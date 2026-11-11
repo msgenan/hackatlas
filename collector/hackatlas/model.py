@@ -78,7 +78,7 @@ class SourceRef(_Base):
 
 
 class Event(_Base):
-    id: str = Field(description="Stable slug: <name-slug>-<year>")
+    id: str = Field(pattern=r"^[a-z0-9]+(?:-[a-z0-9]+)*$", description="Stable slug: <name-slug>-<year>")
     name: str
     organizer: str | None = None
     url: str = Field(description="Official page or application link")

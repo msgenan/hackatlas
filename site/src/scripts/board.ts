@@ -121,8 +121,8 @@ export function initBoard(base: string) {
 
   const fmtClock = new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", hour: "2-digit", minute: "2-digit", second: "2-digit" });
   const everySecond = () => {
+    if (document.hidden || !root.isConnected) return stop();
     if (clock) clock.textContent = fmtClock.format(Date.now());
-    if (document.hidden) return;
     // Only the countdown and status columns change with time; reuse the same rows.
     const rows = boardRows(current, Date.now(), limit);
     const sameOrder = rows.length === list.children.length && rows.every((r, i) => (list.children[i]!.querySelector("a") as HTMLAnchorElement).dataset.id === r.id);
@@ -137,7 +137,30 @@ export function initBoard(base: string) {
       }
     });
   };
-  setInterval(everySecond, 1000);
+  // Tick only while the page is visible; catch up at once when it comes back; stop when it goes away.
+  let timer = 0;
+  const start = () => {
+    if (!timer) timer = window.setInterval(everySecond, 1000);
+  };
+  const stop = () => {
+    if (timer) window.clearInterval(timer);
+    timer = 0;
+  };
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else {
+      everySecond();
+      start();
+    }
+  });
+  addEventListener("pagehide", stop);
+  addEventListener("pageshow", () => {
+    if (!document.hidden) {
+      everySecond();
+      start();
+    }
+  });
+  if (!document.hidden) start();
 
   return { render, intro };
 }

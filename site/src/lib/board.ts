@@ -43,9 +43,9 @@ export function boardText(s: string, width: number): string {
   return out.padEnd(width, " ");
 }
 
-/** End of the deadline day in Turkey (UTC+3, no DST) as epoch ms. */
+/** Exclusive end of the deadline day in Turkey (UTC+3, no DST): the next midnight, as epoch ms. */
 export function deadlineEnd(deadline: string): number {
-  return Date.parse(`${deadline}T23:59:59+03:00`);
+  return Date.parse(`${deadline}T00:00:00+03:00`) + 86_400_000;
 }
 
 /** "12G 04S" above 48 hours, "37:42:08" below, "KAPANDI" after. Always 8 characters. */

@@ -18,11 +18,13 @@ describe("board text", () => {
     expect(boardText("a very long hackathon name that overflows", 10)).toHaveLength(10);
   });
   it("formats remaining time", () => {
-    // deadline 2026-11-14 ends 2026-11-14T20:59:59Z
-    expect(remainingText("2026-11-14", at("2026-11-14T08:00:00Z"))).toBe("12:59:59");
+    // deadline 2026-11-14 closes at the next midnight in Turkey, 2026-11-14T21:00:00Z
+    expect(remainingText("2026-11-14", at("2026-11-14T08:00:00Z"))).toBe("13:00:00");
+    expect(remainingText("2026-11-14", at("2026-11-14T20:59:59.500Z"))).toBe("00:00:00");
+    expect(remainingText("2026-11-14", at("2026-11-14T21:00:00Z"))).toBe("KAPANDI ");
     expect(remainingText("2026-11-20", at("2026-11-12T20:59:59Z"))).toBe("8G 00S  ");
     expect(remainingText("2026-11-01", at("2026-11-12T00:00:00Z"))).toBe("KAPANDI ");
-    for (const s of ["12:59:59", "8G 00S  ", "KAPANDI "]) expect(s).toHaveLength(BOARD_COLS.kalan);
+    for (const s of ["13:00:00", "8G 00S  ", "KAPANDI "]) expect(s).toHaveLength(BOARD_COLS.kalan);
   });
   it("tones by urgency", () => {
     expect(remainingTone("2026-11-13", at("2026-11-12T12:00:00Z"))).toBe("red");
