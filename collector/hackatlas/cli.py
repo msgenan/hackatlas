@@ -6,6 +6,7 @@ import argparse
 import json
 import logging
 import os
+import re
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -80,8 +81,21 @@ def describe(e: Event) -> str:
     return f"[{e.id}]\n" + "\n".join(f"  {k + ':':<20}{v}" for k, v in rows)
 
 
+_MD_SPECIAL = re.compile(r"([\\`*_{}\[\]()<>#+!|~])")
+
+
 def _cell(text: str) -> str:
-    return text.replace("|", "\\|").replace("\n", " ")
+    """Plain text for a Markdown table cell: no line breaks, Markdown syntax escaped."""
+    flat = " ".join(text.split())
+    return _MD_SPECIAL.sub(r"\\\1", flat)
+
+
+def _link(kind: str, url: str) -> str:
+    """A source link only for a clean http(s) URL; anything else is shown as escaped text."""
+    u = url.strip()
+    if re.fullmatch(r"https?://[^\s<>()\[\]`|\\]+", u):
+        return f"[{_cell(kind)}](<{u}>)"
+    return _cell(f"{kind}: {u}")
 
 
 def pr_body(events: list[Event]) -> str:
@@ -99,7 +113,7 @@ def pr_body(events: list[Event]) -> str:
             _fmt_dates(e),
             _cell(_fmt_place(e)),
             _cell(_fmt_prize(e)),
-            f"[{src.kind}]({src.url})",
+            _link(src.kind, src.url),
         ]
         lines.append("| " + " | ".join(cells) + " |")
     return "\n".join(lines) + "\n"

@@ -103,6 +103,11 @@ def test_to_event_drops_non_hackathon_past_and_undated():
         is None
     )
     assert llm.to_event(rec(deadline=None, starts_on=None, ends_on=None), "web", NOW) is None
+    # ended last month, but the model reported a future deadline: still over
+    over = rec(deadline="2026-12-01", starts_on="2026-10-01", ends_on="2026-10-02")
+    assert llm.to_event(over, "web", NOW) is None
+    # no event dates, future deadline: kept
+    assert llm.to_event(rec(starts_on=None, ends_on=None), "web", NOW) is not None
 
 
 def test_to_event_ignores_bad_dates_and_clamps_summary():

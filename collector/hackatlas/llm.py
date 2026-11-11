@@ -102,9 +102,11 @@ def to_event(x: ExtractedEvent, kind: SourceKind, seen_at: datetime) -> Event | 
     starts = _parse_date(x.starts_on, today)
     ends = _parse_date(x.ends_on, today) or starts
     deadline = _parse_date(x.deadline, today)
-    last_relevant = max([d for d in (deadline, ends) if d], default=None)
-    if last_relevant is None or last_relevant < today:
-        return None  # no date at all, or already over
+    if ends is not None:
+        if ends < today:
+            return None  # the event is over, whatever the deadline says
+    elif deadline is None or deadline < today:
+        return None  # no date at all, or only a past deadline
     year = (starts or deadline or today).year
 
     location = None

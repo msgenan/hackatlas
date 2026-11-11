@@ -55,7 +55,7 @@ def test_pr_body_table_and_flags(data, capsys):
     assert lines[0].startswith("3 ")
     rows = [line for line in lines if line.startswith("| ") and "---" not in line][1:]
     assert len(rows) == 3
-    assert "50.000 TL" in rows[0] and "[devpost](https://devpost.com/alpha-hack-2026)" in rows[0]
+    assert "50.000 TL" in rows[0] and "[devpost](<https://devpost.com/alpha-hack-2026>)" in rows[0]
     assert "(kontrol et)" in rows[1] and "Beta \\| Hack" in rows[1]
     assert "(kontrol et)" not in rows[0] and "(kontrol et)" not in rows[2]
     assert "Belirtilmemiş" in rows[2]
@@ -92,3 +92,28 @@ def test_collect_dry_run_with_missing_sources(tmp_path, capsys, monkeypatch):
     out = capsys.readouterr().out
     assert "web: skipped" in out and "ghost: skipped" in out
     assert not (tmp_path / "pending.json").exists()
+
+
+def test_pr_body_escapes_markdown_and_rejects_odd_urls():
+    from datetime import UTC, datetime
+
+    from hackatlas.cli import pr_body
+    from hackatlas.model import Event, SourceRef
+
+    now = datetime(2026, 11, 12, tzinfo=UTC)
+    ev = Event(
+        id="x-2026", name="Evil [click](https://evil.example) **bold**\n| row", url="https://ok.example",
+        sources=[SourceRef(kind="web", url="https://a.example/x)\n[pwn](https://evil.example", seen_at=now)],
+        added_at=now, updated_at=now,
+    )
+    body = pr_body([ev])
+    assert "](https://evil.example)" not in body
+    assert "\\[click\\]" in body and "\\*\\*bold\\*\\*" in body
+    table_rows = [line for line in body.splitlines() if line.startswith("| ") and "Evil" in line]
+    assert len(table_rows) == 1  # the newline in the name did not start a new row
+    ok = Event(
+        id="y-2026", name="Ok", url="https://ok.example",
+        sources=[SourceRef(kind="devpost", url="https://ok.devpost.com/", seen_at=now)],
+        added_at=now, updated_at=now,
+    )
+    assert "[devpost](<https://ok.devpost.com/>)" in pr_body([ok])

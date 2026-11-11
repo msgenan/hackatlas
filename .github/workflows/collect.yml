@@ -45,6 +45,15 @@ jobs:
             hackatlas approve --all
           fi
 
+      - name: Close a stale collection PR when nothing new is left
+        if: steps.prep.outputs.count == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(gh pr view bot/collect --json state -q .state 2>/dev/null)" = "OPEN" ]; then
+            gh pr close bot/collect --delete-branch --comment "Bu turda yeni aday kalmadı; PR kapatıldı."
+          fi
+
       - name: Open or update PR
         if: steps.prep.outputs.count != '0'
         uses: peter-evans/create-pull-request@v7
