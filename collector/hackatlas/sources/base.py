@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Protocol
 
 import httpx
@@ -16,7 +16,7 @@ class Context:
     """What a source gets for one run."""
 
     client: httpx.Client
-    now: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+    now: datetime = field(default_factory=lambda: datetime.now(UTC))
 
 
 class Source(Protocol):

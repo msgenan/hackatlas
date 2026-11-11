@@ -1,0 +1,264 @@
+{
+ "hits": {
+  "total": {
+   "value": 5
+  },
+  "hits": [
+   {
+    "_source": {
+     "country": "India",
+     "devfolio_official": null,
+     "featured": null,
+     "private": false,
+     "starts_at": "2026-11-27T18:30:00+00:00",
+     "hosted_by": null,
+     "hashtags": [],
+     "apply_mode": "both",
+     "city": "Kolkata",
+     "timezone": "Asia/Calcutta",
+     "rating": 0,
+     "type": "HACKATHON",
+     "uuid": "d957bc2099f945e99edfae0c2972bed9",
+     "themes": [],
+     "hackathon_setting": {
+      "reg_starts_at": "2026-09-18T18:30:00+00:00",
+      "reg_ends_at": "2026-11-13T18:30:00+00:00",
+      "site": "https://devnexushackathon.in/",
+      "subdomain": "devnexus2"
+     },
+     "ends_at": "2026-11-28T18:30:00+00:00",
+     "is_online": false,
+     "state": "West Bengal",
+     "slug": "devnexus2",
+     "team_min": 2,
+     "themed": false,
+     "discover": false,
+     "participants_count": 1986,
+     "team_size": 4,
+     "verified": true,
+     "prizes": [],
+     "projects_submitted": 0,
+     "name": "DevNexus 2.0",
+     "tagline": "Code Through the Night. Build Beyond the Fear.",
+     "location": "Government College of Engineering and Leather Technology, Eastern Metropolitan Bypass, LB Block, Sector 3, Bidhannagar, Kolkata, West Bengal, India",
+     "status": "publish"
+    }
+   },
+   {
+    "_source": {
+     "country": "Thailand",
+     "devfolio_official": null,
+     "featured": null,
+     "private": false,
+     "starts_at": "2026-12-26T01:00:00+00:00",
+     "hosted_by": null,
+     "hashtags": [],
+     "apply_mode": "both",
+     "city": null,
+     "timezone": "Asia/Bangkok",
+     "rating": 0,
+     "type": "HACKATHON",
+     "uuid": "cf5fb5645ec44de88ee455be936825da",
+     "themes": [
+      {
+       "name": "AI",
+       "verified": true,
+       "uuid": "9d287d0c0870485a838efa02d5ecc06b"
+      },
+      {
+       "name": "Blockchain",
+       "verified": true,
+       "uuid": "106931c0a88e4e4893333524fe66ef5d"
+      },
+      {
+       "name": "HealthTech",
+       "verified": true,
+       "uuid": "75d24005cd344ddba77d53051adc4f2f"
+      }
+     ],
+     "hackathon_setting": {
+      "reg_starts_at": "2026-11-11T13:00:00+00:00",
+      "reg_ends_at": "2026-12-09T17:00:00+00:00",
+      "site": "https://ethchiangmai.com/",
+      "subdomain": "chiangmai"
+     },
+     "ends_at": "2026-12-27T01:00:00+00:00",
+     "is_online": false,
+     "state": "Chang Wat Chiang Mai",
+     "slug": "chiangmai",
+     "team_min": 1,
+     "themed": false,
+     "discover": false,
+     "participants_count": 4,
+     "team_size": 4,
+     "verified": true,
+     "prizes": [
+      {
+       "name": "Track Prizes",
+       "desc": ""
+      },
+      {
+       "name": "Track Prizes",
+       "desc": ""
+      },
+      {
+       "name": "Track Prizes",
+       "desc": ""
+      },
+      {
+       "name": "Track Prizes",
+       "desc": ""
+      }
+     ],
+     "projects_submitted": 0,
+     "name": "ETHChiangmai & Longevity Hackathon 2026",
+     "tagline": null,
+     "location": "4Seas Nimman Coliving Coworking Space Nimmana Haeminda Road Lane 15 Nimmanhaemin Suthep, Mueang Chiang Mai District, Chiang Mai, Thailand",
+     "status": "publish"
+    }
+   },
+   {
+    "_source": {
+     "country": null,
+     "devfolio_official": null,
+     "featured": null,
+     "private": false,
+     "starts_at": "2027-01-02T04:30:00+00:00",
+     "hosted_by": null,
+     "hashtags": [],
+     "apply_mode": "both",
+     "city": null,
+     "timezone": "Asia/Calcutta",
+     "rating": 0,
+     "type": "HACKATHON",
+     "uuid": "0c74c99ebe4d4bc8b1b9972451f350ca",
+     "themes": [],
+     "hackathon_setting": {
+      "reg_starts_at": "2026-10-12T04:30:00+00:00",
+      "reg_ends_at": "2026-12-10T10:30:00+00:00",
+      "site": "https://hft.excelmec.org/",
+      "subdomain": "hft2026"
+     },
+     "ends_at": "2027-01-03T04:30:00+00:00",
+     "is_online": false,
+     "state": null,
+     "slug": "hft2026",
+     "team_min": 2,
+     "themed": false,
+     "discover": false,
+     "participants_count": 172,
+     "team_size": 4,
+     "verified": true,
+     "prizes": [
+      {
+       "name": "Prize Pool",
+       "desc": "A total prize pool of ₹30,000 awaits the winning teams! Showcase your creativity, build innovative solutions, and compete for exciting rewards. Give your best, turn your ideas into reality, and stand a chance to win."
+      }
+     ],
+     "projects_submitted": 0,
+     "name": "Hack For Tomorrow 2026",
+     "tagline": "Innovate Today. Impact Tomorrow",
+     "location": null,
+     "status": "publish"
+    }
+   },
+   {
+    "_source": {
+     "country": null,
+     "devfolio_official": null,
+     "featured": null,
+     "private": false,
+     "starts_at": "2026-12-11T16:30:00+00:00",
+     "hosted_by": null,
+     "hashtags": [],
+     "apply_mode": "both",
+     "city": null,
+     "timezone": "Asia/Calcutta",
+     "rating": 0,
+     "type": "HACKATHON",
+     "uuid": "c84b90d65eff4ae083366fc1cc549e81",
+     "themes": [],
+     "hackathon_setting": {
+      "reg_starts_at": "2026-09-08T18:30:00+00:00",
+      "reg_ends_at": "2026-12-10T18:29:00+00:00",
+      "site": "https://www.hackodisha.dev/",
+      "subdomain": "hackodisha-6a"
+     },
+     "ends_at": "2026-12-13T06:30:00+00:00",
+     "is_online": true,
+     "state": null,
+     "slug": "hackodisha-6a",
+     "team_min": 1,
+     "themed": false,
+     "discover": false,
+     "participants_count": 1865,
+     "team_size": 5,
+     "verified": true,
+     "prizes": [
+      {
+       "name": "Open Winner",
+       "desc": "Awarded to the winning team of HackOdisha.(in cash+in kind)"
+      },
+      {
+       "name": "Open Runners Up",
+       "desc": "Awarded to the runner-up team of HackOdisha.(in cash+in kind)"
+      },
+      {
+       "name": "Open 2nd Runners Up",
+       "desc": "Awarded to the 2nd runner-up team of HackOdisha.(in cash+in kind)"
+      },
+      {
+       "name": "Fueler Digital Bundle",
+       "desc": "Awarded to the top performing teams of HackOdisha."
+      }
+     ],
+     "projects_submitted": 0,
+     "name": "hackodisha-6.0",
+     "tagline": "Eastern India's one of the largest hackathon organized by Webwiz, NIT Rourkela.",
+     "location": null,
+     "status": "publish"
+    }
+   },
+   {
+    "_source": {
+     "country": "India",
+     "devfolio_official": null,
+     "featured": null,
+     "private": false,
+     "starts_at": "2026-01-10T00:00:00+00:00",
+     "hosted_by": null,
+     "hashtags": [],
+     "apply_mode": "both",
+     "city": "Kolkata",
+     "timezone": "Asia/Calcutta",
+     "rating": 0,
+     "type": "HACKATHON",
+     "uuid": "x",
+     "themes": [],
+     "hackathon_setting": {
+      "reg_starts_at": "2026-09-18T18:30:00+00:00",
+      "reg_ends_at": "2026-01-05T00:00:00+00:00",
+      "site": "https://devnexushackathon.in/",
+      "subdomain": "devnexus2"
+     },
+     "ends_at": "2026-01-11T00:00:00+00:00",
+     "is_online": false,
+     "state": "West Bengal",
+     "slug": "devnexus2",
+     "team_min": 2,
+     "themed": false,
+     "discover": false,
+     "participants_count": 1986,
+     "team_size": 4,
+     "verified": true,
+     "prizes": [],
+     "projects_submitted": 0,
+     "name": "Edited Past Hackathon",
+     "tagline": "Code Through the Night. Build Beyond the Fear.",
+     "location": "Government College of Engineering and Leather Technology, Eastern Metropolitan Bypass, LB Block, Sector 3, Bidhannagar, Kolkata, West Bengal, India",
+     "status": "publish"
+    }
+   }
+  ]
+ }
+}

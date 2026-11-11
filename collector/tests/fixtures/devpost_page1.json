@@ -1,0 +1,274 @@
+{
+ "hackathons": [
+  {
+   "id": 31302,
+   "title": "PayPal AI Hackathon",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "url": "https://paypalaihackathon.devpost.com/",
+   "time_left_to_submission": "about 22 hours left",
+   "submission_period_dates": "Oct 01 - Nov 12, 2026",
+   "themes": [
+    {
+     "id": 17,
+     "name": "Low/No Code"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    },
+    {
+     "id": 25,
+     "name": "Web"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>67,500</span>",
+   "prizes_counts": {
+    "cash": 14,
+    "other": 3
+   },
+   "registrations_count": 34701,
+   "featured": false,
+   "organization_name": "PayPal",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": true
+  },
+  {
+   "id": 31667,
+   "title": "Kiroween 2026",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "url": "https://kiroween.devpost.com/",
+   "time_left_to_submission": "23 days left",
+   "submission_period_dates": "Oct 30 - Dec 04, 2026",
+   "themes": [
+    {
+     "id": 23,
+     "name": "Beginner Friendly"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    },
+    {
+     "id": 22,
+     "name": "Open Ended"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>100,000</span>",
+   "prizes_counts": {
+    "cash": 15,
+    "other": 2
+   },
+   "registrations_count": 12296,
+   "featured": true,
+   "organization_name": "Kiro",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": true
+  },
+  {
+   "id": 31141,
+   "title": "HackStorm 3.0: Sense, Think and Act",
+   "displayed_location": {
+    "icon": "map-marker-alt",
+    "location": "San Francisco, California, USA"
+   },
+   "open_state": "upcoming",
+   "url": "https://hackstorm3.devpost.com/",
+   "time_left_to_submission": "Upcoming",
+   "submission_period_dates": "Jan 15 - 17, 2027",
+   "themes": [
+    {
+     "id": 2,
+     "name": "DevOps"
+    },
+    {
+     "id": 7,
+     "name": "IoT"
+    },
+    {
+     "id": 27,
+     "name": "Robotic Process Automation"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>5,200</span>",
+   "prizes_counts": {
+    "cash": 3,
+    "other": 0
+   },
+   "registrations_count": 42,
+   "featured": false,
+   "organization_name": "HackStorm",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 30463,
+   "title": "DeveloperWeek 2027 Hackathon",
+   "displayed_location": {
+    "icon": "map-marker-alt",
+    "location": "Santa Clara Convention Center + Online"
+   },
+   "open_state": "upcoming",
+   "url": "https://developerweek-2027-hackathon.devpost.com/",
+   "time_left_to_submission": "Upcoming",
+   "submission_period_dates": "Jan 25 - Feb 11, 2027",
+   "themes": [
+    {
+     "id": 21,
+     "name": "Enterprise"
+    },
+    {
+     "id": 7,
+     "name": "IoT"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>6,000</span>",
+   "prizes_counts": {
+    "cash": 4,
+    "other": 1
+   },
+   "registrations_count": 332,
+   "featured": false,
+   "organization_name": "DevNetwork",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 31719,
+   "title": "Scope-AI-Thon 2026 - AI for Detection of Acute Patient Deterioration",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "url": "https://scope-ai-thon-2026.devpost.com/",
+   "time_left_to_submission": "3 days left",
+   "submission_period_dates": "Nov 01 - 14, 2026",
+   "themes": [
+    {
+     "id": 18,
+     "name": "Design"
+    },
+    {
+     "id": 16,
+     "name": "Health"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    }
+   ],
+   "prize_amount": "$CAD <span data-currency-value>1,400</span>",
+   "prizes_counts": {
+    "cash": 3,
+    "other": 0
+   },
+   "registrations_count": 84,
+   "featured": false,
+   "organization_name": "mcgill university",
+   "winners_announced": false,
+   "invite_only": true,
+   "eligibility_requirement_invite_only_description": "McGill and UW students",
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 30689,
+   "title": "BearHacks 2027",
+   "displayed_location": {
+    "icon": "map-marker-alt",
+    "location": "Sheridan College Hazel McCallion Campus"
+   },
+   "open_state": "upcoming",
+   "url": "https://bearhacks2027.devpost.com/",
+   "time_left_to_submission": "Upcoming",
+   "submission_period_dates": "Apr 23 - 25, 2027",
+   "themes": [
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    },
+    {
+     "id": 26,
+     "name": "Mobile"
+    },
+    {
+     "id": 25,
+     "name": "Web"
+    }
+   ],
+   "prize_amount": "$CAD <span data-currency-value>10,000</span>",
+   "prizes_counts": {
+    "cash": 1,
+    "other": 0
+   },
+   "registrations_count": 42,
+   "featured": false,
+   "organization_name": "BearHacks",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": false
+  },
+  {
+   "id": 1,
+   "title": "Edited Past Hackathon",
+   "displayed_location": {
+    "icon": "globe",
+    "location": "Online"
+   },
+   "open_state": "open",
+   "url": "https://start-developer-competition-26.devpost.com/",
+   "time_left_to_submission": "7 days left",
+   "submission_period_dates": "Jan 01 - Feb 02, 2026",
+   "themes": [
+    {
+     "id": 5,
+     "name": "AR/VR"
+    },
+    {
+     "id": 6,
+     "name": "Machine Learning/AI"
+    },
+    {
+     "id": 25,
+     "name": "Web"
+    }
+   ],
+   "prize_amount": "$<span data-currency-value>1,000,000</span>",
+   "prizes_counts": {
+    "cash": 19,
+    "other": 0
+   },
+   "registrations_count": 5857,
+   "featured": true,
+   "organization_name": "Meta",
+   "winners_announced": false,
+   "invite_only": false,
+   "eligibility_requirement_invite_only_description": null,
+   "managed_by_devpost_badge": true
+  }
+ ],
+ "meta": {
+  "total_count": 7,
+  "per_page": 9
+ }
+}

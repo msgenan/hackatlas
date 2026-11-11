@@ -1,0 +1,67 @@
+name: Hackathon ekle
+description: Listede olmayan bir hackathonu öner.
+title: "Hackathon: "
+labels: ["yeni-hackathon"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bildiğin kadarını doldur, eksik alanlar boş kalabilir. Yalnızca resmi sayfa linki zorunlu.
+  - type: input
+    id: name
+    attributes:
+      label: Ad
+      placeholder: Örnek Yapay Zekâ Hackathonu
+  - type: input
+    id: url
+    attributes:
+      label: Resmi sayfa / başvuru linki
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Son başvuru tarihi
+      placeholder: 2026-12-01
+  - type: input
+    id: dates
+    attributes:
+      label: Etkinlik tarihleri
+      placeholder: 2026-12-12 - 2026-12-13
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Online
+        - Yerinde
+        - Hibrit
+  - type: input
+    id: location
+    attributes:
+      label: Şehir/ülke
+      placeholder: İstanbul, TR
+  - type: input
+    id: prize
+    attributes:
+      label: Ödül
+      placeholder: 50.000 TL
+  - type: input
+    id: team
+    attributes:
+      label: Takım büyüklüğü
+      placeholder: 2-4 kişi
+  - type: input
+    id: eligibility
+    attributes:
+      label: Kimler katılabilir
+      placeholder: Lisans öğrencileri
+  - type: input
+    id: organizer
+    attributes:
+      label: Organizatör
+  - type: textarea
+    id: note
+    attributes:
+      label: Not

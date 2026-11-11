@@ -1,0 +1,57 @@
+name: Collect hackathons
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install collector
+        run: |
+          uv venv .venv
+          uv pip install --python .venv/bin/python -e "collector[llm]"
+          echo "$GITHUB_WORKSPACE/.venv/bin" >> "$GITHUB_PATH"
+
+      - name: Collect candidates
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: hackatlas collect --sources devpost,mlh,devfolio,techcareer,web
+
+      - name: Prepare PR body
+        id: prep
+        run: |
+          count=$(hackatlas pr-body --count)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -gt 0 ]; then
+            hackatlas pr-body > /tmp/body.md
+            hackatlas approve --all
+          fi
+
+      - name: Open or update PR
+        if: steps.prep.outputs.count != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/collect
+          add-paths: data/
+          commit-message: "chore: add collected hackathons"
+          title: "Yeni hackathonlar (${{ steps.prep.outputs.count }})"
+          body-path: /tmp/body.md
+          delete-branch: true
