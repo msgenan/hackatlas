@@ -1,0 +1,379 @@
+{
+  "events": [
+    {
+      "id": "ornek-yapay-zeka-hackathonu-2026",
+      "name": "Örnek Yapay Zekâ Hackathonu",
+      "organizer": "Örnek Teknopark",
+      "url": "https://example.com/ai",
+      "summary": "Şehir sorunlarına yapay zekâ ile çözüm geliştirilen iki günlük yerinde etkinlik.",
+      "format": "in_person",
+      "location": {
+        "city": "İstanbul",
+        "country": "TR",
+        "venue": "Örnek Kampüs"
+      },
+      "starts_on": "2026-12-12",
+      "ends_on": "2026-12-13",
+      "deadline": "2026-11-14",
+      "prize": {
+        "amount": 150000.0,
+        "currency": "TRY",
+        "text": "150.000 TL ödül havuzu"
+      },
+      "team": {
+        "min": 2,
+        "max": 5
+      },
+      "eligibility": "18-30 yaş öğrenci ve mezunlar",
+      "themes": [
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "web",
+          "url": "https://example.com/news",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "ornek-fintech-challenge-2026",
+      "name": "Örnek Fintech Challenge",
+      "organizer": "Örnek Bank",
+      "url": "https://example.com/fintech",
+      "summary": "Açık bankacılık API'leriyle ürün fikri geliştirilen hibrit yarışma.",
+      "format": "hybrid",
+      "location": {
+        "city": "Ankara",
+        "country": "TR",
+        "venue": null
+      },
+      "starts_on": "2026-12-05",
+      "ends_on": "2026-12-07",
+      "deadline": "2026-11-28",
+      "prize": {
+        "amount": 250000.0,
+        "currency": "TRY",
+        "text": "250.000 TL + staj fırsatı"
+      },
+      "team": {
+        "min": 3,
+        "max": 4
+      },
+      "eligibility": "Lisans 3. ve 4. sınıf öğrencileri",
+      "themes": [
+        "fintech"
+      ],
+      "sources": [
+        {
+          "kind": "instagram",
+          "url": "https://instagram.com/p/example",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "global-build-week-2026",
+      "name": "Global Build Week",
+      "organizer": "Example Inc.",
+      "url": "https://example.com/gbw",
+      "summary": "Online, open to everyone worldwide; build anything with the sponsor APIs.",
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-12-01",
+      "ends_on": "2027-01-15",
+      "deadline": "2027-01-10",
+      "prize": {
+        "amount": 120000.0,
+        "currency": "USD",
+        "text": "$120,000 in prizes"
+      },
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": "18+, most countries",
+      "themes": [
+        "ai",
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://example.devpost.com",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "cok-uzun-isimli-bir-surdurulebilirlik-ve-iklim-teknolojileri-hackathonu-2027",
+      "name": "Çok Uzun İsimli Bir Sürdürülebilirlik ve İklim Teknolojileri Ulusal Hackathonu ve Fikir Maratonu",
+      "organizer": null,
+      "url": "https://example.com/climate",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "İzmir",
+        "country": "TR",
+        "venue": null
+      },
+      "starts_on": "2027-02-20",
+      "ends_on": "2027-02-22",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "sustainability"
+      ],
+      "sources": [
+        {
+          "kind": "techcareer",
+          "url": "https://example.com/tc",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "student-hacks-v8-2027",
+      "name": "Student Hacks V8",
+      "organizer": "Student Hacks",
+      "url": "https://example.com/sh",
+      "summary": "MLH member event for high school and university students.",
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-01-08",
+      "ends_on": "2027-01-10",
+      "deadline": "2027-01-07",
+      "prize": {
+        "amount": 13700.0,
+        "currency": "USD",
+        "text": "$13,700 in prizes"
+      },
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": "13+",
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://example.com/mlh",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "web3-istanbul-buildathon-2026",
+      "name": "Web3 İstanbul Buildathon",
+      "organizer": "Örnek DAO",
+      "url": "https://example.com/w3",
+      "summary": "Akıllı sözleşme ve zincir üstü uygulamalar için üç günlük buildathon.",
+      "format": "hybrid",
+      "location": {
+        "city": "İstanbul",
+        "country": "TR",
+        "venue": null
+      },
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "deadline": "2026-11-13",
+      "prize": {
+        "amount": 20000.0,
+        "currency": "USD",
+        "text": "$20,000 + grant"
+      },
+      "team": {
+        "min": 1,
+        "max": 5
+      },
+      "eligibility": "Herkes",
+      "themes": [
+        "web3"
+      ],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://example.com/df",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "saglik-datathon-2026",
+      "name": "Sağlık Datathon",
+      "organizer": "Örnek Üniversitesi IEEE",
+      "url": "https://example.com/health",
+      "summary": "Anonim hastane verisiyle tahmin modelleri kurulan veri yarışması.",
+      "format": "in_person",
+      "location": {
+        "city": "Bursa",
+        "country": "TR",
+        "venue": null
+      },
+      "starts_on": "2026-12-19",
+      "ends_on": "2026-12-20",
+      "deadline": "2026-12-10",
+      "prize": {
+        "amount": null,
+        "currency": null,
+        "text": "Ödül bilgisi sonra açıklanacak"
+      },
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": "Üniversite öğrencileri",
+      "themes": [
+        "health",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "instagram",
+          "url": "https://instagram.com/p/example2",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": 0.72,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "game-jam-weekend-2026",
+      "name": "Game Jam Weekend",
+      "organizer": "Örnek Oyun Kulübü",
+      "url": "https://example.com/jam",
+      "summary": "48 saatte oyun prototipi.",
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-27",
+      "ends_on": "2026-11-29",
+      "deadline": "2026-11-26",
+      "prize": {
+        "amount": 30000.0,
+        "currency": "TRY",
+        "text": "30.000 TL"
+      },
+      "team": {
+        "min": 1,
+        "max": 3
+      },
+      "eligibility": "Herkes",
+      "themes": [
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "web",
+          "url": "https://example.com/jamnews",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "secure-code-ctf-hack-2026",
+      "name": "SecureCode Hack",
+      "organizer": "Example Security",
+      "url": "https://example.com/sec",
+      "summary": "Security-focused hackathon with CTF warm-up rounds.",
+      "format": "in_person",
+      "location": {
+        "city": "Berlin",
+        "country": "DE",
+        "venue": null
+      },
+      "starts_on": "2027-03-06",
+      "ends_on": "2027-03-07",
+      "deadline": "2027-02-15",
+      "prize": {
+        "amount": 15000.0,
+        "currency": "EUR",
+        "text": "€15,000"
+      },
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": "18+",
+      "themes": [
+        "security"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://example.devpost.com/sec",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    },
+    {
+      "id": "gecmis-mobility-hackathon-2026",
+      "name": "Mobilite Hackathonu",
+      "organizer": "Örnek Belediye",
+      "url": "https://example.com/mob",
+      "summary": "Ulaşım verisiyle şehir içi mobilite çözümleri.",
+      "format": "in_person",
+      "location": {
+        "city": "Kocaeli",
+        "country": "TR",
+        "venue": null
+      },
+      "starts_on": "2026-10-18",
+      "ends_on": "2026-10-19",
+      "deadline": "2026-10-05",
+      "prize": {
+        "amount": 100000.0,
+        "currency": "TRY",
+        "text": "100.000 TL"
+      },
+      "team": {
+        "min": 3,
+        "max": 5
+      },
+      "eligibility": "Öğrenciler",
+      "themes": [
+        "mobility"
+      ],
+      "sources": [
+        {
+          "kind": "web",
+          "url": "https://example.com/mobnews",
+          "seen_at": "2026-11-12T09:00:00Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-12T09:00:00Z",
+      "updated_at": "2026-11-12T09:00:00Z"
+    }
+  ]
+}
