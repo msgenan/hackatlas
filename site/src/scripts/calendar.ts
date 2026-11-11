@@ -28,7 +28,11 @@ function entriesOn(d: string): Entry[] {
   for (const m of visible) {
     const s = m.starts ?? m.ends;
     const e = m.ends ?? m.starts;
-    if (s && e && s <= d && d <= e) out.push({ m, kind: "event" });
+    if (!s || !e) continue;
+    // Short events (a weekend) fill their days; long submission windows only mark their first day,
+    // otherwise a months-long online window would flood every cell.
+    const short = diffDays(e, s) <= 3;
+    if (short ? s <= d && d <= e : d === s) out.push({ m, kind: "event" });
   }
   return out;
 }
