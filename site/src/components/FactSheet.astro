@@ -1,0 +1,29 @@
+---
+import { NA, SOURCE_NAMES } from "../lib/format";
+import type { ViewEvent } from "../lib/events";
+import CountdownChip from "./CountdownChip.astro";
+interface Props { v: ViewEvent }
+const { v } = Astro.props;
+const { e } = v;
+const venue = e.location?.venue && e.location.venue !== v.place ? e.location.venue : null;
+const sources = [...new Set(e.sources.map((s) => SOURCE_NAMES[s.kind] ?? s.kind))];
+---
+<dl class="sheet">
+  <div>
+    <dt>Son başvuru</dt>
+    <dd class="v-cd">
+      <CountdownChip status={v.status} e={e} />
+      {e.deadline && v.deadlineDate && <span class="num">{v.deadlineDate}</span>}
+    </dd>
+  </div>
+  <div><dt>Tarih</dt><dd class:list={{ na: !v.dates }}>{v.dates ?? NA}</dd></div>
+  <div>
+    <dt>Yer</dt>
+    <dd class:list={{ na: !v.place }}>{v.place ?? NA}{venue && <span class="muted">, {venue}</span>}</dd>
+  </div>
+  <div><dt>Ödül</dt><dd class:list={{ na: !v.prize }}>{v.prize ?? NA}</dd></div>
+  <div><dt>Takım</dt><dd class:list={{ na: !v.team }}>{v.team ?? NA}</dd></div>
+  <div><dt>Kimler katılabilir</dt><dd class:list={{ na: !e.eligibility }}>{e.eligibility ?? NA}</dd></div>
+  <div><dt>Organizatör</dt><dd class:list={{ na: !e.organizer }}>{e.organizer ?? NA}</dd></div>
+  <div><dt>Kaynak</dt><dd>{sources.join(", ")}</dd></div>
+</dl>

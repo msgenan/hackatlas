@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import { ISSUE_NEW } from "../lib/format";
+---
+<Base title="Hakkında" description="hackatlas nedir, bilgiler nereden geliyor, nasıl hackathon eklenir.">
+  <div class="wrap">
+    <div class="page-head"><h1 class="page-title">Hakkında</h1></div>
+    <div class="prose">
+      <p>hackatlas, Türkiye'deki öğrenci yazılımcı takımları için hackathonları sakin ve okunur tek bir listede toplar. Amaç, çok sayıda etkinliği hızlıca tarayıp şu soruyu yanıtlamak: hâlâ başvurabilir miyiz, ne zaman, nerede ve değer mi?</p>
+      <h2>Bilgiler nereden geliyor</h2>
+      <p>Kayıtlar şu kaynaklardan toplanır:</p>
+      <ul>
+        <li>Devpost</li>
+        <li>MLH</li>
+        <li>Devfolio</li>
+        <li>Techcareer</li>
+        <li>Web araması</li>
+        <li>Instagram</li>
+      </ul>
+      <p>Uzun açıklamalar kopyalanmaz. Her kayıtta kısa bir özet ve kaynağa giden bağlantı bulunur.</p>
+      <h2>Yayından önce insan gözü</h2>
+      <p>Yeni kayıtlar yayınlanmadan önce insanlar tarafından gözden geçirilir. Otomatik toplanan ve emin olunamayan kayıtlarda sayfada bir uyarı görürsün. Başvurmadan önce her zaman resmi sayfayı kontrol et.</p>
+      <h2>Hackathon nasıl eklenir</h2>
+      <p>Listede olmayan bir hackathon biliyorsan <a href={ISSUE_NEW} target="_blank" rel="noopener">GitHub üzerindeki ekleme formunu</a> doldur. Kayıt gözden geçirildikten sonra listeye girer. Yanlış ya da eksik bir bilgi görürsen her hackathon sayfasının altındaki "Düzeltme öner" bağlantısını kullan.</p>
+      <h2>Takip etmek için</h2>
+      <p>Yeni eklenenleri RSS ile, tarihleri takvim aboneliği ile izleyebilirsin. Bağlantılar sayfanın en altında.</p>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,65 @@
+---
+import "@fontsource/ibm-plex-sans/latin-400.css";
+import "@fontsource/ibm-plex-sans/latin-ext-400.css";
+import "@fontsource/ibm-plex-sans/latin-500.css";
+import "@fontsource/ibm-plex-sans/latin-ext-500.css";
+import "@fontsource/ibm-plex-sans/latin-600.css";
+import "@fontsource/ibm-plex-sans/latin-ext-600.css";
+import "@fontsource-variable/bricolage-grotesque/index.css";
+import "../styles/tokens.css";
+import "../styles/global.css";
+import "../styles/list.css";
+import "../styles/detail.css";
+import "../styles/calendar.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { href } from "../lib/url";
+
+interface Props {
+  title?: string;
+  description?: string;
+  current?: "liste" | "takvim" | "kaydedilenler" | "";
+  noindex?: boolean;
+}
+const { title, description = "Türkiye ve dünyadan hackathonlar: son başvuru, tarih, yer, ödül ve takım bilgisi tek düzende.", current = "", noindex = false } = Astro.props;
+const full = title ? `${title} - hackatlas` : "hackatlas";
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{full}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={href("favicon.svg")} type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="hackatlas" href={href("feed.xml")} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      /* Applies the stored theme before first paint. ?theme=dark|light forces a theme without storing it
+         (used for screenshots only). */
+      (function () {
+        var d = document.documentElement;
+        d.classList.add("js");
+        try {
+          var q = new URLSearchParams(location.search).get("theme");
+          var t = q === "dark" || q === "light" ? q : localStorage.getItem("hackatlas:theme");
+          if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">İçeriğe geç</a>
+    <Header current={current} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import "../scripts/common";
+    </script>
+  </body>
+</html>

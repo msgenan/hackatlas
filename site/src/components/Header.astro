@@ -1,0 +1,27 @@
+---
+import { href } from "../lib/url";
+import { ISSUE_NEW } from "../lib/format";
+import Icon from "./Icon.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+interface Props { current?: "liste" | "takvim" | "kaydedilenler" | "" }
+const { current = "" } = Astro.props;
+const nav = [
+  ["liste", "Liste", href()],
+  ["takvim", "Takvim", href("takvim/")],
+  ["kaydedilenler", "Kaydedilenler", href("kaydedilenler/")],
+] as const;
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href={href()}>hackatlas</a>
+    <nav class="nav" aria-label="Ana gezinme">
+      {nav.map(([k, label, to]) => <a href={to} aria-current={current === k ? "page" : undefined}>{label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-add" href={ISSUE_NEW} target="_blank" rel="noopener" aria-label="Hackathon ekle">
+        <Icon name="plus" /><span class="label">Hackathon ekle</span>
+      </a>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>

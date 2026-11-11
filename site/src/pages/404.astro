@@ -1,0 +1,10 @@
+---
+import Base from "../layouts/Base.astro";
+import EmptyState from "../components/EmptyState.astro";
+import { href } from "../lib/url";
+---
+<Base title="Sayfa bulunamadı" noindex>
+  <div class="wrap">
+    <EmptyState title="Bu sayfa bulunamadı." text="Adres yanlış olabilir ya da hackathon arşive taşınmış olabilir." action={{ label: "Listeye dön", href: href() }} />
+  </div>
+</Base>

@@ -1,0 +1,65 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Icon from "../../../components/Icon.astro";
+import FactSheet from "../../../components/FactSheet.astro";
+import SaveButton from "../../../components/SaveButton.astro";
+import { site } from "../../../lib/site";
+import { href, absolute } from "../../../lib/url";
+import { SOURCE_NAMES, fixIssueUrl, themeName } from "../../../lib/format";
+import { formatDay } from "../../../lib/dates";
+import { hasCalendarDates } from "../../../lib/ical";
+import type { ViewEvent } from "../../../lib/events";
+
+export function getStaticPaths() {
+  return site().all.map((v) => ({ params: { id: v.e.id }, props: { v } }));
+}
+const { v } = Astro.props as { v: ViewEvent };
+const { e } = v;
+const { today } = site();
+const lowConfidence = e.confidence !== null && e.confidence < 0.7;
+const desc = e.summary ?? `${e.name}: son başvuru, tarih, yer, ödül ve takım bilgisi.`;
+---
+<Base title={e.name} description={desc}>
+  <div class="wrap">
+    <a class="crumb" href={href()}><Icon name="chevron-left" />Liste</a>
+    <div class="detail-head">
+      <h1 class="detail-title">{e.name}</h1>
+      {e.organizer && <p class="detail-org">{e.organizer}</p>}
+      <p class="detail-status">
+        <span class="chip" data-tone={v.status.tone} {...(v.status.kind === "ended" ? {} : { "data-cd": "", "data-deadline": e.deadline ?? "", "data-starts": e.starts_on ?? "", "data-ends": e.ends_on ?? "" })} set:html={v.status.big ? `<b class="cd-n">${v.status.big}</b> <span class="cd-t">${v.status.rest}</span>` : `<span class="cd-t">${v.status.rest}</span>`} />
+      </p>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href={e.url} target="_blank" rel="noopener noreferrer">Başvuru sayfasına git</a>
+      {hasCalendarDates(e) && <a class="btn" href={href(`e/${e.id}.ics`)} download><Icon name="calendar-plus" />Takvime ekle</a>}
+      <SaveButton id={e.id} name={e.name} full />
+      <button type="button" class="btn" data-copy><Icon name="link" /><span class="copy-label" aria-live="polite">Bağlantıyı kopyala</span></button>
+    </div>
+
+    {lowConfidence && (
+      <p class="notice"><Icon name="info" /><span>Bu bilgiler otomatik toplandı, başvurmadan önce resmi sayfadan kontrol et.</span></p>
+    )}
+
+    <FactSheet v={v} />
+
+    {e.summary && (
+      <section class="detail-section"><h2>Özet</h2><p>{e.summary}</p></section>
+    )}
+    {e.themes.length > 0 && (
+      <section class="detail-section">
+        <h2>Konular</h2>
+        <ul class="tags plain">{e.themes.map((t) => <li class="pill">{themeName(t)}</li>)}</ul>
+      </section>
+    )}
+    <section class="detail-section">
+      <h2>Kaynaklar</h2>
+      <ul class="sources">
+        {e.sources.map((s) => (
+          <li><a href={s.url} target="_blank" rel="noopener noreferrer">{SOURCE_NAMES[s.kind] ?? s.kind}</a><span class="seen">{formatDay(s.seen_at.slice(0, 10), today)} görüldü</span></li>
+        ))}
+      </ul>
+    </section>
+    <p class="fix">Bilgi yanlış ya da eksik mi? <a href={fixIssueUrl(e.name, absolute(`e/${e.id}/`))} target="_blank" rel="noopener">Düzeltme öner</a></p>
+  </div>
+</Base>

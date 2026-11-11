@@ -1,0 +1,5 @@
+{
+  "note": "Approximate USD value of one unit, used only to sort by prize. Display always shows the original text. Update by hand now and then.",
+  "as_of": "2026-11-12",
+  "usd_per_unit": { "USD": 1, "EUR": 1.08, "GBP": 1.27, "TRY": 0.024, "INR": 0.012 }
+}

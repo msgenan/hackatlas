@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import EventRow from "../components/EventRow.astro";
+import EmptyState from "../components/EmptyState.astro";
+import { site } from "../lib/site";
+import { href } from "../lib/url";
+
+const { ended } = site();
+const cols = ["Durum", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
+---
+<Base title="Arşiv" description="Sona ermiş hackathonlar, en yeniden en eskiye.">
+  <div class="wrap">
+    <div class="page-head"><h1 class="page-title">Arşiv</h1><p class="page-sub">Sona ermiş hackathonlar, en yeniden en eskiye.</p></div>
+    {ended.length === 0 ? (
+      <EmptyState title="Arşivde henüz kayıt yok." text="Biten hackathonlar burada toplanır." action={{ label: "Listeye dön", href: href() }} />
+    ) : (
+      <div class="list">
+        <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
+        <ul class="rows">{ended.map((v) => <EventRow v={v} archive />)}</ul>
+      </div>
+    )}
+  </div>
+</Base>

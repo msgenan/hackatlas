@@ -1,0 +1,22 @@
+---
+import Icon from "./Icon.astro";
+const opts = [
+  ["light", "Açık", "sun"],
+  ["dark", "Koyu", "moon"],
+  ["system", "Sistem", "monitor"],
+] as const;
+---
+<div class="pop-wrap theme-wrap">
+  <button type="button" class="btn btn-quiet theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Tema">
+    <span class="t-system"><Icon name="monitor" size={18} /></span>
+    <span class="t-light"><Icon name="sun" size={18} /></span>
+    <span class="t-dark"><Icon name="moon" size={18} /></span>
+  </button>
+  <div class="pop pop-end" data-align="end" id="theme-menu" role="group" aria-label="Tema seçimi">
+    {opts.map(([v, label, icon]) => (
+      <button type="button" class="pop-item" role="menuitemradio" aria-checked="false" data-theme-set={v}>
+        <Icon name={icon} /> {label} <span class="tick-mark"><Icon name="check" /></span>
+      </button>
+    ))}
+  </div>
+</div>

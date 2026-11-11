@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import EventRow from "../components/EventRow.astro";
+import EmptyState from "../components/EmptyState.astro";
+import { site } from "../lib/site";
+import { href } from "../lib/url";
+
+const { upcoming, ended } = site();
+const cols = ["Son başvuru", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
+---
+<Base title="Kaydedilenler" current="kaydedilenler" description="Kaydettiğin hackathonlar.">
+  <div class="wrap">
+    <div class="page-head"><h1 class="page-title">Kaydedilenler</h1><p class="page-sub" id="saved-sub" hidden></p></div>
+    <noscript><p class="noscript-note">Kaydedilenleri görmek için JavaScript gerekir. Kayıtlar yalnızca bu tarayıcıda tutulur.</p></noscript>
+    <div id="saved-empty" hidden>
+      <EmptyState title="Henüz kaydettiğin bir hackathon yok." text="Listede yer imi simgesine basarak kaydedebilirsin." action={{ label: "Listeye dön", href: href() }} />
+    </div>
+    <div id="saved-blocked" hidden>
+      <EmptyState title="Kaydetme kullanılamıyor." text="Tarayıcın yerel depolamaya izin vermiyor, bu yüzden hackathonları burada tutamıyoruz." action={{ label: "Listeye dön", href: href() }} />
+    </div>
+    <div class="list" id="saved-list" hidden>
+      <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
+      <ul class="rows">
+        {upcoming.map((v) => <EventRow v={v} />)}
+        {ended.map((v) => <EventRow v={v} archive />)}
+      </ul>
+    </div>
+    <script>
+      import "../scripts/saved-page";
+    </script>
+  </div>
+</Base>

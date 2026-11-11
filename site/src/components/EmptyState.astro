@@ -1,0 +1,10 @@
+---
+import { ISSUE_NEW } from "../lib/format";
+interface Props { title: string; text: string; action?: { label: string; href: string; external?: boolean } | null }
+const { title, text, action = { label: "Hackathon ekle", href: ISSUE_NEW, external: true } } = Astro.props;
+---
+<div class="empty">
+  <h2>{title}</h2>
+  <p>{text}</p>
+  {action && <a class="btn" href={action.href} target={action.external ? "_blank" : undefined} rel={action.external ? "noopener" : undefined}>{action.label}</a>}
+</div>

@@ -1,0 +1,14 @@
+---
+import Icon from "./Icon.astro";
+interface Props { id: string; name: string; full?: boolean }
+const { id, name, full = false } = Astro.props;
+---
+{full ? (
+  <button type="button" class="btn save-btn save-full" data-save={id} aria-pressed="false">
+    <Icon name="bookmark" /><span class="off">Kaydet</span><span class="on">Kaydedildi</span>
+  </button>
+) : (
+  <button type="button" class="save save-btn" data-save={id} aria-pressed="false" aria-label={`Kaydet: ${name}`} title="Kaydet">
+    <Icon name="bookmark" size={18} />
+  </button>
+)}

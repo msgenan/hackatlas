@@ -1,0 +1,8 @@
+---
+import { countdownInner, type Status } from "../lib/countdown";
+import type { HackEvent } from "../lib/types";
+interface Props { status: Status; e?: HackEvent; refresh?: boolean }
+const { status, e, refresh = true } = Astro.props;
+const attrs = refresh && e ? { "data-cd": "", "data-deadline": e.deadline ?? "", "data-starts": e.starts_on ?? "", "data-ends": e.ends_on ?? "" } : {};
+---
+<span class="cd" data-tone={status.tone} {...attrs} set:html={countdownInner(status)} />

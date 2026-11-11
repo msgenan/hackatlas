@@ -1,0 +1,37 @@
+---
+import { href } from "../lib/url";
+import { NA, themeName } from "../lib/format";
+import type { ViewEvent } from "../lib/events";
+import CountdownChip from "./CountdownChip.astro";
+import SaveButton from "./SaveButton.astro";
+interface Props { v: ViewEvent; archive?: boolean }
+const { v, archive = false } = Astro.props;
+const { e } = v;
+const tags = e.themes.slice(0, 3);
+const facts: [string, string | null, string][] = [
+  ["Tarih", v.dates, ""],
+  ["Yer", v.place, ""],
+  ["Ödül", v.prize, "clamp"],
+  ["Takım", v.team, ""],
+];
+---
+<li class="row" data-id={e.id}>
+  <div class="row-cd">
+    <CountdownChip status={v.status} e={e} refresh={!archive} />
+    {v.deadlineDate && !archive && <span class="row-date">{v.deadlineDate}</span>}
+  </div>
+  <div class="row-main">
+    <h3 class="name"><a href={href(`e/${e.id}/`)}>{e.name}</a></h3>
+    {e.organizer ? <p class="org" title={e.organizer}>{e.organizer}</p> : <p class="org na">Organizatör belirtilmemiş</p>}
+    {tags.length > 0 && <ul class="tags" aria-label="Konular">{tags.map((t) => <li class="pill">{themeName(t)}</li>)}</ul>}
+  </div>
+  <dl class="facts">
+    {facts.map(([label, val, cls]) => (
+      <div>
+        <dt>{label}</dt>
+        <dd class:list={[cls, { na: !val }]} title={val && cls ? val : undefined}>{val ?? NA}</dd>
+      </div>
+    ))}
+  </dl>
+  <div class="row-save"><SaveButton id={e.id} name={e.name} /></div>
+</li>

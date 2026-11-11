@@ -1,0 +1,51 @@
+---
+import Icon from "./Icon.astro";
+import { THEMES } from "../lib/types";
+import { FORMAT_NAMES, themeName } from "../lib/format";
+interface Props { sort?: boolean }
+const { sort = true } = Astro.props;
+const regions = [["katilabilir", "Katılabileceklerim"], ["tr", "Sadece Türkiye"], ["tumu", "Tümü"]] as const;
+const sorts = [["son-basvuru", "Son başvuru"], ["odul", "Ödül"], ["tarih", "Etkinlik tarihi"], ["yeni", "Yeni eklenen"]] as const;
+---
+<form class="filters" role="search" aria-label="Filtreler" id="filters" onsubmit="return false">
+  <div class="filter-row">
+    <label class="search">
+      <span class="sr-only">Ara</span>
+      <Icon name="search" />
+      <input class="field" type="search" name="q" placeholder="Ara: ad, organizatör, şehir" autocomplete="off" />
+    </label>
+    <fieldset class="seg">
+      <legend class="sr-only">Katılım</legend>
+      {regions.map(([v, label]) => (
+        <label><input type="radio" name="bolge" value={v} checked={v === "katilabilir"} /><span>{label}</span></label>
+      ))}
+    </fieldset>
+    <div class="pop-wrap">
+      <button type="button" class="btn pop-btn" aria-expanded="false" aria-controls="pop-format" aria-haspopup="true">Format <span class="count" hidden></span><Icon name="chevron-down" /></button>
+      <div class="pop" id="pop-format" role="group" aria-label="Format">
+        {(Object.keys(FORMAT_NAMES) as (keyof typeof FORMAT_NAMES)[]).map((f) => (
+          <label class="opt"><input type="checkbox" name="format" value={f} />{FORMAT_NAMES[f]}</label>
+        ))}
+      </div>
+    </div>
+    <div class="pop-wrap">
+      <button type="button" class="btn pop-btn" aria-expanded="false" aria-controls="pop-konu" aria-haspopup="true">Konu <span class="count" hidden></span><Icon name="chevron-down" /></button>
+      <div class="pop" id="pop-konu" role="group" aria-label="Konu">
+        {THEMES.map((t) => <label class="opt"><input type="checkbox" name="konu" value={t} />{themeName(t)}</label>)}
+      </div>
+    </div>
+    <label class="check-pill"><input type="checkbox" name="odul" value="1" /><span>Ödüllü</span></label>
+    {sort && (
+      <label>
+        <span class="sr-only">Sırala</span>
+        <select class="field" name="sirala" aria-label="Sırala">
+          {sorts.map(([v, l]) => <option value={v}>Sırala: {l}</option>)}
+        </select>
+      </label>
+    )}
+  </div>
+  <div class="filter-meta">
+    <span id="result-count" aria-live="polite"></span>
+    <button type="button" class="link-btn" data-clear hidden>Filtreleri temizle</button>
+  </div>
+</form>

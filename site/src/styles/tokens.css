@@ -1,0 +1,125 @@
+/* hackatlas design tokens. The only place raw colors, sizes and durations live. See DESIGN.md. */
+:root {
+  color-scheme: light;
+  /* Ink neutral ramp (light) */
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --raised: #eceff4;
+  --sunken: #e6eaf0;
+  --line: rgb(17 24 39 / 0.09);
+  --line-strong: rgb(17 24 39 / 0.16);
+  --text: #111827;
+  --text-2: #4b5565;
+  --text-3: #66708a; /* meta only, ~4.6:1 on --surface */
+
+  /* One accent: ember. Marks time-critical facts and the primary action only. */
+  --accent: #c2410c;          /* text/icon on light, 5.2:1 on white */
+  --accent-fill: #ea580c;     /* fills, rail ticks */
+  --accent-soft: rgb(234 88 12 / 0.1);
+  --on-accent: #ffffff;
+
+  /* Semantic */
+  --danger: #b91c1c;
+  --danger-soft: rgb(220 38 38 / 0.09);
+  --ok: #15803d;
+  --ok-soft: rgb(22 163 74 / 0.1);
+
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.05);
+  --shadow-float: 0 8px 24px rgb(15 23 42 / 0.08), 0 1px 2px rgb(15 23 42 / 0.05);
+  --focus: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent-fill);
+
+  /* Type */
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "IBM Plex Sans", system-ui, sans-serif;
+  /* Scale ratio ~1.2, 8 steps */
+  --fs-12: 0.75rem;   --lh-12: 1rem;
+  --fs-13: 0.8125rem; --lh-13: 1.25rem;
+  --fs-15: 0.9375rem; --lh-15: 1.5rem;   /* body */
+  --fs-17: 1.0625rem; --lh-17: 1.625rem;
+  --fs-20: 1.25rem;   --lh-20: 1.75rem;
+  --fs-24: 1.5rem;    --lh-24: 2rem;
+  --fs-30: 1.875rem;  --lh-30: 2.25rem;
+  --fs-44: 2.75rem;   --lh-44: 3rem;
+
+  /* Spacing, 4px grid */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px;
+  --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px;
+
+  /* Radius: tag < control < panel */
+  --r-tag: 6px;
+  --r-control: 10px;
+  --r-panel: 16px;
+  --r-pill: 999px;
+
+  /* Layout */
+  --page-max: 1200px;
+  --page-pad: var(--s-6);
+  --header-h: 60px;
+  --row-min: 72px;
+  --measure: 68ch;
+  --touch: 2.75rem;   /* minimum touch target (44px) */
+  --rail-h: 6rem;     /* deadline rail height (~96px) */
+
+  /* Motion: one curve */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 140ms;
+  --t-menu: 200ms;
+  --t-enter: 380ms;
+  --stagger: 40ms;    /* rail tick stagger on first load */
+}
+
+@media (max-width: 640px) {
+  :root { --page-pad: var(--s-4); }
+}
+
+/* Dark: follows the system unless the viewer chose light; explicit dark always wins. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0b0d14;
+    --surface: #11141c;
+    --raised: #1a1e28;
+    --sunken: #07080d;
+    --line: rgb(238 240 245 / 0.08);
+    --line-strong: rgb(238 240 245 / 0.15);
+    --text: #eef0f5;
+    --text-2: #a3a9b8;
+    --text-3: #8b93a7;
+    --accent: #ff8a4c;
+    --accent-fill: #f97316;
+    --accent-soft: rgb(249 115 22 / 0.14);
+    --on-accent: #1a0d05;
+    --danger: #f87171;
+    --danger-soft: rgb(229 72 77 / 0.16);
+    --ok: #4cc38a;
+    --ok-soft: rgb(76 195 138 / 0.14);
+    --shadow-sm: none;
+    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.45);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0d14;
+  --surface: #11141c;
+  --raised: #1a1e28;
+  --sunken: #07080d;
+  --line: rgb(238 240 245 / 0.08);
+  --line-strong: rgb(238 240 245 / 0.15);
+  --text: #eef0f5;
+  --text-2: #a3a9b8;
+  --text-3: #8b93a7;
+  --accent: #ff8a4c;
+  --accent-fill: #f97316;
+  --accent-soft: rgb(249 115 22 / 0.14);
+  --on-accent: #1a0d05;
+  --danger: #f87171;
+  --danger-soft: rgb(229 72 77 / 0.16);
+  --ok: #4cc38a;
+  --ok-soft: rgb(76 195 138 / 0.14);
+  --shadow-sm: none;
+  --shadow-float: 0 12px 32px rgb(0 0 0 / 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-menu: 0ms; --t-enter: 0ms; --stagger: 0ms; }
+}

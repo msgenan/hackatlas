@@ -1,0 +1,74 @@
+---
+import Base from "../layouts/Base.astro";
+import Filters from "../components/Filters.astro";
+import Icon from "../components/Icon.astro";
+import EmptyState from "../components/EmptyState.astro";
+import { site } from "../lib/site";
+import { href } from "../lib/url";
+import { WEEKDAYS_SHORT, formatWeekdayDay } from "../lib/dates";
+
+const { today, all } = site();
+interface Entry { id: string; name: string; kind: "deadline" | "event" }
+const byDay = new Map<string, Entry[]>();
+const add = (d: string | null, e: Entry) => {
+  if (d && d >= today) byDay.set(d, [...(byDay.get(d) ?? []), e]);
+};
+for (const v of all) {
+  add(v.e.deadline, { id: v.e.id, name: v.e.name, kind: "deadline" });
+  add(v.e.starts_on ?? v.e.ends_on, { id: v.e.id, name: v.e.name, kind: "event" });
+}
+const days = [...byDay.keys()].sort();
+const metas = all.map((v) => v.meta);
+---
+<Base title="Takvim" current="takvim" description="Hackathon son başvuru ve etkinlik tarihleri, ay görünümünde.">
+  <div class="wrap">
+    <div class="page-head"><h1 class="page-title">Takvim</h1><p class="page-sub">Turuncu nokta son başvuru günüdür, gri çubuk etkinlik günüdür.</p></div>
+    {all.length === 0 ? (
+      <EmptyState title="Takvimde gösterilecek hackathon yok." text="Yayınlanmış kayıt olduğunda tarihler burada görünür." />
+    ) : (
+      <>
+        <Filters sort={false} />
+        <div class="cal-bar">
+          <div class="cal-nav">
+            <button type="button" class="btn btn-quiet" id="cal-prev" aria-label="Önceki ay"><Icon name="chevron-left" size={18} /></button>
+            <button type="button" class="btn btn-quiet" id="cal-next" aria-label="Sonraki ay"><Icon name="chevron-right" size={18} /></button>
+          </div>
+          <h2 id="cal-title" aria-live="polite"></h2>
+          <button type="button" class="btn" id="cal-today">Bugün</button>
+        </div>
+        <div class="cal-grid" id="cal-grid">
+          <div class="cal-head" aria-hidden="true">{WEEKDAYS_SHORT.map((d) => <span>{d}</span>)}</div>
+          <div id="cal-body"></div>
+        </div>
+        <section class="cal-agenda" id="cal-agenda" aria-label="Gün gün liste">
+          {days.map((d) => (
+            <div class="agenda-day">
+              <h3>{formatWeekdayDay(d, today)}</h3>
+              <ul>
+                {byDay.get(d)!.map((en) => (
+                  <li data-id={en.id}>
+                    <a href={href(`e/${en.id}/`)}>
+                      <span class="akind">{en.kind === "deadline" ? <><i class="dot"></i>Son başvuru</> : "Başlıyor"}</span>
+                      <span class="aname">{en.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {days.length === 0 && <p class="cal-note">Yaklaşan tarih yok.</p>}
+        </section>
+        <p class="cal-note" id="cal-none" hidden>Bu filtrelerle eşleşen hackathon yok. <button type="button" class="link-btn" data-clear>Filtreleri temizle</button></p>
+        <dialog class="day-panel" id="day-panel" aria-labelledby="day-title">
+          <h3 id="day-title"></h3>
+          <ul id="day-list"></ul>
+          <form method="dialog"><button class="btn">Kapat</button></form>
+        </dialog>
+        <script type="application/json" id="hackatlas-data" set:html={JSON.stringify(metas).replace(/</g, "\\u003c")} />
+        <script>
+          import "../scripts/calendar";
+        </script>
+      </>
+    )}
+  </div>
+</Base>
