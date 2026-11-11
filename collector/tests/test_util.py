@@ -120,3 +120,20 @@ def test_http_get_rate_limits_per_source(monkeypatch):
         http_get(client, "https://example.com/z", source="s1")
         http_get(client, "https://example.com/z", source="s2")
     assert len(sleeps) == 1 and 0 < sleeps[0] <= 1.0
+
+
+def test_event_and_source_urls_must_be_http():
+    from datetime import UTC, datetime
+
+    import pytest
+    from pydantic import ValidationError
+
+    from hackatlas.model import Event, SourceRef
+
+    now = datetime(2026, 11, 12, tzinfo=UTC)
+    ok = SourceRef(kind="web", url="https://a.example/x", seen_at=now)
+    for bad in ("javascript:alert(1)", "data:text/html,x", "/relative", "https://a.example/<script>"):
+        with pytest.raises(ValidationError):
+            Event(id="x-2026", name="X", url=bad, sources=[ok], added_at=now, updated_at=now)
+        with pytest.raises(ValidationError):
+            SourceRef(kind="web", url=bad, seen_at=now)

@@ -22,6 +22,16 @@ function readJson(file: string, explicit?: string): unknown {
 }
 
 const isStr = (v: unknown): v is string => typeof v === "string" && v.length > 0;
+/** Only absolute http(s) URLs may become links; anything else (javascript:, data:, relative) is refused. */
+export const isHttpUrl = (v: unknown): v is string => {
+  if (typeof v !== "string") return false;
+  try {
+    const u = new URL(v);
+    return u.protocol === "https:" || u.protocol === "http:";
+  } catch {
+    return false;
+  }
+};
 const isNullableStr = (v: unknown) => v === null || v === undefined || typeof v === "string";
 
 /** Light shape check with a clear message; the collector does the strict validation. */
@@ -40,11 +50,12 @@ export function validateEvents(raw: unknown, source = "events file"): HackEvent[
     if (seen.has(e.id)) fail(`${at}: duplicate id`);
     seen.add(e.id);
     if (!isStr(e.name)) fail(`${at}: name is required`);
-    if (!isStr(e.url)) fail(`${at}: url is required`);
+    if (!isHttpUrl(e.url)) fail(`${at}: url must be an absolute http(s) URL`);
     for (const k of ["starts_on", "ends_on", "deadline"] as const) {
       if (e[k] != null && !isDateOnly(e[k])) fail(`${at}: ${k} must be YYYY-MM-DD`);
     }
     if (!Array.isArray(e.sources) || e.sources.length === 0) fail(`${at}: sources needs at least one entry`);
+    if (!e.sources.every((s) => isHttpUrl(s?.url))) fail(`${at}: every source url must be an absolute http(s) URL`);
     if (!isNullableStr(e.organizer) || !isNullableStr(e.summary) || !isNullableStr(e.eligibility)) fail(`${at}: text fields must be strings`);
     if (!Array.isArray(e.themes ?? [])) fail(`${at}: themes must be a list`);
     if (!isStr(e.added_at) || !isStr(e.updated_at)) fail(`${at}: added_at and updated_at are required`);

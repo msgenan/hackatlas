@@ -58,7 +58,7 @@ function render(): void {
   if (key === today.slice(0, 7)) q.delete("ay");
   else q.set("ay", key);
   const qs = q.toString();
-  history.replaceState(null, "", location.pathname + (qs ? `?${qs}` : ""));
+  history.replaceState(null, "", location.pathname + (qs ? `?${qs}` : "") + location.hash);
 }
 
 const step = (n: number) => {

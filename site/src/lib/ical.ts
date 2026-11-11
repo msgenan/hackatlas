@@ -5,7 +5,11 @@ const CRLF = "\r\n";
 
 /** RFC 5545 TEXT escaping. */
 export function escapeText(s: string): string {
-  return s.replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+  return s
+    .replace(/\\/g, "\\\\")
+    .replace(/;/g, "\\;")
+    .replace(/,/g, "\\,")
+    .replace(/\r\n|\r|\n/g, "\\n");
 }
 
 /** Folds a content line at 75 octets (UTF-8), never splitting a character; continuation lines start with a space. */

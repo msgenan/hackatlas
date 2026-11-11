@@ -6,6 +6,7 @@ Field order here is the order the site shows them in.
 
 from __future__ import annotations
 
+import re
 from datetime import date, datetime
 from typing import Literal
 
@@ -57,10 +58,23 @@ class Team(_Base):
     max: int | None = None
 
 
+def _http_url(v: str) -> str:
+    """Only absolute http(s) URLs: they end up as links on a public site."""
+    v = v.strip()
+    if not re.fullmatch(r"https?://[^\s<>\"']+", v, flags=re.IGNORECASE):
+        raise ValueError("must be an absolute http(s) URL")
+    return v
+
+
 class SourceRef(_Base):
     kind: SourceKind
     url: str
     seen_at: datetime
+
+    @field_validator("url")
+    @classmethod
+    def _url(cls, v: str) -> str:
+        return _http_url(v)
 
 
 class Event(_Base):
@@ -82,6 +96,11 @@ class Event(_Base):
     confidence: float | None = Field(None, ge=0, le=1, description="Only for LLM-extracted records")
     added_at: datetime
     updated_at: datetime
+
+    @field_validator("url")
+    @classmethod
+    def _url(cls, v: str) -> str:
+        return _http_url(v)
 
     @field_validator("themes")
     @classmethod

@@ -103,7 +103,9 @@ def test_pr_body_escapes_markdown_and_rejects_odd_urls():
     now = datetime(2026, 11, 12, tzinfo=UTC)
     ev = Event(
         id="x-2026", name="Evil [click](https://evil.example) **bold**\n| row", url="https://ok.example",
-        sources=[SourceRef(kind="web", url="https://a.example/x)\n[pwn](https://evil.example", seen_at=now)],
+        # model_construct skips validation: the model already refuses this URL, the PR body is a second layer
+        sources=[SourceRef.model_construct(kind="web", url="https://a.example/x)\n[pwn](https://evil.example",
+                                           seen_at=now)],
         added_at=now, updated_at=now,
     )
     body = pr_body([ev])

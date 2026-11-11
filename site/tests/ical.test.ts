@@ -10,7 +10,9 @@ const ev = (over: Partial<HackEvent> = {}): HackEvent => ({
 
 describe("ical", () => {
   it("escapes text", () => {
-    expect(escapeText("a,b;c\\d\ne")).toBe("a\\,b\;c\\\\d\\ne");
+    expect(escapeText("a,b;c\\d\ne")).toBe("a\\,b\\;c\\\\d\\ne");
+    // a bare carriage return must not start a new iCalendar property
+    expect(escapeText("x\rDESCRIPTION:evil")).toBe("x\\nDESCRIPTION:evil");
   });
   it("folds at 75 octets without splitting characters", () => {
     const line = "SUMMARY:" + "ş".repeat(60);
@@ -30,7 +32,7 @@ describe("ical", () => {
     expect(text).toContain("UID:demo-2026@hackatlas");
     expect(text).toContain("DTSTART;VALUE=DATE:20261212\r\nDTEND;VALUE=DATE:20261214");
     expect(text).toContain("DTSTART;VALUE=DATE:20261114\r\nDTEND;VALUE=DATE:20261115");
-    expect(text).toContain("SUMMARY:Son başvuru: Demo\\, Hack\; Weekend");
+    expect(text).toContain("SUMMARY:Son başvuru: Demo\\, Hack\\; Weekend");
     expect(text).toContain("DTSTAMP:20261112T090000Z");
   });
   it("handles single-date and dateless events", () => {
