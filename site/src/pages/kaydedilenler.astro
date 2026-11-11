@@ -6,7 +6,6 @@ import { site } from "../lib/site";
 import { href } from "../lib/url";
 
 const { upcoming, ended } = site();
-const cols = ["Son başvuru", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
 ---
 <Base title="Kaydedilenler" current="kaydedilenler" description="Kaydettiğin hackathonlar.">
   <div class="wrap">
@@ -19,7 +18,6 @@ const cols = ["Son başvuru", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", "
       <EmptyState title="Kaydetme kullanılamıyor." text="Tarayıcın yerel depolamaya izin vermiyor, bu yüzden hackathonları burada tutamıyoruz." action={{ label: "Listeye dön", href: href() }} />
     </div>
     <div class="list" id="saved-list" hidden>
-      <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
       <ul class="rows">
         {upcoming.map((v) => <EventRow v={v} />)}
         {ended.map((v) => <EventRow v={v} archive />)}

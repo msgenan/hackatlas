@@ -5,7 +5,7 @@ import Icon from "../components/Icon.astro";
 import EmptyState from "../components/EmptyState.astro";
 import { site } from "../lib/site";
 import { href } from "../lib/url";
-import { WEEKDAYS_SHORT, formatWeekdayDay } from "../lib/dates";
+import { WEEKDAYS_SHORT, diffDays, formatWeekdayDay } from "../lib/dates";
 
 const { today, all } = site();
 interface Entry { id: string; name: string; kind: "deadline" | "event" }
@@ -22,7 +22,7 @@ const metas = all.map((v) => v.meta);
 ---
 <Base title="Takvim" current="takvim" description="Hackathon son başvuru ve etkinlik tarihleri, ay görünümünde.">
   <div class="wrap">
-    <div class="page-head"><h1 class="page-title">Takvim</h1><p class="page-sub">Turuncu nokta son başvuru günüdür, gri çubuk etkinlik günüdür.</p></div>
+    <div class="page-head"><h1 class="page-title">Takvim</h1><p class="page-sub">Amber etiket son başvuru günüdür, kırmızı etiket son 3 gündür, gri çubuk etkinlik günüdür.</p></div>
     {all.length === 0 ? (
       <EmptyState title="Takvimde gösterilecek hackathon yok." text="Yayınlanmış kayıt olduğunda tarihler burada görünür." />
     ) : (
@@ -46,9 +46,9 @@ const metas = all.map((v) => v.meta);
               <h3>{formatWeekdayDay(d, today)}</h3>
               <ul>
                 {byDay.get(d)!.map((en) => (
-                  <li data-id={en.id}>
+                  <li data-id={en.id} data-kind={en.kind}>
                     <a href={href(`e/${en.id}/`)}>
-                      <span class="akind">{en.kind === "deadline" ? <><i class="dot"></i>Son başvuru</> : "Başlıyor"}</span>
+                      <span class="akind" data-kind={en.kind} data-tone={en.kind === "deadline" && diffDays(d, today) <= 3 ? "danger" : undefined}>{en.kind === "deadline" ? "Son başvuru" : "Başlıyor"}</span>
                       <span class="aname">{en.name}</span>
                     </a>
                   </li>

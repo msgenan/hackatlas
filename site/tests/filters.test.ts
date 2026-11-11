@@ -24,7 +24,7 @@ describe("url filters", () => {
 describe("matching", () => {
   const m: EventMeta = {
     id: "x", name: "Örnek Yapay Zekâ Hackathonu", deadline: null, starts: null, ends: null, country: "TR", format: "online",
-    themes: ["ai"], hasPrize: true, prizeUsd: 1, added: "", search: fold("Örnek Yapay Zekâ Hackathonu İstanbul Türkiye"),
+    themes: ["ai"], hasPrize: true, prizeUsd: 1, added: "", search: fold("Örnek Yapay Zekâ Hackathonu İstanbul Türkiye"), city: "İstanbul", prizeAmount: 1, prizeCurrency: "USD",
   };
   it("folds Turkish letters in search", () => {
     expect(fold("İSTANBUL ışık")).toBe("istanbul isik");

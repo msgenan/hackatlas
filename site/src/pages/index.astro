@@ -2,39 +2,45 @@
 import Base from "../layouts/Base.astro";
 import EventRow from "../components/EventRow.astro";
 import EmptyState from "../components/EmptyState.astro";
-import DeadlineRail from "../components/DeadlineRail.astro";
+import Board from "../components/Board.astro";
 import Filters from "../components/Filters.astro";
 import Icon from "../components/Icon.astro";
 import { site, defaultVisible } from "../lib/site";
 import { GROUP_LABELS, GROUP_ORDER, type Group } from "../lib/countdown";
 import { formatDay } from "../lib/dates";
+import { href } from "../lib/url";
 
 const { today, upcoming, updated } = site();
 const first = defaultVisible(upcoming);
 const byGroup = (g: Group) => upcoming.filter((v) => v.group === g);
 const cols = ["Son başvuru", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
 const metas = upcoming.map((v) => v.meta);
+// Build-time instant for the server-rendered board: noon in Turkey on the build's "today".
+const nowMs = Date.parse(`${today}T12:00:00+03:00`);
 ---
 <Base current="liste">
   <div class="wrap">
-    <div class="page-head">
-      {upcoming.length === 0 ? (
-        <h1 class="page-title">Hackathonlar, tek düzende.</h1>
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="hero-title" data-hero-title>
+        <span class="line"><span>Hangi hackathona</span></span>
+        <span class="line"><span>yetişirsin?</span></span>
+      </h1>
+      {upcoming.length > 0 ? (
+        <p class="hero-sub">
+          Katılabileceğin <b id="intro-count">{first.length}</b> hackathon, son başvuruya göre sıralı.
+          Türkiye'den ve dünyadan toplanır, her gün güncellenir{updated && <>; son güncelleme {formatDay(updated, today)}</>}.
+        </p>
       ) : (
-        <div class="intro">
-          <h1 class="page-title"><span id="intro-count" class="num">{first.length}</span> hackathon, tek düzende.</h1>
-          {updated && <p class="updated">Son güncelleme {formatDay(updated, today)}</p>}
-        </div>
+        <p class="hero-sub">Türkiye'den ve dünyadan hackathonlar, son başvuruya göre sıralı. İlk kayıtlar gözden geçirildikten sonra burada görünür.</p>
       )}
-    </div>
-
+    </section>
     {upcoming.length === 0 ? (
       <EmptyState title="Henüz yayınlanmış hackathon yok." text="Yeni kayıtlar insanlar tarafından gözden geçirildikten sonra burada görünür. Bildiğin bir hackathon varsa ekleyebilirsin." />
     ) : (
       <>
-        <DeadlineRail items={first.map((v) => ({ id: v.e.id, name: v.e.name, deadline: v.e.deadline }))} today={today} />
+        <Board metas={first.map((v) => v.meta)} nowMs={nowMs} />
+        <div class="list" id="liste">
         <Filters />
-        <div class="list">
           {GROUP_ORDER.map((g) => {
             const items = byGroup(g);
             const header = (
@@ -64,6 +70,7 @@ const metas = upcoming.map((v) => v.meta);
           </div>
         </div>
         <script type="application/json" id="hackatlas-data" set:html={JSON.stringify(metas).replace(/</g, "\\u003c")} />
+        <script is:inline defer src={href("vendor/gsap-3.14.2.min.js")}></script>
         <script>
           import "../scripts/list";
         </script>

@@ -2,12 +2,13 @@ import type { EventMeta } from "../lib/types";
 import { comparator, groupFor, isEnded, matches } from "../lib/filters";
 import { GROUP_ORDER, type Group } from "../lib/countdown";
 import { initFilters } from "./filter-form";
-import { initRail } from "./rail";
+import { initBoard } from "./board";
 import { clientToday, readData } from "./today";
 
 const metas = readData<EventMeta[]>() ?? [];
 const today = clientToday();
-const rail = initRail(today);
+const board = initBoard(import.meta.env.BASE_URL.replace(/\/?$/, "/"));
+let firstRender = true;
 
 const rowEl = new Map<string, HTMLElement>();
 document.querySelectorAll<HTMLElement>(".row[data-id]").forEach((r) => rowEl.set(r.dataset.id!, r));
@@ -65,7 +66,16 @@ function render(f = filters.get()): void {
   if (noneFound) noneFound.hidden = visible.length > 0;
   filters.setCount(live.length, visible.length);
   if (intro) intro.textContent = String(visible.length);
-  rail.render(visible.map((m) => ({ id: m.id, name: m.name, deadline: m.deadline })));
+  if (firstRender) {
+    firstRender = false;
+    board.intro(visible);
+  } else board.render(visible);
 }
 
 render();
+
+import("./motion").then(async (m) => {
+  if (!(await m.ready())) return;
+  m.heroIntro();
+  m.revealPasses();
+});

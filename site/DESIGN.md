@@ -1,5 +1,37 @@
-# hackatlas design
+# hackatlas design (v2: "kalkış panosu")
 
+v1 (calm aligned table) was rejected by the owner as too plain. v2 direction, owner gave full freedom:
+
+## Thesis
+Hackathons are departures; the application deadline is the gate closing. The page is a terminal hall
+(cool concrete by day, a dark night hall by night). Two signature objects:
+1. **The departures board** (`components/Board.astro`, `scripts/board.ts`, `styles/board.css`): a dark split-flap
+   board, dark in both themes, amber/red/dim glyphs in Big Shoulders Display, live seconds countdown, flaps
+   flip in on load and when filters change. It is real data, not decoration.
+2. **The boarding pass** (`components/EventRow.astro`, `.pass` in `styles/list.css`): every event is a pass with
+   the same anatomy, so every fact sits in the same place: main part (name, organizer, "route" = place with a
+   format icon, then a fixed 2x2 field grid Tarih / Ödül / Takım / Konu with small uppercase labels and dashed
+   rules) and a tear-off stub (perforated dashed edge with notches, urgency-tinted: danger <= 3 days, amber <= 7)
+   holding the big countdown number, the deadline date, a generated barcode (`lib/barcode.ts`) and save.
+Uppercase is allowed only where it is the material: board glyphs and pass field labels. Everywhere else sentence case.
+
+## Type
+- Display: Big Shoulders Display Variable (700-800): hero, page titles, group headings, big numbers, board.
+- UI/body: Geist Variable. Mono (Geist Mono) only for codes/ids if ever needed, not for labels.
+
+## Color
+Tokens in `styles/tokens.css` (names unchanged from v1, values new, plus `--board*`, `--flap*`, `--r-pass`,
+`--shadow-pass*`, `--danger-fill`). One accent: board amber (`--accent` text, `--accent-fill` fills with
+`--on-accent` text). Light: cool concrete page `--bg`, paper passes `--surface`. Dark: night hall, dark passes.
+
+## Motion
+One orchestrated moment on the list page (GSAP, pinned classic script `public/vendor/gsap-3.14.2.min.js`,
+`scripts/motion.ts`): hero lines rise, board settles while its flaps land, passes rise in batches on scroll.
+Cross-document view transitions: a pass on the list and the pass on its detail page share
+`view-transition-name: pass-<id>`, so the pass grows into the detail page (Chromium/Safari; others just navigate).
+Hover: passes lift 2px. Everything honors reduced motion. No smooth-scroll library: native scroll is calmer for a tool.
+
+## v1 notes still valid (subject, field order, wording, filters, feeds, states)
 ## Subject and job
 A list of hackathons for Turkish student developer teams. The one job: scan many events fast and answer
 "can we still apply, when, where, and is it worth it?" The material of the product is time, so time is the

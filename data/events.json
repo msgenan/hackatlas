@@ -1,3 +1,4699 @@
 {
-  "events": []
+  "events": [
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "name": "PayPal AI Hackathon",
+      "organizer": "PayPal",
+      "url": "https://paypalaihackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-01",
+      "ends_on": "2026-11-12",
+      "deadline": "2026-11-12",
+      "prize": {
+        "amount": 67500.0,
+        "currency": "USD",
+        "text": "$67,500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://paypalaihackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "build-demo-and-take-home-a-working-ai-support-bot-2026",
+      "name": "Build, Demo, and Take Home a Working AI Support Bot",
+      "organizer": "egain",
+      "url": "https://build-a-working-ai-support-bot.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "eGain Corp."
+      },
+      "starts_on": "2026-11-06",
+      "ends_on": "2026-11-12",
+      "deadline": "2026-11-12",
+      "prize": {
+        "amount": 750.0,
+        "currency": "USD",
+        "text": "$750"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://build-a-working-ai-support-bot.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "devnexus-2-0-2026",
+      "name": "DevNexus 2.0",
+      "organizer": null,
+      "url": "https://devnexus2.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Kolkata",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2026-11-28",
+      "ends_on": "2026-11-29",
+      "deadline": "2026-11-13",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://devnexus2.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "civic-hack-2026",
+      "name": "CIVIC Hack 2026",
+      "organizer": "Future Cities Institute",
+      "url": "https://civic-hack-2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": {
+        "amount": 1500.0,
+        "currency": "CAD",
+        "text": "$CAD 1,500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://civic-hack-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ibm-qiskit-hackathon-bangladesh-2026",
+      "name": "IBM Qiskit Hackathon - Bangladesh",
+      "organizer": "DevChangeMakers Community",
+      "url": "https://ibm-qiskit-hackathon.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "BRAC University"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ibm-qiskit-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "system-public-challenge-2026",
+      "name": "System Public Challenge",
+      "organizer": "System, Inc.",
+      "url": "https://system-public-challenge.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "System HQ"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": {
+        "amount": 7500.0,
+        "currency": "USD",
+        "text": "$7,500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "health",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://system-public-challenge.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "dsh-hacks-v2-100k-in-prizes-2026",
+      "name": "DSH Hacks V2 ($100k+ in prizes!)",
+      "organizer": "STEMise",
+      "url": "https://dsh-hacks-v2.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-06-24",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://dsh-hacks-v2.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "mathematics-for-systems-security-2026",
+      "name": "Mathematics for systems security",
+      "organizer": "Software Engineering Club (DEV)",
+      "url": "https://mathematics-systems-security.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "security",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://mathematics-systems-security.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "stemergent-hacks-2026",
+      "name": "STEMergent Hacks 2026",
+      "organizer": "STEMergent",
+      "url": "https://stemergent-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-31",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://stemergent-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "icehacks-2026",
+      "name": "IceHacks",
+      "organizer": "CodeStarters",
+      "url": "https://icehacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-08",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 17150.0,
+        "currency": "USD",
+        "text": "$17,150"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://icehacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "datajam-2026",
+      "name": "DataJam 2026",
+      "organizer": "SFU Data Science Student Society",
+      "url": "https://datajam-2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-09",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://datajam-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "norcal-hacks-27-2026",
+      "name": "NorCal Hacks 27",
+      "organizer": "Lynbrook Engineering Club",
+      "url": "https://norcal-hacks-27.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://norcal-hacks-27.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-a-ton-with-friends-2026",
+      "name": "Hack-a-ton with Friends",
+      "organizer": "naitsa",
+      "url": "https://hack-a-ton-with-friends.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "DOW Theatre"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hack-a-ton-with-friends.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "stupid-ideas-hackathon-ottawa-f26-2026",
+      "name": "Stupid Ideas Hackathon (Ottawa F26)",
+      "organizer": "stupid ideas hackathon",
+      "url": "https://stupideas-ottawa-f26.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Bayview Yards"
+      },
+      "starts_on": "2026-11-15",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 1252.0,
+        "currency": "CAD",
+        "text": "$CAD 1,252"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://stupideas-ottawa-f26.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "genarrative-clash-2026",
+      "name": "GeNarrative Clash",
+      "organizer": null,
+      "url": "https://genarrative-clash.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Kolkata",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://genarrative-clash.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ugreen-hackathon-2026-on-ai-nas-2026",
+      "name": "UGREEN Hackathon 2026 on AI NAS",
+      "organizer": "UGREEN",
+      "url": "https://ugreenhackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-11-16",
+      "deadline": "2026-11-16",
+      "prize": {
+        "amount": 46000.0,
+        "currency": "USD",
+        "text": "$46,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ugreenhackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "green-shift-hacks-2026",
+      "name": "Green Shift Hacks",
+      "organizer": "HackathonForEveryone",
+      "url": "https://green-shift-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-18",
+      "ends_on": "2026-11-17",
+      "deadline": "2026-11-17",
+      "prize": {
+        "amount": 125.0,
+        "currency": "USD",
+        "text": "$125"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://green-shift-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "meta-vr-start-developer-competition-2026",
+      "name": "Meta VR Start Developer Competition 2026",
+      "organizer": "Meta",
+      "url": "https://start-developer-competition-26.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-09-24",
+      "ends_on": "2026-11-18",
+      "deadline": "2026-11-18",
+      "prize": {
+        "amount": 1000000.0,
+        "currency": "USD",
+        "text": "$1,000,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://start-developer-competition-26.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "code-n-mod-2026",
+      "name": "Code N Mod",
+      "organizer": null,
+      "url": "https://codenmod.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Tumakur",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-18",
+      "deadline": "2026-11-18",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 6
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://codenmod.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "lean-in-hacks-8-0-2026",
+      "name": "Lean In Hacks 8.0",
+      "organizer": null,
+      "url": "https://lean-in-hacks-8.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": null,
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "deadline": "2026-11-18",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://lean-in-hacks-8.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "wqcc-qiskit-fall-fest-2026",
+      "name": "WQCC Qiskit Fall Fest 2026",
+      "organizer": "Wisconsin Quantum Computing Club",
+      "url": "https://wqcc-qiskit-fall-fest-2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-07",
+      "ends_on": "2026-11-19",
+      "deadline": "2026-11-19",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://wqcc-qiskit-fall-fest-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "accessed-hacks-2026",
+      "name": "AccessED Hacks",
+      "organizer": "AccessEDnpo",
+      "url": "https://accessed-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-11-20",
+      "deadline": "2026-11-20",
+      "prize": {
+        "amount": 225.0,
+        "currency": "USD",
+        "text": "$225"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://accessed-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "dakar-bitcoin-hack-by-btrust-2026",
+      "name": "Dakar Bitcoin Hack by BTrust",
+      "organizer": "Dakar Bitcoin Days",
+      "url": "https://dakar-bitcoin-hack-2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-26",
+      "ends_on": "2026-11-20",
+      "deadline": "2026-11-20",
+      "prize": {
+        "amount": 900.0,
+        "currency": "USD",
+        "text": "$900"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "web3",
+        "fintech",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://dakar-bitcoin-hack-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "stem2connect-ai-hackathon-2026",
+      "name": "STEM2Connect AI Hackathon",
+      "organizer": "STEM2Connect",
+      "url": "https://stem2connect-online-hackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-21",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://stem2connect-online-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "teens-hack-houston-hackathon-2026",
+      "name": "Teens Hack Houston Hackathon",
+      "organizer": "HackClub  ✓⃝",
+      "url": "https://tripleh.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-21",
+      "prize": {
+        "amount": 300.0,
+        "currency": "USD",
+        "text": "$300"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://tripleh.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "bridge-the-gap-hacks-2026",
+      "name": "Bridge The Gap Hacks",
+      "organizer": "Bridge The Gap Hacks",
+      "url": "https://sq-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-15",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-21",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://sq-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "devfest-munster-2026-agentic-ai-hackathon-2026",
+      "name": "DevFest Münster 2026: Agentic AI Hackathon",
+      "organizer": "GDG Münster",
+      "url": "https://devfest-ai-hackathon.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Volkshochschule"
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-21",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://devfest-ai-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "nerdearla-vibeathon-by-devin-2026",
+      "name": "Nerdearla Vibeathon by Devin",
+      "organizer": "Nerdearla",
+      "url": "https://vibeathon-mexico-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Amazon CDMX (Puerta Polanco)"
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-21",
+      "deadline": "2026-11-21",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://vibeathon-mexico-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "safespace-hacks-2026",
+      "name": "SafeSpace Hacks",
+      "organizer": "SafeSpace",
+      "url": "https://safespace-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-11-22",
+      "deadline": "2026-11-22",
+      "prize": {
+        "amount": 280.0,
+        "currency": "USD",
+        "text": "$280"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "security",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://safespace-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "crosspointx-2026",
+      "name": "CrossPointX 2026",
+      "organizer": "Science Innovation Association of XJTLU",
+      "url": "https://cpx2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "deadline": "2026-11-22",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://cpx2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "taskforge-2026",
+      "name": "Taskforge",
+      "organizer": "HackathonForEveryone",
+      "url": "https://taskforge.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-11-24",
+      "deadline": "2026-11-24",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://taskforge.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "founders-house-kolkata-2026",
+      "name": "Founders' House Kolkata",
+      "organizer": null,
+      "url": "https://founders-house-kolkata.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": null,
+      "starts_on": "2026-11-09",
+      "ends_on": "2026-11-25",
+      "deadline": "2026-11-24",
+      "prize": null,
+      "team": {
+        "min": 3,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://founders-house-kolkata.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "obscura-satellite-ai-research-challenge-2026",
+      "name": "OBSCURA: Satellite AI Research Challenge",
+      "organizer": "BTAJI CREW",
+      "url": "https://obscura.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-24",
+      "deadline": "2026-11-24",
+      "prize": {
+        "amount": 50.0,
+        "currency": "USD",
+        "text": "$50"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://obscura.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackwithaditya-2026",
+      "name": "HackWithAditya",
+      "organizer": "Aditya University",
+      "url": "https://hackwithaditya.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-11-25",
+      "deadline": "2026-11-25",
+      "prize": {
+        "amount": 500000.0,
+        "currency": "INR",
+        "text": "₹ 500,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "health",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackwithaditya.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "code-for-dfw-2026",
+      "name": "Code For DFW",
+      "organizer": "n/a",
+      "url": "https://code-for-dfw.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-20",
+      "ends_on": "2026-11-25",
+      "deadline": "2026-11-25",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://code-for-dfw.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "buildyourownwebsite-2026",
+      "name": "BuildyourOwnWebsite",
+      "organizer": "Roxten Studios",
+      "url": "https://buildyourownwebsite.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-16",
+      "ends_on": "2026-11-25",
+      "deadline": "2026-11-25",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://buildyourownwebsite.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "build-your-first-ai-app-2026",
+      "name": "Build Your First AI App",
+      "organizer": "Yasir Insights",
+      "url": "https://build-your-first-ai-app.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-27",
+      "ends_on": "2026-11-27",
+      "deadline": "2026-11-27",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://build-your-first-ai-app.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "global-ai-builder-s-challenge-2026",
+      "name": "Global AI Builder’s Challenge",
+      "organizer": "Refactor The World",
+      "url": "https://global-ai-builders-challenge.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-28",
+      "deadline": "2026-11-28",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://global-ai-builders-challenge.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "csc-winter-sparkathon-2026",
+      "name": "CSC Winter Sparkathon",
+      "organizer": "The Webb Schools CSC",
+      "url": "https://csc-winter-sparkathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-29",
+      "ends_on": "2026-11-30",
+      "deadline": "2026-11-30",
+      "prize": {
+        "amount": 300.0,
+        "currency": "USD",
+        "text": "$300"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://csc-winter-sparkathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "305-veterans-hackathon-edition-november-2026-305hackathons-vercel-app-2026",
+      "name": "305 Veterans Hackathon Edition November 2026 — 305Hackathons.vercel.app",
+      "organizer": "GOOGLE DEVELOPER GROUP AT FIU",
+      "url": "https://305veteransnov2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-01",
+      "ends_on": "2026-11-30",
+      "deadline": "2026-11-30",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "security",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://305veteransnov2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "idealab-hacks-2026",
+      "name": "IdeaLab Hacks",
+      "organizer": "IdeaLab",
+      "url": "https://idealab-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-04",
+      "ends_on": "2026-11-30",
+      "deadline": "2026-11-30",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://idealab-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "buildhybridai-2026",
+      "name": "#BuildHybridAI 2026",
+      "organizer": "Google",
+      "url": "https://firebasehybridaihackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-11",
+      "ends_on": "2026-11-30",
+      "deadline": "2026-11-30",
+      "prize": {
+        "amount": 30000.0,
+        "currency": "USD",
+        "text": "$30,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://firebasehybridaihackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "clash-of-commits-2026",
+      "name": "Clash of Commits",
+      "organizer": null,
+      "url": "https://clash-of-commits.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Chennai",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-05",
+      "deadline": "2026-11-30",
+      "prize": null,
+      "team": {
+        "min": 3,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://clash-of-commits.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "health-hackathon-3-0-2027",
+      "name": "Health Hackathon 3.0",
+      "organizer": null,
+      "url": "https://health-hackathon.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Kothri Kalan",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-28",
+      "ends_on": "2027-01-29",
+      "deadline": "2026-11-30",
+      "prize": {
+        "amount": 100000.0,
+        "currency": null,
+        "text": "First price 100000, 2nd 50000, 3rd 25000, 4th 10000, 5th 5000"
+      },
+      "team": {
+        "min": 1,
+        "max": 6
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://health-hackathon.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "code-for-change-2026",
+      "name": "Code for Change",
+      "organizer": "HackathonForEveryone",
+      "url": "https://code-for-change-global.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-12-01",
+      "deadline": "2026-12-01",
+      "prize": {
+        "amount": 200.0,
+        "currency": "USD",
+        "text": "$200"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://code-for-change-global.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ml-empowerment-build-challenge-4-0-2026",
+      "name": "ML Empowerment Build Challenge 4.0",
+      "organizer": "ML Empowerment Foundation",
+      "url": "https://ml-build-challenge-4.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-01",
+      "ends_on": "2026-12-02",
+      "deadline": "2026-12-02",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ml-build-challenge-4.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "launchpad-hacks-judges-sponsors-needed-2026",
+      "name": "LaunchPad Hacks (Judges + Sponsors Needed)",
+      "organizer": "Hack4TodayOrg",
+      "url": "https://launchpad-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-12-04",
+      "deadline": "2026-12-04",
+      "prize": {
+        "amount": 300.0,
+        "currency": "USD",
+        "text": "$300"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://launchpad-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "kiroween-2026",
+      "name": "Kiroween 2026",
+      "organizer": "Kiro",
+      "url": "https://kiroween.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-30",
+      "ends_on": "2026-12-04",
+      "deadline": "2026-12-04",
+      "prize": {
+        "amount": 100000.0,
+        "currency": "USD",
+        "text": "$100,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://kiroween.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ai-for-medicine-a-global-student-hackathon-on-the-future-of-care-2026",
+      "name": "AI for Medicine: A Global Student Hackathon on the Future of Care",
+      "organizer": "Open Health AI Collective",
+      "url": "https://ai-for-medicine.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-04",
+      "ends_on": "2026-12-04",
+      "deadline": "2026-12-04",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "health",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ai-for-medicine.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "the-dawn-of-superintelligence-kaya-ai-grand-challenge-2026",
+      "name": "The Dawn of Superintelligence | Kaya AI Grand Challenge",
+      "organizer": "Kaya AI",
+      "url": "https://kaya-ai-grand-challenge.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Mumbai"
+      },
+      "starts_on": "2026-11-29",
+      "ends_on": "2026-12-06",
+      "deadline": "2026-12-06",
+      "prize": {
+        "amount": 3000.0,
+        "currency": "USD",
+        "text": "$3,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://kaya-ai-grand-challenge.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hacksussex-gamejam-2026",
+      "name": "HackSussex GameJam 2026",
+      "organizer": "HackSussex",
+      "url": "https://hacksussex-gamejam-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Brighton"
+      },
+      "starts_on": "2026-12-05",
+      "ends_on": "2026-12-06",
+      "deadline": "2026-12-06",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hacksussex-gamejam-2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "2026-2027-fall-ese-senior-design-2026",
+      "name": "2026-2027 Fall ESE Senior Design",
+      "organizer": "university of pennsylvania",
+      "url": "https://ese4500f26.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Amy Gutman Hall"
+      },
+      "starts_on": "2026-09-22",
+      "ends_on": "2026-12-07",
+      "deadline": "2026-12-07",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "fintech"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ese4500f26.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "slay-hacks-2026",
+      "name": "SLAY HACKS",
+      "organizer": "cite & slayy",
+      "url": "https://slayy-hacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-07",
+      "ends_on": "2026-12-07",
+      "deadline": "2026-12-07",
+      "prize": {
+        "amount": 4500.0,
+        "currency": "USD",
+        "text": "$4,500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://slayy-hacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "deck-the-pixels-2026",
+      "name": "Deck the Pixels",
+      "organizer": "Google",
+      "url": "https://deckthepixels.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-12-07",
+      "deadline": "2026-12-07",
+      "prize": {
+        "amount": 25000.0,
+        "currency": "USD",
+        "text": "$25,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://deckthepixels.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "learn-ar-with-specs-2026",
+      "name": "Learn AR with SPECS",
+      "organizer": "Devpost",
+      "url": "https://learn-specs.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-12-07",
+      "deadline": "2026-12-07",
+      "prize": {
+        "amount": 2500.0,
+        "currency": "USD",
+        "text": "$2,500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://learn-specs.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "reddit-s-daily-games-hackathon-2026",
+      "name": "Reddit’s Daily Games Hackathon",
+      "organizer": "reddit",
+      "url": "https://redditgameofday2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-11",
+      "ends_on": "2026-12-08",
+      "deadline": "2026-12-08",
+      "prize": {
+        "amount": 35000.0,
+        "currency": "USD",
+        "text": "$35,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://redditgameofday2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ethchiangmai-longevity-hackathon-2026",
+      "name": "ETHChiangmai & Longevity Hackathon 2026",
+      "organizer": null,
+      "url": "https://chiangmai.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": "TH",
+        "venue": null
+      },
+      "starts_on": "2026-12-26",
+      "ends_on": "2026-12-27",
+      "deadline": "2026-12-09",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [
+        "ai",
+        "web3",
+        "health"
+      ],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://chiangmai.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ai-openbuild-2026",
+      "name": "AI OpenBuild",
+      "organizer": "AI OpenBuild",
+      "url": "https://ai-openbuild.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-12-10",
+      "deadline": "2026-12-10",
+      "prize": {
+        "amount": 150.0,
+        "currency": "USD",
+        "text": "$150"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ai-openbuild.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "peninsula-innovation-hackathon-2026",
+      "name": "Peninsula Innovation Hackathon",
+      "organizer": "bayhacks",
+      "url": "https://peninsula-innovation-hackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-12-10",
+      "deadline": "2026-12-10",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://peninsula-innovation-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackodisha-6-0-2026",
+      "name": "hackodisha-6.0",
+      "organizer": null,
+      "url": "https://hackodisha-6a.devfolio.co/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-12-11",
+      "ends_on": "2026-12-13",
+      "deadline": "2026-12-10",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hackodisha-6a.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-for-tomorrow-2026-2027",
+      "name": "Hack For Tomorrow 2026",
+      "organizer": null,
+      "url": "https://hft2026.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": null,
+      "starts_on": "2027-01-02",
+      "ends_on": "2027-01-03",
+      "deadline": "2026-12-10",
+      "prize": {
+        "amount": 30000.0,
+        "currency": "INR",
+        "text": "A total prize pool of ₹30,000 awaits the winning teams! Showcase your creativity, build innovative solutions, and compet"
+      },
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hft2026.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "haxfinity-2027",
+      "name": "haxfinity",
+      "organizer": null,
+      "url": "https://haxfinity.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Myladi",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-03",
+      "ends_on": "2027-01-04",
+      "deadline": "2026-12-10",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [
+        "fintech"
+      ],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://haxfinity.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "aws-msp-ai-hackathon-2026",
+      "name": "AWS MSP AI Hackathon",
+      "organizer": "AWS",
+      "url": "https://aws-agentic-msp.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-02",
+      "ends_on": "2026-12-11",
+      "deadline": "2026-12-11",
+      "prize": {
+        "amount": 64000.0,
+        "currency": "USD",
+        "text": "$64,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://aws-agentic-msp.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "innovateher-hackathon-girls-who-code-2026",
+      "name": "InnovateHER Hackathon: Girls Who Code",
+      "organizer": "Girls Who Code",
+      "url": "https://hackathon-girls-who-code.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-12-13",
+      "deadline": "2026-12-13",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackathon-girls-who-code.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "qnx-global-hackathon-2026",
+      "name": "QNX Global Hackathon",
+      "organizer": "QNX",
+      "url": "https://qnx.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-02",
+      "ends_on": "2026-12-15",
+      "deadline": "2026-12-15",
+      "prize": {
+        "amount": 50000.0,
+        "currency": "USD",
+        "text": "$50,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "ai",
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://qnx.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "silicon-valley-buildathon-2026",
+      "name": "Silicon Valley Buildathon",
+      "organizer": "Silicon Hacks Team",
+      "url": "https://silicon-valley-buildathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-08",
+      "ends_on": "2026-12-15",
+      "deadline": "2026-12-15",
+      "prize": {
+        "amount": 500.0,
+        "currency": "USD",
+        "text": "$500"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://silicon-valley-buildathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-nexus-2027",
+      "name": "Hack Nexus 2027",
+      "organizer": null,
+      "url": "https://hack-nexus.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Nagpur",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-30",
+      "ends_on": "2027-01-31",
+      "deadline": "2026-12-15",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hack-nexus.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ai-agents-for-founders-challenge-hetic-2026",
+      "name": "AI Agents for Founders Challenge — HETIC 2026",
+      "organizer": "HETIC",
+      "url": "https://ai-agents-founders-hetic-26.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-04",
+      "ends_on": "2026-12-18",
+      "deadline": "2026-12-18",
+      "prize": {
+        "amount": 1000.0,
+        "currency": "EUR",
+        "text": "€1,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ai-agents-founders-hetic-26.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "arbiter-hacks-v1-2026",
+      "name": "Arbiter Hacks V1",
+      "organizer": "Arbiter ",
+      "url": "https://arbiter-hacks-v1.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-20",
+      "ends_on": "2026-12-21",
+      "deadline": "2026-12-21",
+      "prize": {
+        "amount": 7800.0,
+        "currency": "USD",
+        "text": "$7,800"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://arbiter-hacks-v1.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "codegeist-2026-build-with-context-ship-with-confidence-2026",
+      "name": "Codegeist 2026: Build with context. Ship with confidence.",
+      "organizer": "Atlassian",
+      "url": "https://codegeist2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-10-27",
+      "ends_on": "2026-12-22",
+      "deadline": "2026-12-22",
+      "prize": {
+        "amount": 120000.0,
+        "currency": "USD",
+        "text": "$120,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://codegeist2026.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "inceptrix-3-0-2026",
+      "name": "Inceptrix 3.0",
+      "organizer": "Tech Council - Jain Univeristy",
+      "url": "https://inceptrix-hackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-12-24",
+      "deadline": "2026-12-24",
+      "prize": {
+        "amount": 250000.0,
+        "currency": "INR",
+        "text": "₹ 250,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://inceptrix-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "genhacks-2026",
+      "name": "GenHacks",
+      "organizer": "Shail & Sharaf",
+      "url": "https://genhacks-open.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-01",
+      "ends_on": "2026-12-26",
+      "deadline": "2026-12-26",
+      "prize": {
+        "amount": 1050.0,
+        "currency": "CAD",
+        "text": "$CAD 1,050"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "hardware",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://genhacks-open.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hacksprint-3-0-2027",
+      "name": "Hacksprint 3.0",
+      "organizer": null,
+      "url": "https://hacksprint-3.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": null,
+      "starts_on": "2027-01-29",
+      "ends_on": "2027-01-30",
+      "deadline": "2026-12-28",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hacksprint-3.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "innerve-11-0-2027",
+      "name": "Innerve 11.0",
+      "organizer": null,
+      "url": "https://innerve-11.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Pune",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-29",
+      "ends_on": "2027-01-30",
+      "deadline": "2026-12-30",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://innerve-11.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "evensonarisnord-2026",
+      "name": "evensonarisnord",
+      "organizer": "HoustonHacks2026",
+      "url": "https://evensonarisnord.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-12-31",
+      "ends_on": "2026-12-31",
+      "deadline": "2026-12-31",
+      "prize": {
+        "amount": 150.0,
+        "currency": "USD",
+        "text": "$150"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://evensonarisnord.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "techacks-5-0-2027",
+      "name": "Techacks 5.0",
+      "organizer": null,
+      "url": "https://techacks05.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Rajpura",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-15",
+      "ends_on": "2027-01-16",
+      "deadline": "2026-12-31",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [
+        "ai",
+        "hardware",
+        "health"
+      ],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://techacks05.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "goa-buildathon-27-2027",
+      "name": "GOA BUILDATHON 27",
+      "organizer": null,
+      "url": "https://goa-buildathon.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-16",
+      "ends_on": "2027-01-17",
+      "deadline": "2026-12-31",
+      "prize": {
+        "amount": 27.0,
+        "currency": "INR",
+        "text": "GOA BUILDATHON ’27 is targeting a total prize pool of ₹10,00,000. The final prize distribution and rewards will be annou"
+      },
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://goa-buildathon.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-with-gdg-s4-2027",
+      "name": "HACK WITH GDG S4",
+      "organizer": null,
+      "url": "https://hack-with-gdg-s4.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "KSR Kalvi Nagar",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-22",
+      "ends_on": "2027-01-24",
+      "deadline": "2026-12-31",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hack-with-gdg-s4.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "innovart-2027-art-and-technology-hack-day-2026",
+      "name": "InnovArt 2027: Art and Technology Hack Day",
+      "organizer": "Binnovative",
+      "url": "https://innovart2027.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-08-23",
+      "ends_on": "2027-01-02",
+      "deadline": "2027-01-02",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://innovart2027.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-6-0-2027",
+      "name": "HACK 6.0",
+      "organizer": null,
+      "url": "https://hack-1736.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Hamirpur",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-22",
+      "ends_on": "2027-01-24",
+      "deadline": "2027-01-03",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://hack-1736.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "checkpoint-1-games-for-good-2027",
+      "name": "checkpoint 1 — games for good",
+      "organizer": "Checkpoint",
+      "url": "https://checkpoint-1.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-01-08",
+      "ends_on": "2027-01-10",
+      "deadline": "2027-01-10",
+      "prize": {
+        "amount": 11960.0,
+        "currency": "USD",
+        "text": "$11,960"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "games",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://checkpoint-1.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "united-hacks-v8-2027",
+      "name": "United Hacks V8",
+      "organizer": "Hack United",
+      "url": "https://unitedhacksv8.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-01-08",
+      "ends_on": "2027-01-10",
+      "deadline": "2027-01-10",
+      "prize": {
+        "amount": 18700.0,
+        "currency": "USD",
+        "text": "$18,700"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://unitedhacksv8.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "syntax-summit-2026",
+      "name": "Syntax Summit",
+      "organizer": "Student Organization",
+      "url": "https://syntax-summit.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-07-18",
+      "ends_on": "2027-01-14",
+      "deadline": "2027-01-14",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://syntax-summit.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "code-for-humanity-2026",
+      "name": "Code for Humanity",
+      "organizer": "nill",
+      "url": "https://code-for-humanity.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-07-16",
+      "ends_on": "2027-01-15",
+      "deadline": "2027-01-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://code-for-humanity.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "devnexus-vidisha-2027",
+      "name": "DevNexus Vidisha",
+      "organizer": null,
+      "url": "https://devnexus-3.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Vidisha",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-24",
+      "ends_on": "2027-01-24",
+      "deadline": "2027-01-15",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://devnexus-3.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "makeathon-9-0-2027",
+      "name": "Makeathon 9.0",
+      "organizer": null,
+      "url": "https://makeathon-9.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Patiala",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-01-30",
+      "ends_on": "2027-01-31",
+      "deadline": "2027-01-15",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://makeathon-9.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "coderave-2-0-2027",
+      "name": "CODERAVE 2.0",
+      "organizer": null,
+      "url": "https://coderave-2.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": null,
+      "starts_on": "2027-02-13",
+      "ends_on": "2027-02-14",
+      "deadline": "2027-01-15",
+      "prize": null,
+      "team": {
+        "min": 3,
+        "max": 6
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://coderave-2.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackstorm-3-0-sense-think-and-act-2027",
+      "name": "HackStorm 3.0: Sense, Think and Act",
+      "organizer": "HackStorm",
+      "url": "https://hackstorm3.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "San Francisco",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-01-15",
+      "ends_on": "2027-01-17",
+      "deadline": "2027-01-17",
+      "prize": {
+        "amount": 5200.0,
+        "currency": "USD",
+        "text": "$5,200"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackstorm3.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "cosmo-hacks-2026",
+      "name": "Cosmo Hacks 2026",
+      "organizer": "Cosmo Hacks",
+      "url": "https://cosmohacks.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-12-19",
+      "ends_on": "2027-01-18",
+      "deadline": "2027-01-18",
+      "prize": {
+        "amount": 146770.0,
+        "currency": "USD",
+        "text": "$146,770"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://cosmohacks.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hoya-hacks-2027",
+      "name": "Hoya Hacks 2027",
+      "organizer": "Hoya Hacks",
+      "url": "https://hoya-hacks-2027.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Washington",
+        "country": "US",
+        "venue": "Healey Family Student Center"
+      },
+      "starts_on": "2027-01-22",
+      "ends_on": "2027-01-24",
+      "deadline": "2027-01-24",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hoya-hacks-2027.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        },
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hoya-hacks-39",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackout-2027-2026",
+      "name": "HackOut! 2027",
+      "organizer": "BranchOut!",
+      "url": "https://hackout-branchout.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-03",
+      "ends_on": "2027-02-01",
+      "deadline": "2027-02-01",
+      "prize": {
+        "amount": 3000.0,
+        "currency": "USD",
+        "text": "$3,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackout-branchout.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hacktitan-2027",
+      "name": "HackTitan",
+      "organizer": "IWU",
+      "url": "https://hacktitan.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-02-02",
+      "ends_on": "2027-02-04",
+      "deadline": "2027-02-04",
+      "prize": {
+        "amount": 10000.0,
+        "currency": "USD",
+        "text": "$10,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hacktitan.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "diversion-2k27-2027",
+      "name": "Diversion 2k27",
+      "organizer": null,
+      "url": "https://diversion2k27.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Bidhannagar",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-03-06",
+      "ends_on": "2027-03-07",
+      "deadline": "2027-02-10",
+      "prize": null,
+      "team": {
+        "min": 1,
+        "max": 4
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://diversion2k27.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "developerweek-2027-hackathon-2027",
+      "name": "DeveloperWeek 2027 Hackathon",
+      "organizer": "DevNetwork",
+      "url": "https://developerweek-2027-hackathon.devpost.com/",
+      "summary": null,
+      "format": "hybrid",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Santa Clara Convention Center"
+      },
+      "starts_on": "2027-01-25",
+      "ends_on": "2027-02-11",
+      "deadline": "2027-02-11",
+      "prize": {
+        "amount": 6000.0,
+        "currency": "USD",
+        "text": "$6,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://developerweek-2027-hackathon.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "tech-to-treasure-hackathon-2027",
+      "name": "Tech to Treasure Hackathon",
+      "organizer": "bin to better",
+      "url": "https://techtotreasure.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Tully Community Branch Library"
+      },
+      "starts_on": "2027-03-03",
+      "ends_on": "2027-03-10",
+      "deadline": "2027-03-10",
+      "prize": {
+        "amount": 450.0,
+        "currency": "USD",
+        "text": "$450"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://techtotreasure.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "build-beyond-hackathon-2027",
+      "name": "Build Beyond Hackathon",
+      "organizer": "OSC",
+      "url": "https://build-beyond.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-03-01",
+      "ends_on": "2027-03-15",
+      "deadline": "2027-03-15",
+      "prize": {
+        "amount": 5000.0,
+        "currency": "USD",
+        "text": "$5,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://build-beyond.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "eclipse-7-0-2027",
+      "name": "ECLIPSE 7.0",
+      "organizer": null,
+      "url": "https://eclipse.devfolio.co/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Patiala",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-04-03",
+      "ends_on": "2027-04-04",
+      "deadline": "2027-03-20",
+      "prize": null,
+      "team": {
+        "min": 2,
+        "max": 5
+      },
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "devfolio",
+          "url": "https://eclipse.devfolio.co/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "gnec-hackathon-2027-winter-compete-for-un-affiliated-ngo-internships-prizes-2027",
+      "name": "GNEC Hackathon 2027 Winter - Compete For UN-Affiliated/NGO Internships & Prizes",
+      "organizer": "Global NGO Executive Committee",
+      "url": "https://gnec-hackathon-2027-winter.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2027-01-26",
+      "ends_on": "2027-03-26",
+      "deadline": "2027-03-26",
+      "prize": {
+        "amount": 700.0,
+        "currency": "USD",
+        "text": "$700"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://gnec-hackathon-2027-winter.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "bearhacks-2027",
+      "name": "BearHacks 2027",
+      "organizer": "BearHacks",
+      "url": "https://bearhacks2027.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Sheridan College Hazel McCallion Campus"
+      },
+      "starts_on": "2027-04-23",
+      "ends_on": "2027-04-25",
+      "deadline": "2027-04-25",
+      "prize": {
+        "amount": 10000.0,
+        "currency": "CAD",
+        "text": "$CAD 10,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://bearhacks2027.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "phystech-2027-physical-activity-and-technology-hack-day-2026",
+      "name": "PhysTech 2027: Physical Activity and Technology Hack Day",
+      "organizer": "Binnovative",
+      "url": "https://phystech2027.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-04",
+      "ends_on": "2027-06-26",
+      "deadline": "2027-06-26",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "health"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://phystech2027.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "brewing-codes-4-0-2028",
+      "name": "Brewing Codes 4.0",
+      "organizer": "HARD MODE",
+      "url": "https://brewing-codes-4-0.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2028-03-12",
+      "ends_on": "2028-03-27",
+      "deadline": "2028-03-27",
+      "prize": {
+        "amount": 100000.0,
+        "currency": "INR",
+        "text": "₹ 100,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://brewing-codes-4-0.devpost.com/",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "emory-hacks-2026",
+      "name": "Emory Hacks",
+      "organizer": null,
+      "url": "https://emoryhacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Atlanta",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/emory-hacks-b9",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackprinceton-fall-2026",
+      "name": "HackPrinceton Fall 2026",
+      "organizer": null,
+      "url": "https://www.hackprinceton.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Princeton",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackprinceton-fall-2026",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackumass-2026",
+      "name": "HackUMass",
+      "organizer": null,
+      "url": "https://www.hackumass.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Amherst",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackumass-19",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "junction-2026",
+      "name": "Junction",
+      "organizer": null,
+      "url": "https://hackjunction.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Espoo",
+        "country": "FI",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/junction-40",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "nasa-s-space-apps-challenge-nyc-2026",
+      "name": "NASA's Space Apps Challenge NYC",
+      "organizer": null,
+      "url": "https://www.spaceappschallenge.org/2026/local-events/new-york/",
+      "summary": null,
+      "format": "hybrid",
+      "location": {
+        "city": "Brooklyn",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/nasa-s-space-apps-challenge-nyc",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "unihack-2026",
+      "name": "UniHack",
+      "organizer": null,
+      "url": "https://unihack.eu/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Timișoara",
+        "country": "RO",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/unihack-bd",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "durhack-2026",
+      "name": "DurHack",
+      "organizer": null,
+      "url": "https://durhack.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Durham",
+        "country": "GB",
+        "venue": null
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/durhack-2026",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-the-nest-2026",
+      "name": "Hack The Nest",
+      "organizer": null,
+      "url": "https://hackthenest.tech/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Ypsilanti",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hack-the-nest-96",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackuta-2026",
+      "name": "HackUTA",
+      "organizer": null,
+      "url": "https://hackuta.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Arlington",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackuta-53",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "sand-hacks-2026",
+      "name": "SanD Hacks",
+      "organizer": null,
+      "url": "https://hackathon.csesatucsd.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "La Jolla",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/sand-hacks",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "sunhacks-2026",
+      "name": "sunhacks",
+      "organizer": null,
+      "url": "https://2026.sunhacks.io/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Tempe",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/sunhacks-ec",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-western-13-2026",
+      "name": "Hack Western 13",
+      "organizer": null,
+      "url": "https://hackwestern.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "London",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hack-western-13",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "bostonhacks-2026",
+      "name": "BostonHacks",
+      "organizer": null,
+      "url": "https://bostonhacks.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Boston",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-22",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/bostonhacks-de",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "tech-for-community-2026",
+      "name": "Tech For Community 2026",
+      "organizer": null,
+      "url": "https://tecnurtur.org/hackathon",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "St. John's",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-22",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/tech-for-community-2026",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "whack-wellesley-hackathon-2026",
+      "name": "WHACK (Wellesley Hackathon)",
+      "organizer": null,
+      "url": "https://www.wellesleyhacks.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Wellesley",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-22",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/whack-wellesley-hackathon",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackeps-2026",
+      "name": "HackEPS",
+      "organizer": null,
+      "url": "https://hackeps.dev/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Lleida",
+        "country": "ES",
+        "venue": null
+      },
+      "starts_on": "2026-11-28",
+      "ends_on": "2026-11-29",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackeps",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hacksheffield11-2026",
+      "name": "HackSheffield11",
+      "organizer": null,
+      "url": "https://hacksheffield.uk",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Sheffield",
+        "country": "GB",
+        "venue": null
+      },
+      "starts_on": "2026-11-28",
+      "ends_on": "2026-11-29",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hacksheffield11",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-cats-2026",
+      "name": "Hack Cats",
+      "organizer": null,
+      "url": "https://hackkstate.tech/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Manhattan",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-06",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hack-cats-cd",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "deltahacks-2027",
+      "name": "DeltaHacks",
+      "organizer": null,
+      "url": "https://www.deltahacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Hamilton",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-09",
+      "ends_on": "2027-01-10",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/deltahacks-d5",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "uofthacks-2027",
+      "name": "UofTHacks",
+      "organizer": null,
+      "url": "https://uofthacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Toronto",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-15",
+      "ends_on": "2027-01-17",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/uofthacks-99",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "uottahack-9-2027",
+      "name": "uOttaHack 9",
+      "organizer": null,
+      "url": "https://2027.uottahack.ca/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Ottawa",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-15",
+      "ends_on": "2027-01-17",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/uottahack-9",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackbi-x-2027",
+      "name": "HackBI X",
+      "organizer": null,
+      "url": "https://hackbi.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Alexandria",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-01-16",
+      "ends_on": "2027-01-17",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackbi-x",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "nwhacks-2027",
+      "name": "nwHacks",
+      "organizer": null,
+      "url": "https://nwhacks.io/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Vancouver",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-16",
+      "ends_on": "2027-01-17",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/nwhacks-29",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "qwer-hacks-2027",
+      "name": "QWER Hacks",
+      "organizer": null,
+      "url": "https://www.qwerhacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Los Angeles",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-01-16",
+      "ends_on": "2027-01-17",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/qwer-hacks-12",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackville-2027",
+      "name": "Hackville 2027",
+      "organizer": null,
+      "url": "https://hackville.io/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Missisauga",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-23",
+      "ends_on": "2027-01-24",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackville-2027",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ellehacks-2027",
+      "name": "ElleHacks",
+      "organizer": null,
+      "url": "https://ellehacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Toronto",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-01-29",
+      "ends_on": "2027-01-31",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/ellehacks-39",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "beachhack-season-8-2027",
+      "name": "BeachHack Season 8",
+      "organizer": null,
+      "url": "https://www.beachhack.in/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Thrissur",
+        "country": "IN",
+        "venue": null
+      },
+      "starts_on": "2027-02-05",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/beachhack-season-8",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-brown-2027",
+      "name": "Hack@Brown 2027",
+      "organizer": null,
+      "url": "https://hackatbrown.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Providence",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-05",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hack-brown-2027",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "ugahacks-2027",
+      "name": "UGAHacks",
+      "organizer": null,
+      "url": "https://12.ugahacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Athens",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-05",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/ugahacks-ec",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-ncstate-2027",
+      "name": "Hack_NCState",
+      "organizer": null,
+      "url": "https://hackncstate.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Raleigh",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-06",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hack_ncstate-e7",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "innovateher-2027",
+      "name": "InnovateHer",
+      "organizer": null,
+      "url": "https://innovateherhacks.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "West Lafayette",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-06",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/innovateher-58",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "spartahack-2027",
+      "name": "SpartaHack",
+      "organizer": null,
+      "url": "https://www.spartahack.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "East Lansing",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-06",
+      "ends_on": "2027-02-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/spartahack-02",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "makeuoft-2027",
+      "name": "MakeUofT",
+      "organizer": null,
+      "url": "http://makeuoft.ca/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Toronto",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-02-13",
+      "ends_on": "2027-02-14",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/makeuoft-72",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "sf-hacks-2027",
+      "name": "SF Hacks",
+      "organizer": null,
+      "url": "https://sfhacks.io",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "San Francisco",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-19",
+      "ends_on": "2027-02-21",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/sf-hacks-8c",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "cuhackit-2027",
+      "name": "CUhackit",
+      "organizer": null,
+      "url": "https://cuhack.it/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Clemson",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-20",
+      "ends_on": "2027-02-21",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/cuhackit-ba",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackillinois-2027",
+      "name": "HackIllinois",
+      "organizer": null,
+      "url": "https://www.hackillinois.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Urbana",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-26",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackillinois-92",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hacklytics-2027",
+      "name": "Hacklytics 2027",
+      "organizer": null,
+      "url": "https://hacklytics2027.web.app/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Atlanta",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-26",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hacklytics-2027",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackudc-2027",
+      "name": "HackUDC",
+      "organizer": null,
+      "url": "https://hackudc.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "A Coruña",
+        "country": "ES",
+        "venue": null
+      },
+      "starts_on": "2027-02-26",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackudc",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackhers-2027",
+      "name": "HackHERS",
+      "organizer": null,
+      "url": "https://ruhackhers.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "New Brunswick",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-27",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackhers-85",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "revolutionuc-2027",
+      "name": "RevolutionUC",
+      "organizer": null,
+      "url": "https://www.revolutionuc.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Cincinnati",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-27",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/revolutionuc-d9",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "wichacks-2027",
+      "name": "WiCHacks",
+      "organizer": null,
+      "url": "https://wichacks.io/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Rochester",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-02-27",
+      "ends_on": "2027-02-28",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/wichacks-0e",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "henhacks-2027",
+      "name": "HenHacks",
+      "organizer": null,
+      "url": "https://www.henhackshackathon.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Newark",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-03-06",
+      "ends_on": "2027-03-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/henhacks-30",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "kent-hack-enough-2027",
+      "name": "Kent Hack Enough",
+      "organizer": null,
+      "url": "https://khe.io/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Kent",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-03-06",
+      "ends_on": "2027-03-07",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/kent-hack-enough-8e",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "diamondhacks-2027",
+      "name": "Diamondhacks",
+      "organizer": null,
+      "url": "https://diamondhacks.acmucsd.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "La Jolla",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-04-04",
+      "ends_on": "2027-04-05",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/diamondhacks-dc",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hackku27-2027",
+      "name": "HackKU27",
+      "organizer": null,
+      "url": "https://www.hackku.org/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Lawrence",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-04-09",
+      "ends_on": "2027-04-11",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/hackku27",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "marihacks-2027",
+      "name": "MariHacks",
+      "organizer": null,
+      "url": "https://www.marihacks.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Montreal",
+        "country": "CA",
+        "venue": null
+      },
+      "starts_on": "2027-04-09",
+      "ends_on": "2027-04-10",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/marihacks-bc",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "wehack-2027",
+      "name": "WEHack",
+      "organizer": null,
+      "url": "https://www.wehackutd.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Richardson",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-04-10",
+      "ends_on": "2027-04-11",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/wehack-36",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "la-hacks-27-2027",
+      "name": "LA Hacks 27",
+      "organizer": null,
+      "url": "https://lahacks.com",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Los Angeles",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2027-04-16",
+      "ends_on": "2027-04-18",
+      "deadline": null,
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [],
+      "sources": [
+        {
+          "kind": "mlh",
+          "url": "https://www.mlh.com/events/la-hacks-27",
+          "seen_at": "2026-11-11T22:44:22Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-11T22:44:22Z",
+      "updated_at": "2026-11-11T22:44:22Z"
+    }
+  ]
 }

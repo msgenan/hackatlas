@@ -51,7 +51,7 @@ describe("prize", () => {
   });
   const m = (id: string, prizeUsd: number | null): EventMeta => ({
     id, name: id, deadline: null, starts: null, ends: null, country: "TR", format: null, themes: [],
-    hasPrize: prizeUsd !== null, prizeUsd, added: "", search: "",
+    hasPrize: prizeUsd !== null, prizeUsd, added: "", search: "", city: null, prizeAmount: null, prizeCurrency: null,
   });
   it("sorts by prize descending with unknown last", () => {
     const list = [m("a", null), m("b", 100), m("c", 6000), m("d", 16200)];

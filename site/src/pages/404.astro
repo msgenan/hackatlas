@@ -1,10 +1,23 @@
 ---
 import Base from "../layouts/Base.astro";
-import EmptyState from "../components/EmptyState.astro";
 import { href } from "../lib/url";
+const pad = (t: string, n: number) => t.padEnd(n, " ");
+const rows: [string, "amber" | "red"][] = [[pad("KAPI", 7), "amber"], [pad("KAPANDI", 7), "red"]];
 ---
 <Base title="Sayfa bulunamadı" noindex>
-  <div class="wrap">
-    <EmptyState title="Bu sayfa bulunamadı." text="Adres yanlış olabilir ya da hackathon arşive taşınmış olabilir." action={{ label: "Listeye dön", href: href() }} />
+  <div class="wrap notfound">
+    <h1 class="sr-only">Sayfa bulunamadı</h1>
+    <section class="board board-404" style="--cells: 7" aria-hidden="true">
+      <div class="board-head"><p class="board-title">Hata 404</p></div>
+      <div class="board-grid">
+        <ol class="board-rows">
+          {rows.map(([t, tone]) => (
+            <li class="brow"><span class="bcol" data-tone={tone}>{[...t].map((ch) => <span class="cell">{ch}</span>)}</span></li>
+          ))}
+        </ol>
+      </div>
+    </section>
+    <p class="nf-text">Bu adres yok ya da hackathon arşive taşınmış olabilir.</p>
+    <a class="btn btn-primary" href={href()}>Listeye dön</a>
   </div>
 </Base>

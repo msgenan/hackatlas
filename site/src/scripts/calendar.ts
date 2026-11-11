@@ -1,6 +1,6 @@
 import type { EventMeta } from "../lib/types";
 import { matches, type Filters } from "../lib/filters";
-import { MONTHS, formatWeekdayDay, monthCells, monthKey, parts } from "../lib/dates";
+import { MONTHS, diffDays, formatWeekdayDay, monthCells, monthKey, parts } from "../lib/dates";
 import { initFilters } from "./filter-form";
 import { clientToday, readData } from "./today";
 
@@ -33,7 +33,7 @@ function entriesOn(d: string): Entry[] {
   return out;
 }
 const entryHtml = ({ m, kind }: Entry) =>
-  `<a class="cal-entry ${kind === "deadline" ? "dl" : "ev"}" href="${BASE}/e/${esc(m.id)}/" title="${esc(m.name)}${kind === "deadline" ? ", son başvuru" : ""}">${kind === "deadline" ? '<i class="dot"></i>' : ""}<span>${esc(m.name)}</span></a>`;
+  `<a class="cal-entry ${kind === "deadline" ? "dl" : "ev"}"${kind === "deadline" && diffDays(m.deadline!, today) <= 3 ? ' data-tone="danger"' : ""} href="${BASE}/e/${esc(m.id)}/" title="${esc(m.name)}${kind === "deadline" ? ", son başvuru" : ""}">${kind === "deadline" ? '<i class="dot"></i>' : ""}<span>${esc(m.name)}</span></a>`;
 
 function render(): void {
   title.textContent = `${MONTHS[ym.m - 1]} ${ym.y}`;

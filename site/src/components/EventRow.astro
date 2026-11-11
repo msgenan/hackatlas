@@ -1,37 +1,53 @@
 ---
+/* One event as a boarding pass. Every pass has the same anatomy, so each fact is always in the same place:
+   left: name, organizer, place (the "route"), then a fixed 2x2 field grid (Tarih, Ödül, Takım, Konu);
+   right: the stub with the countdown, the deadline date, a barcode and the save button. */
 import { href } from "../lib/url";
 import { NA, themeName } from "../lib/format";
+import { barcodePath } from "../lib/barcode";
 import type { ViewEvent } from "../lib/events";
 import CountdownChip from "./CountdownChip.astro";
 import SaveButton from "./SaveButton.astro";
+import Icon from "./Icon.astro";
 interface Props { v: ViewEvent; archive?: boolean }
 const { v, archive = false } = Astro.props;
 const { e } = v;
-const tags = e.themes.slice(0, 3);
-const facts: [string, string | null, string][] = [
-  ["Tarih", v.dates, ""],
-  ["Yer", v.place, ""],
-  ["Ödül", v.prize, "clamp"],
-  ["Takım", v.team, ""],
+const themes = e.themes.slice(0, 2).map(themeName).join(", ") || null;
+const facts: [string, string | null][] = [
+  ["Tarih", v.dates],
+  ["Ödül", v.prize],
+  ["Takım", v.team],
+  ["Konu", themes],
 ];
+const formatIcon = e.format === "online" ? "globe" : e.format === "hybrid" ? "shuffle" : "map-pin";
+const urgency = v.status.tone; // danger | accent | neutral | muted
 ---
-<li class="row" data-id={e.id}>
-  <div class="row-cd">
+<li class="row pass" data-id={e.id} data-tone={urgency} style={`view-transition-name: pass-${e.id}`}>
+  <div class="pass-main">
+    <div class="pass-head">
+      <h3 class="name"><a href={href(`e/${e.id}/`)}>{e.name}</a></h3>
+      {e.organizer ? <p class="org" title={e.organizer}>{e.organizer}</p> : <p class="org na">Organizatör belirtilmemiş</p>}
+    </div>
+    <p class="route" title={v.place ?? undefined}>
+      <Icon name={formatIcon} size={16} />
+      <span class:list={[{ na: !v.place }]}>{v.place ?? NA}</span>
+    </p>
+    <dl class="facts">
+      {facts.map(([label, val]) => (
+        <div>
+          <dt>{label}</dt>
+          <dd class:list={[{ na: !val }]} title={val ?? undefined}>{val ?? NA}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+  <div class="pass-stub">
+    <span class="stub-label">{archive ? "Durum" : v.e.deadline ? "Son başvuru" : "Başlangıç"}</span>
     <CountdownChip status={v.status} e={e} refresh={!archive} />
     {v.deadlineDate && !archive && <span class="row-date">{v.deadlineDate}</span>}
+    <div class="stub-foot">
+      <svg class="barcode" viewBox="0 0 120 28" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d={barcodePath(e.id)} /></svg>
+      <div class="row-save"><SaveButton id={e.id} name={e.name} /></div>
+    </div>
   </div>
-  <div class="row-main">
-    <h3 class="name"><a href={href(`e/${e.id}/`)}>{e.name}</a></h3>
-    {e.organizer ? <p class="org" title={e.organizer}>{e.organizer}</p> : <p class="org na">Organizatör belirtilmemiş</p>}
-    {tags.length > 0 && <ul class="tags" aria-label="Konular">{tags.map((t) => <li class="pill">{themeName(t)}</li>)}</ul>}
-  </div>
-  <dl class="facts">
-    {facts.map(([label, val, cls]) => (
-      <div>
-        <dt>{label}</dt>
-        <dd class:list={[cls, { na: !val }]} title={val && cls ? val : undefined}>{val ?? NA}</dd>
-      </div>
-    ))}
-  </dl>
-  <div class="row-save"><SaveButton id={e.id} name={e.name} /></div>
 </li>

@@ -37,6 +37,9 @@ export function toMeta(e: HackEvent, fx: FxFile): EventMeta {
     prizeUsd: usd,
     added: e.added_at,
     search,
+    city: e.location?.city?.trim() || null,
+    prizeAmount: e.prize?.amount ?? null,
+    prizeCurrency: e.prize?.currency ?? null,
   };
 }
 

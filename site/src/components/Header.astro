@@ -13,7 +13,7 @@ const nav = [
 ---
 <header class="site-header">
   <div class="wrap">
-    <a class="wordmark" href={href()}>hackatlas</a>
+    <a class="wordmark" href={href()}><span class="wm-tile" aria-hidden="true">h</span><span>hackatlas</span></a>
     <nav class="nav" aria-label="Ana gezinme">
       {nav.map(([k, label, to]) => <a href={to} aria-current={current === k ? "page" : undefined}>{label}</a>)}
     </nav>

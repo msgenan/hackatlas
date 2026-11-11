@@ -1,0 +1,45 @@
+/* Filter bar: a calm control strip. Loads after list.css and overrides its base filter rules. */
+.filters { isolation: isolate; margin-top: var(--s-6); padding: var(--s-3) 0; background: none; border-bottom: 0; }
+.filters::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 calc(50% - 50vw);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom: 1px solid var(--line);
+}
+.filter-row { gap: var(--s-2) var(--s-3); }
+.search { max-width: 24rem; }
+.search .icon { left: var(--s-4); }
+.field {
+  min-height: 2.5rem; padding: 0 var(--s-4); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); box-shadow: none;
+  transition: border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.field:hover { border-color: var(--line-strong); }
+.search .field { padding-left: calc(var(--s-4) + 1.75rem); }
+select.field { padding-right: var(--s-3); }
+.field:focus-visible { border-radius: var(--r-pill); }
+.seg { padding: 3px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); }
+.seg span { border-radius: var(--r-pill); padding: 0 var(--s-4); font-size: var(--fs-13); }
+.seg input:checked + span {
+  background: var(--accent-soft); color: var(--accent); font-weight: 600; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-fill) 55%, transparent);
+}
+.seg input:focus-visible + span { box-shadow: var(--focus); }
+.filters .btn.pop-btn, .check-pill span { border-radius: var(--r-pill); border-color: var(--line); box-shadow: none; background: var(--surface); }
+.filters .btn.pop-btn:hover, .check-pill span:hover { border-color: var(--line-strong); }
+.check-pill input:checked + span { background: var(--accent-soft); color: var(--accent); border-color: color-mix(in srgb, var(--accent-fill) 55%, transparent); font-weight: 600; }
+.pop-btn .count { background: var(--accent-fill); color: var(--on-accent); font-weight: 600; }
+.filter-meta { margin-top: var(--s-2); color: var(--text-3); min-height: var(--lh-13); }
+.link-btn { color: var(--accent); text-decoration-thickness: 1px; }
+@media (max-width: 63.99em) {
+  .field, .check-pill span { min-height: var(--touch); }
+  .seg span { min-height: 2.25rem; }
+}
+
+@media (max-width: 47.99em) { .filters { position: relative; } }
+
+/* 404: a board-style message (tiles come from board.css) */
+.notfound { padding-top: var(--s-16); padding-bottom: var(--s-8); }
+.board-404 { max-width: 40rem; }
+.board-404 .brow { padding: 0; margin: 0; }
+.board-404 .board-head { margin-bottom: var(--s-3); }
+.nf-text { margin-block: var(--s-6) var(--s-5); max-width: var(--measure); color: var(--text-2); font-size: var(--fs-17); line-height: var(--lh-17); }
+@media (max-width: 47.99em) { .notfound { padding-top: var(--s-8); } }

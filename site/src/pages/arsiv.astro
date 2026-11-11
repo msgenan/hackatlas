@@ -6,7 +6,6 @@ import { site } from "../lib/site";
 import { href } from "../lib/url";
 
 const { ended } = site();
-const cols = ["Durum", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
 ---
 <Base title="Arşiv" description="Sona ermiş hackathonlar, en yeniden en eskiye.">
   <div class="wrap">
@@ -15,7 +14,6 @@ const cols = ["Durum", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
       <EmptyState title="Arşivde henüz kayıt yok." text="Biten hackathonlar burada toplanır." action={{ label: "Listeye dön", href: href() }} />
     ) : (
       <div class="list">
-        <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
         <ul class="rows">{ended.map((v) => <EventRow v={v} archive />)}</ul>
       </div>
     )}

@@ -1,0 +1,40 @@
+---
+/* Departures board: the next deadlines as a split-flap board. Server-rendered with final characters
+   (complete without JS); scripts/board.ts animates, keeps it live and follows the list filters. */
+import { BOARD_COLS, BOARD_COL_ORDER, BOARD_LABELS, boardRows } from "../lib/board";
+import { href } from "../lib/url";
+import type { EventMeta } from "../lib/types";
+interface Props { metas: EventMeta[]; nowMs: number; limit?: number }
+const { metas, nowMs, limit = 8 } = Astro.props;
+const rows = boardRows(metas, nowMs, limit);
+const clock = new Intl.DateTimeFormat("tr-TR", { timeZone: "Europe/Istanbul", hour: "2-digit", minute: "2-digit" }).format(nowMs);
+---
+<section class="board" aria-labelledby="board-title" data-board data-limit={limit}>
+  <div class="board-head">
+    <h2 id="board-title" class="board-title">Sıradaki kapanışlar</h2>
+    <p class="board-clock"><span data-clock>{clock}</span><span class="board-tz">Türkiye saati</span></p>
+  </div>
+  <div class="board-grid">
+    <div class="brow brow-labels" aria-hidden="true">
+      {BOARD_COL_ORDER.map((c) => (
+        <span class="bcol bcol-label" data-col={c} style={`--w:${BOARD_COLS[c]}`}>{BOARD_LABELS[c]}</span>
+      ))}
+    </div>
+    <ol class="board-rows" data-board-rows>
+      {rows.map((r) => (
+        <li>
+          <a class="brow" href={href(`e/${r.id}/`)} data-id={r.id}>
+            <span class="sr-only" data-sr>{r.label}</span>
+            {BOARD_COL_ORDER.map((c) => (
+              <span class="bcol" data-col={c} data-tone={r.tone[c]} aria-hidden="true">
+                {[...r.cells[c]].map((ch) => <span class="cell">{ch}</span>)}
+              </span>
+            ))}
+          </a>
+        </li>
+      ))}
+    </ol>
+    <p class="board-empty" data-board-empty hidden={rows.length > 0}>Bu filtrelerde son başvurusu yaklaşan hackathon yok.</p>
+  </div>
+  <p class="board-foot">Son başvurular, o günün sonunda Türkiye saatiyle kapanır. Satıra basınca etkinlik açılır.</p>
+</section>

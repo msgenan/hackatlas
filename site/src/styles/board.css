@@ -1,0 +1,79 @@
+/* Hero and departures board. The board is a dark physical object in both themes. */
+.hero { padding: var(--s-16) 0 var(--s-10); }
+.hero-title {
+  font-family: var(--font-display); font-weight: 800; font-size: var(--fs-hero); line-height: 0.88;
+  letter-spacing: -0.01em; text-wrap: balance; max-width: 14ch;
+}
+.hero-title .line { display: block; }
+.hero-title .line > span { display: inline-block; }
+.hero-sub { margin-top: var(--s-6); max-width: 40rem; color: var(--text-2); font-size: var(--fs-20); line-height: var(--lh-20); text-wrap: pretty; }
+.hero-sub b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-8); }
+
+.board {
+  --cells: 59; --gap: 3px;
+  position: relative; background: var(--board); color: var(--flap-text);
+  border-radius: var(--r-board); padding: var(--s-6) var(--s-6) var(--s-5);
+  box-shadow: var(--shadow-board);
+  border: 1px solid var(--board-edge);
+}
+.board::before { /* mounting screws */
+  content: ""; position: absolute; inset: var(--s-3); pointer-events: none; border-radius: calc(var(--r-board) - var(--s-3));
+  background:
+    radial-gradient(circle at 0 0, var(--board-edge) 0 2.5px, transparent 3px) top left / var(--s-3) var(--s-3) no-repeat,
+    radial-gradient(circle at 100% 0, var(--board-edge) 0 2.5px, transparent 3px) top right / var(--s-3) var(--s-3) no-repeat,
+    radial-gradient(circle at 0 100%, var(--board-edge) 0 2.5px, transparent 3px) bottom left / var(--s-3) var(--s-3) no-repeat,
+    radial-gradient(circle at 100% 100%, var(--board-edge) 0 2.5px, transparent 3px) bottom right / var(--s-3) var(--s-3) no-repeat;
+}
+.board-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); margin-bottom: var(--s-4); }
+.board-title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-24); line-height: var(--lh-24); color: var(--flap-amber); letter-spacing: 0.02em; }
+.board-clock { display: flex; align-items: baseline; gap: var(--s-2); font-family: var(--font-display); font-weight: 700; font-size: var(--fs-24); font-variant-numeric: tabular-nums; color: var(--flap-text); }
+.board-tz { font-family: var(--font-ui); font-weight: 400; font-size: var(--fs-12); color: var(--flap-dim); }
+.board-grid { container-type: inline-size; }
+.board-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-1); }
+.brow {
+  display: grid; grid-template-columns: repeat(var(--cells), minmax(0, 1fr)); column-gap: var(--gap);
+  text-decoration: none; color: inherit; border-radius: var(--r-flap); padding: 2px; margin: -2px;
+  transition: background var(--t-fast) var(--ease);
+}
+.brow:hover, .brow:focus-visible { background: rgb(255 178 26 / 0.08); }
+.brow:focus-visible { outline: 2px solid var(--flap-amber); outline-offset: 2px; }
+.bcol { display: contents; }
+.bcol[data-col="ad"]::before, .bcol[data-col="yer"]::before, .bcol[data-col="odul"]::before, .bcol[data-col="durum"]::before { content: ""; } /* one spacer cell between columns */
+.cell {
+  position: relative; display: grid; place-items: center; aspect-ratio: 0.68; overflow: hidden;
+  background: linear-gradient(var(--flap-hi) 0 50%, var(--flap) 50% 100%);
+  border-radius: var(--r-flap);
+  font-family: var(--font-display); font-weight: 700; font-size: calc((100cqi - (var(--cells) - 1) * var(--gap)) / var(--cells) * 1.12);
+  line-height: 1; color: currentColor; white-space: pre; user-select: none;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.6), inset 0 1px 0 rgb(255 255 255 / 0.04);
+}
+.cell::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--flap-split); }
+.cell.is-flipping { animation: flap 84ms var(--ease); }
+@keyframes flap { 0% { transform: scaleY(1); } 50% { transform: scaleY(0.12); filter: brightness(1.5); } 100% { transform: scaleY(1); } }
+.bcol[data-tone="amber"] { color: var(--flap-amber); }
+.bcol[data-tone="red"] { color: var(--flap-red); }
+.bcol[data-tone="dim"] { color: var(--flap-dim); }
+.bcol[data-blink="1"] .cell { animation: blink 1.4s steps(1) infinite; }
+@keyframes blink { 50% { color: var(--flap-dim); } }
+.brow-labels { margin-bottom: var(--s-2); }
+.bcol-label {
+  display: block; grid-column: span var(--w); font-size: var(--fs-12); line-height: var(--lh-12); color: var(--flap-dim);
+  white-space: nowrap; overflow: hidden;
+}
+.bcol-label[data-col="ad"], .bcol-label[data-col="yer"], .bcol-label[data-col="odul"], .bcol-label[data-col="durum"] { grid-column: span calc(var(--w) + 1); padding-left: calc((100cqi - (var(--cells) - 1) * var(--gap)) / var(--cells) + var(--gap)); }
+.board-empty { padding: var(--s-8) 0; color: var(--flap-dim); text-align: center; }
+.board-foot { margin-top: var(--s-4); color: var(--flap-dim); font-size: var(--fs-12); line-height: var(--lh-12); }
+
+/* Narrow: countdown + the start of the name only. */
+@media (max-width: 47.99em) {
+  .board { --cells: 20; padding: var(--s-4) var(--s-3) var(--s-4); border-radius: var(--r-panel); }
+  .board::before { display: none; }
+  .bcol[data-col="yer"], .bcol[data-col="odul"], .bcol[data-col="durum"] { display: none; }
+  .bcol[data-col="ad"] .cell:nth-child(n + 12) { display: none; }
+  .bcol-label[data-col="ad"] { grid-column: span 12; }
+  .board-title, .board-clock { font-size: var(--fs-20); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cell.is-flipping, .bcol[data-blink="1"] .cell { animation: none; }
+}

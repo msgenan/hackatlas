@@ -1,29 +1,117 @@
+/* Event detail: one large boarding pass is the page. Same notch + dashed perforation as .pass in list.css. */
 .crumb { display: inline-flex; align-items: center; gap: var(--s-1); margin-top: var(--s-6); min-height: 2rem; color: var(--text-2); text-decoration: none; font-weight: 500; }
 .crumb:hover { color: var(--text); text-decoration: underline; }
 @media (max-width: 63.99em) { .crumb { min-height: var(--touch); } }
-.detail-head { padding-top: var(--s-4); }
-.detail-title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-30); line-height: var(--lh-30); letter-spacing: -0.02em; max-width: var(--measure); overflow-wrap: anywhere; text-wrap: balance; }
-@media (min-width: 64em) { .detail-title { font-size: var(--fs-44); line-height: var(--lh-44); } }
-.detail-org { color: var(--text-2); margin-top: var(--s-2); font-size: var(--fs-17); line-height: var(--lh-17); }
-.detail-status { margin-top: var(--s-4); }
-.actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
-.notice { display: flex; gap: var(--s-3); margin-top: var(--s-6); padding: var(--s-3) var(--s-4); max-width: var(--measure); background: var(--raised); border-radius: var(--r-control); color: var(--text-2); font-size: var(--fs-13); line-height: var(--lh-13); }
-.notice .icon { margin-top: 0.125rem; }
-.sheet { margin-top: var(--s-8); display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--line); }
-.sheet > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-1); padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
-.sheet dt { color: var(--text-3); font-size: var(--fs-13); line-height: var(--lh-13); }
-.sheet dd { min-width: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
-.sheet .v-cd { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-3); }
-@media (min-width: 64em) {
-  .sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(4, auto); grid-auto-flow: column; column-gap: var(--s-12); }
-  .sheet > div { grid-template-columns: 10rem minmax(0, 1fr); gap: var(--s-4); }
+
+.dpass {
+  --dstub-w: 19rem;
+  --stub-bg: var(--raised); --stub-ink: var(--text);
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr) var(--dstub-w);
+  margin-top: var(--s-3); background: var(--surface); border-radius: var(--r-pass); box-shadow: var(--shadow-pass);
+  -webkit-mask: radial-gradient(circle var(--notch) at calc(100% - var(--dstub-w)) 0, transparent 98%, #000) top / 100% 51% no-repeat,
+                radial-gradient(circle var(--notch) at calc(100% - var(--dstub-w)) 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+          mask: radial-gradient(circle var(--notch) at calc(100% - var(--dstub-w)) 0, transparent 98%, #000) top / 100% 51% no-repeat,
+                radial-gradient(circle var(--notch) at calc(100% - var(--dstub-w)) 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
 }
-.detail-section { margin-top: var(--s-10); max-width: var(--measure); }
-.detail-section h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-20); line-height: var(--lh-20); margin-bottom: var(--s-3); }
+.dpass[data-tone="danger"] { --stub-bg: var(--danger-soft); --stub-ink: var(--danger); }
+.dpass[data-tone="accent"] { --stub-bg: var(--accent-soft); --stub-ink: var(--accent); }
+
+.dpass-main { min-width: 0; padding: var(--s-10) var(--s-10) var(--s-8); display: flex; flex-direction: column; gap: var(--s-6); }
+.detail-title {
+  font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem, 1.5rem + 3.6vw, 4.25rem); line-height: 0.95; letter-spacing: -0.005em;
+  overflow-wrap: anywhere; text-wrap: balance;
+}
+.detail-org { color: var(--text-2); margin-top: var(--s-3); font-size: var(--fs-17); line-height: var(--lh-17); overflow-wrap: anywhere; }
+.dpass .route {
+  display: flex; align-items: center; gap: var(--s-3); min-width: 0; padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-control); background: var(--raised); font-weight: 550; font-size: var(--fs-17); line-height: var(--lh-17);
+}
+.dpass .route .icon { flex: none; color: var(--text-3); }
+.dpass .route span { min-width: 0; overflow-wrap: anywhere; }
+.dpass .na { color: var(--text-3); font-weight: 400; }
+
+/* Fact sheet: the fixed order, two columns, dashed rules, small uppercase labels */
+.sheet { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-8); }
+.sheet > div { min-width: 0; border-top: 1px dashed var(--line-strong); padding-top: var(--s-3); }
+.sheet dt, .detail-section h2 { color: var(--text-3); font-size: var(--fs-12); line-height: var(--lh-12); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+.sheet dd { margin-top: var(--s-1); min-width: 0; overflow-wrap: anywhere; font-size: var(--fs-17); line-height: var(--lh-17); font-weight: 500; font-variant-numeric: tabular-nums; }
+.sheet dd.na { color: var(--text-3); font-weight: 400; }
+.sheet .v-cd { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-1) var(--s-3); }
+.sheet .cd-n { font-size: var(--fs-20); line-height: var(--lh-20); }
+.sheet .cd-t { font-size: var(--fs-13); }
+
+.detail-section { padding-top: var(--s-4); border-top: 1px dashed var(--line-strong); }
+.detail-section h2 { margin-bottom: var(--s-2); }
+.detail-section > p { max-width: var(--measure); font-size: var(--fs-17); line-height: var(--lh-17); text-wrap: pretty; }
+.detail-section .tags { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: 0; }
+.detail-section .pill { min-height: 1.75rem; padding: 0 var(--s-3); font-size: var(--fs-13); }
 .sources { list-style: none; padding: 0; }
-.sources li { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-3); padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
-.sources a { min-width: 0; overflow-wrap: anywhere; }
+.sources li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-1) var(--s-3); padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
+.sources li:last-child { border-bottom: 0; }
+.sources a { min-width: 0; overflow-wrap: anywhere; font-weight: 500; }
 .sources .seen { color: var(--text-3); font-size: var(--fs-13); font-variant-numeric: tabular-nums; }
-.fix { margin-top: var(--s-10); padding-top: var(--s-4); border-top: 1px solid var(--line); color: var(--text-2); max-width: var(--measure); }
-.fix a { color: var(--text); }
-.detail-section .tags { margin-top: 0; }
+.notice { display: flex; gap: var(--s-3); padding: var(--s-3) var(--s-4); background: var(--accent-soft); border-radius: var(--r-control); color: var(--text); font-size: var(--fs-13); line-height: var(--lh-13); }
+.notice .icon { margin-top: 0.125rem; color: var(--accent); }
+.fix { color: var(--text-2); font-size: var(--fs-13); line-height: var(--lh-13); }
+.fix a { color: var(--text); display: inline-flex; align-items: center; min-height: 2rem; }
+@media (max-width: 63.99em) { .fix a { min-height: var(--touch); } }
+
+/* Stub */
+.dpass-stub {
+  position: relative; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-1);
+  padding: var(--s-10) var(--s-6) var(--s-8);
+  background: var(--stub-bg); color: var(--stub-ink); border-left: 2px dashed var(--line-strong);
+  border-radius: 0 var(--r-pass) var(--r-pass) 0;
+}
+.dpass-stub .stub-label { font-size: var(--fs-12); line-height: var(--lh-12); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); }
+.dpass-stub .cd { display: flex; flex-direction: column; color: var(--stub-ink); }
+.dpass-stub .cd-n { font-family: var(--font-display); font-weight: 800; font-size: 6.5rem; line-height: 0.9; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.dpass-stub .cd-t { font-size: var(--fs-15); line-height: var(--lh-15); font-weight: 600; }
+.dpass-stub .cd:not(:has(.cd-n)) .cd-t { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-30); line-height: 1; margin-top: var(--s-1); }
+.dpass[data-tone="muted"] .dpass-stub .cd, .dpass[data-tone="neutral"] .dpass-stub .cd { color: var(--text); }
+.stub-date { color: var(--text-2); font-size: var(--fs-15); line-height: var(--lh-15); font-weight: 500; font-variant-numeric: tabular-nums; }
+.d-barcode { width: 100%; height: 3.5rem; margin-block: auto var(--s-6); fill: var(--text); opacity: 0.8; }
+.actions { display: flex; flex-direction: column; gap: var(--s-2); width: 100%; }
+.actions .btn { width: 100%; white-space: normal; text-align: center; }
+.actions .btn-primary { min-height: 3rem; font-weight: 600; }
+
+/* Tablet and phone: the stub tears off at the bottom, the perforation turns horizontal. */
+@media (max-width: 63.99em) {
+  .dpass { grid-template-columns: minmax(0, 1fr); -webkit-mask: none; mask: none; }
+  .dpass-main { padding: var(--s-6) var(--s-5) var(--s-6); }
+  .dpass-stub {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 9rem); grid-template-areas: "label barcode" "cd barcode" "date barcode" "actions actions";
+    column-gap: var(--s-5); align-items: start; padding: var(--s-6) var(--s-5);
+    border-left: 0; border-top: 2px dashed var(--line-strong); border-radius: 0 0 var(--r-pass) var(--r-pass);
+  }
+  .dpass-stub::before, .dpass-stub::after {
+    content: ""; position: absolute; top: calc(var(--notch) * -1); width: calc(var(--notch) * 2); height: calc(var(--notch) * 2);
+    border-radius: var(--r-pill); background: var(--bg);
+  }
+  .dpass-stub::before { left: calc(var(--notch) * -1); }
+  .dpass-stub::after { right: calc(var(--notch) * -1); }
+  .dpass-stub .stub-label { grid-area: label; }
+  .dpass-stub .cd { grid-area: cd; }
+  .dpass-stub .stub-date { grid-area: date; }
+  .d-barcode { grid-area: barcode; align-self: stretch; height: 100%; min-height: 5rem; margin: 0; }
+  .dpass-stub .cd-n { font-size: 5rem; }
+  .actions { grid-area: actions; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--s-6); }
+  .actions .btn-primary { grid-column: 1 / -1; }
+  .actions > :last-child:nth-child(even) { grid-column: 1 / -1; }
+  .sheet { column-gap: var(--s-6); }
+}
+@media (max-width: 30em) {
+  .dpass-main { padding: var(--s-5) var(--s-4); gap: var(--s-5); }
+  .dpass-stub { padding: var(--s-5) var(--s-4); grid-template-columns: minmax(0, 1fr) minmax(0, 7rem); }
+  .sheet { column-gap: var(--s-4); }
+  .sheet dd { font-size: var(--fs-15); line-height: var(--lh-15); }
+  .actions { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* The stub's content travels with the reader on wide screens, so the actions stay in reach. */
+.stub-inner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-1); width: 100%; }
+@media (min-width: 64em) {
+  .stub-inner { position: sticky; top: calc(var(--header-h) + var(--s-8)); }
+  .dpass-stub .d-barcode { margin-block: var(--s-8) var(--s-6); }
+}
+@media (max-width: 63.99em) { .stub-inner { display: contents; } }

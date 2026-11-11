@@ -12,8 +12,8 @@ const sources = [...new Set(e.sources.map((s) => SOURCE_NAMES[s.kind] ?? s.kind)
   <div>
     <dt>Son başvuru</dt>
     <dd class="v-cd">
+      {e.deadline && v.deadlineDate ? <span class="num">{v.deadlineDate}</span> : null}
       <CountdownChip status={v.status} e={e} />
-      {e.deadline && v.deadlineDate && <span class="num">{v.deadlineDate}</span>}
     </dd>
   </div>
   <div><dt>Tarih</dt><dd class:list={{ na: !v.dates }}>{v.dates ?? NA}</dd></div>
