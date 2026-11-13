@@ -3,16 +3,15 @@ import { href } from "../lib/url";
 import { ISSUE_NEW } from "../lib/format";
 ---
 <footer class="site-footer">
-  <div class="wrap">
-    <ul>
+  <div class="foot-in">
+    <p class="foot-note">Bilgiler her gün Devpost, MLH, Devfolio ve Techcareer gibi kaynaklardan toplanır, yayından önce gözden geçirilir. Başvurmadan önce resmi sayfayı kontrol et.</p>
+    <ul class="foot-links">
       <li><a href={href("arsiv/")}>Arşiv</a></li>
+      <li><a href={href("hakkinda/")}>Hakkında</a></li>
       <li><a href={href("feed.xml")}>RSS</a></li>
       <li><a href={href("takvim.ics")}>Takvim aboneliği</a></li>
       <li><a href="https://github.com/msgenan/hackatlas" rel="noopener">GitHub</a></li>
       <li><a href={ISSUE_NEW} target="_blank" rel="noopener">Hackathon ekle</a></li>
-      <li><a href={href("hakkinda/")}>Hakkında</a></li>
     </ul>
-    <p>Bilgiler otomatik toplanır ve yayınlanmadan önce gözden geçirilir. Başvurmadan önce her zaman resmi sayfayı kontrol et.</p>
   </div>
-  <div class="foot-mark" aria-hidden="true" data-mark="hackatlas"></div>
 </footer>

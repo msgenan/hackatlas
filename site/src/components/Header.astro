@@ -3,25 +3,24 @@ import { href } from "../lib/url";
 import { ISSUE_NEW } from "../lib/format";
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-interface Props { current?: "liste" | "takvim" | "kaydedilenler" | "" }
+interface Props { current?: "harita" | "takvim" | "rota" | "" }
 const { current = "" } = Astro.props;
 const nav = [
-  ["liste", "Liste", href()],
+  ["harita", "Harita", href()],
   ["takvim", "Takvim", href("takvim/")],
-  ["kaydedilenler", "Kaydedilenler", href("kaydedilenler/")],
+  ["rota", "Rotam", href("kaydedilenler/")],
 ] as const;
 ---
 <header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href={href()}><span class="wm-tile" aria-hidden="true">h</span><span>hackatlas</span></a>
-    <nav class="nav" aria-label="Ana gezinme">
-      {nav.map(([k, label, to]) => <a href={to} aria-current={current === k ? "page" : undefined}>{label}</a>)}
-    </nav>
-    <div class="header-actions">
-      <a class="btn btn-add" href={ISSUE_NEW} target="_blank" rel="noopener" aria-label="Hackathon ekle">
-        <Icon name="plus" /><span class="label">Hackathon ekle</span>
-      </a>
-      <ThemeToggle />
-    </div>
+  <a class="wordmark" href={href()} aria-label="hackatlas, ana sayfa">
+    <svg class="wm-rose" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M0 -11L2.4 -2.4L11 0L2.4 2.4L0 11L-2.4 2.4L-11 0L-2.4 -2.4Z" /><circle r="1.6" /></svg>
+    <span>hackatlas</span>
+  </a>
+  <nav class="nav" aria-label="Ana gezinme">
+    {nav.map(([k, label, to]) => <a href={to} aria-current={current === k ? "page" : undefined}>{label}{k === "rota" && <span class="nav-count" data-saved-count hidden></span>}</a>)}
+  </nav>
+  <div class="header-actions">
+    <a class="btn-ghost add" href={ISSUE_NEW} target="_blank" rel="noopener"><Icon name="plus" size={16} /><span>Hackathon ekle</span></a>
+    <ThemeToggle />
   </div>
 </header>

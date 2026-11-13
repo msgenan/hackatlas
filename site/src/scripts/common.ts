@@ -1,6 +1,5 @@
 import { countdownStatus, countdownInner } from "../lib/countdown";
-import { initPopovers } from "./popover";
-import { initSave } from "./saved";
+import { initSave, readSaved, SAVED_EVENT } from "./saved";
 import { clientToday } from "./today";
 
 function initTheme(): void {
@@ -30,13 +29,23 @@ function initTheme(): void {
 export function refreshCountdowns(root: ParentNode = document): void {
   const today = clientToday();
   root.querySelectorAll<HTMLElement>("[data-cd]").forEach((el) => {
-    const s = countdownStatus(
-      { deadline: el.dataset.deadline || null, starts: el.dataset.starts || null, ends: el.dataset.ends || null },
-      today,
-    );
+    const s = countdownStatus({ deadline: el.dataset.deadline || null, starts: el.dataset.starts || null, ends: el.dataset.ends || null }, today);
     el.dataset.tone = s.tone;
-    el.innerHTML = countdownInner(s);
+    const inner = el.querySelector<HTMLElement>(".cd-in") ?? el;
+    inner.innerHTML = countdownInner(s);
   });
+}
+
+function initSavedCount(): void {
+  const paint = () => {
+    const n = readSaved().length;
+    document.querySelectorAll<HTMLElement>("[data-saved-count]").forEach((el) => {
+      el.textContent = String(n);
+      el.hidden = n === 0;
+    });
+  };
+  paint();
+  document.addEventListener(SAVED_EVENT, paint);
 }
 
 function initCopy(): void {
@@ -44,19 +53,19 @@ function initCopy(): void {
     const b = (ev.target as Element).closest<HTMLElement>("[data-copy]");
     if (!b) return;
     const label = b.querySelector<HTMLElement>(".copy-label");
+    const url = location.origin + location.pathname;
     const done = () => {
-      if (label) {
-        const old = label.textContent;
-        label.textContent = "Kopyalandı";
-        setTimeout(() => (label.textContent = old), 1800);
-      }
+      if (!label) return;
+      const old = label.textContent;
+      label.textContent = "Kopyalandı";
+      setTimeout(() => (label.textContent = old), 1800);
     };
     try {
-      await navigator.clipboard.writeText(location.origin + location.pathname);
+      await navigator.clipboard.writeText(url);
       done();
     } catch {
       const ta = document.createElement("textarea");
-      ta.value = location.origin + location.pathname;
+      ta.value = url;
       document.body.appendChild(ta);
       ta.select();
       try {
@@ -70,8 +79,25 @@ function initCopy(): void {
   });
 }
 
+/** Remembers where a hackathon was opened, so the detail page can open as a circle from that spot. */
+function initIris(): void {
+  document.addEventListener("click", (ev) => {
+    const a = (ev.target as Element).closest<HTMLAnchorElement | SVGAElement>("a[data-iris], a.isle");
+    if (!a || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+    const r = a.getBoundingClientRect();
+    const x = ((ev.clientX || r.left + r.width / 2) / innerWidth) * 100;
+    const y = ((ev.clientY || r.top + r.height / 2) / innerHeight) * 100;
+    try {
+      sessionStorage.setItem("hackatlas:iris", JSON.stringify({ x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 }));
+    } catch {
+      /* no storage: plain navigation */
+    }
+  });
+}
+
 initTheme();
-initPopovers();
 initSave();
+initSavedCount();
 initCopy();
+initIris();
 refreshCountdowns();

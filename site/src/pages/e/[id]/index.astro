@@ -1,15 +1,14 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Icon from "../../../components/Icon.astro";
-import FactSheet from "../../../components/FactSheet.astro";
-import CountdownChip from "../../../components/CountdownChip.astro";
+import Countdown from "../../../components/Countdown.astro";
 import SaveButton from "../../../components/SaveButton.astro";
-import { barcodePath } from "../../../lib/barcode";
 import { site } from "../../../lib/site";
 import { href, absolute } from "../../../lib/url";
-import { SOURCE_NAMES, fixIssueUrl, themeName } from "../../../lib/format";
+import { NA, SOURCE_NAMES, countryName, fixIssueUrl, themeName } from "../../../lib/format";
 import { formatDay } from "../../../lib/dates";
 import { hasCalendarDates } from "../../../lib/ical";
+import { islandRadius, islandShape, rhumbs } from "../../../lib/chart";
 import type { ViewEvent } from "../../../lib/events";
 
 export function getStaticPaths() {
@@ -18,64 +17,102 @@ export function getStaticPaths() {
 const { v } = Astro.props as { v: ViewEvent };
 const { e } = v;
 const { today } = site();
+const ended = v.status.kind === "ended";
+const urgent = v.status.kind === "today" || v.status.kind === "soon" || v.status.kind === "week";
 const lowConfidence = e.confidence !== null && e.confidence < 0.7;
-const formatIcon = e.format === "online" ? "globe" : e.format === "hybrid" ? "shuffle" : "map-pin";
 const desc = e.summary ?? `${e.name}: son başvuru, tarih, yer, ödül ve takım bilgisi.`;
+const pageUrl = absolute(`e/${e.id}/`);
+
+// The plate: the same island as on the chart, surveyed at a large scale.
+const R = Math.round(islandRadius(v.meta.prizeUsd) * 4.4);
+const shape = islandShape(e.id, 0, 0, R);
+const ring2 = islandShape(e.id, 0, 0, R + 26).contour;
+const ring3 = islandShape(e.id, 0, 0, R + 52).contour;
+const PW = 560;
+const PH = 420;
+const plateState = ended || v.status.kind === "closed" ? "closed" : "open";
+const where = e.format === "online" ? "Online" : [e.location?.city, countryName(e.location?.country)].filter(Boolean).join(", ") || e.location?.venue || null;
+
+const facts: [string, string | null, string?][] = [
+  ["Son başvuru", e.deadline ? formatDay(e.deadline, today) : null],
+  ["Tarih", v.dates],
+  ["Yer", v.place],
+  ["Ödül", v.prize],
+  ["Takım", v.team],
+  ["Kimler katılabilir", e.eligibility],
+  ["Organizatör", e.organizer],
+];
 ---
-<Base title={e.name} description={desc}>
-  <div class="wrap">
-    <a class="crumb" href={href()}><Icon name="chevron-left" />Liste</a>
+<Base title={e.name} description={desc} noindex={ended}>
+  <article class="page plate-page">
+    <a class="crumb" href={`${href()}#liste`}><Icon name="chevron-left" />Haritaya dön</a>
 
-    <article class="dpass" data-tone={v.status.tone} style={`view-transition-name: pass-${e.id}`}>
-      <div class="dpass-main">
-        <header class="detail-head">
-          <h1 class="detail-title">{e.name}</h1>
-          {e.organizer && <p class="detail-org">{e.organizer}</p>}
-        </header>
-        <p class="route">
-          <Icon name={formatIcon} size={18} />
-          <span class:list={[{ na: !v.place }]}>{v.place ?? "Belirtilmemiş"}</span>
-        </p>
+    <header class="plate-head">
+      {ended ? <p class="cd cd-big" data-tone="muted"><span class="cd-in"><span class="cd-t">Bitti</span></span></p> : <Countdown v={v} size="big" />}
+      <h1 class="plate-title">{e.name}</h1>
+      <p class="plate-org">{e.organizer ?? <span class="na">Organizatör belirtilmemiş</span>}</p>
+    </header>
 
-        <FactSheet v={v} />
+    <div class="plate-grid">
+      <figure class="plate-map" data-state={plateState}>
+        <svg viewBox={`${-PW / 2} ${-PH / 2} ${PW} ${PH}`} role="img" aria-label={`${e.name} adası. Ada büyüklüğü ödülü gösterir.`}>
+          <defs>
+            <pattern id="p-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" class="hatch-line" /></pattern>
+            <clipPath id="p-clip"><rect x={-PW / 2 + 14} y={-PH / 2 + 14} width={PW - 28} height={PH - 28} /></clipPath>
+          </defs>
+          <rect class="sea-bg" x={-PW / 2} y={-PH / 2} width={PW} height={PH} />
+          <g clip-path="url(#p-clip)">
+            <path class="rhumb" d={rhumbs(-PW / 2 + 70, PH / 2 - 70, 900) + rhumbs(PW / 2 - 40, -PH / 2 + 40, 900, 16)} />
+            <path class="p-ring" d={ring3} />
+            <path class="p-ring" d={ring2} />
+            <path class="i-contour" d={shape.contour} />
+            <path class="p-shoal" d={shape.shoal} />
+            <path class="p-land" d={shape.land} pathLength="1" />
+            {urgent && (
+              <g class="i-flare p-flare" transform={`translate(${(R * 0.25).toFixed(1)} ${(-R * 0.2).toFixed(1)}) scale(1.8)`}>
+                <path d="M0 0c6 -10 16 -16 26 -18c-2 10 -8 20 -18 24z" />
+                <circle r="2.8" />
+              </g>
+            )}
+            {where && <text class="p-where" x="0" y={R * 0.82 + 54} text-anchor="middle">{where}</text>}
+          </g>
+          <rect class="neat-frame" x={-PW / 2 + 0.5} y={-PH / 2 + 0.5} width={PW - 1} height={PH - 1} />
+          <rect class="neat-frame" x={-PW / 2 + 14} y={-PH / 2 + 14} width={PW - 28} height={PH - 28} />
+          {Array.from({ length: 20 }, (_, i) => i % 2 === 0 && <rect class="neat-cell" x={-PW / 2 + 14 + i * ((PW - 28) / 20)} y={-PH / 2 + 8} width={(PW - 28) / 20} height="6" />)}
+          {Array.from({ length: 15 }, (_, i) => i % 2 === 0 && <rect class="neat-cell" x={-PW / 2 + 8} y={-PH / 2 + 14 + i * ((PH - 28) / 15)} width="6" height={(PH - 28) / 15} />)}
+        </svg>
+        <figcaption>Haritadaki adanın büyütülmüş levhası. Büyüklük ödülü, fener yaklaşan son başvuruyu gösterir.</figcaption>
+      </figure>
 
-        {e.summary && (
-          <section class="detail-section"><h2>Özet</h2><p>{e.summary}</p></section>
-        )}
-        {e.themes.length > 0 && (
-          <section class="detail-section">
-            <h2>Konular</h2>
-            <ul class="tags plain">{e.themes.map((t) => <li class="pill">{themeName(t)}</li>)}</ul>
-          </section>
-        )}
-        <section class="detail-section">
-          <h2>Kaynaklar</h2>
-          <ul class="sources">
-            {e.sources.map((s) => (
-              <li><a href={s.url} target="_blank" rel="noopener noreferrer">{SOURCE_NAMES[s.kind] ?? s.kind}</a><span class="seen">{formatDay(s.seen_at.slice(0, 10), today)} görüldü</span></li>
-            ))}
-          </ul>
-        </section>
-        {lowConfidence && (
-          <p class="notice"><Icon name="info" /><span>Bu bilgiler otomatik toplandı, başvurmadan önce resmi sayfadan kontrol et.</span></p>
-        )}
-        <p class="fix">Bilgi yanlış ya da eksik mi? <a href={fixIssueUrl(e.name, absolute(`e/${e.id}/`))} target="_blank" rel="noopener">Düzeltme öner</a></p>
-      </div>
-
-      <aside class="dpass-stub" aria-label="Başvuru">
-        <div class="stub-inner">
-        <span class="stub-label">{e.deadline ? "Son başvuru" : "Başvuru"}</span>
-        <CountdownChip status={v.status} e={e} />
-        {e.deadline && v.deadlineDate && <span class="stub-date">{v.deadlineDate}</span>}
-        <svg class="d-barcode" viewBox="0 0 120 28" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d={barcodePath(e.id)} /></svg>
+      <aside class="plate-notes" aria-label="Bilgiler">
         <div class="actions">
-          <a class="btn btn-primary" href={e.url} target="_blank" rel="noopener noreferrer">Başvuru sayfasına git</a>
-          {hasCalendarDates(e) && <a class="btn" href={href(`e/${e.id}.ics`)} download><Icon name="calendar-plus" />Takvime ekle</a>}
-          <SaveButton id={e.id} name={e.name} full />
-          <button type="button" class="btn" data-copy><Icon name="link" /><span class="copy-label" aria-live="polite">Bağlantıyı kopyala</span></button>
+          <a class="btn-primary" href={e.url} target="_blank" rel="noopener"><Icon name="external-link" />Başvuru sayfasına git</a>
+          <div class="actions-row">
+            {hasCalendarDates(e) && <a class="btn-ghost" href={href(`e/${e.id}.ics`)} download><Icon name="calendar-plus" />Takvime ekle</a>}
+            <SaveButton id={e.id} full />
+            <button type="button" class="btn-ghost" data-copy><Icon name="link" /><span class="copy-label">Bağlantıyı kopyala</span></button>
+          </div>
         </div>
-        </div>
+        <dl class="facts">
+          {facts.map(([k, val]) => (
+            <div><dt>{k}</dt><dd class:list={[!val && "na"]}>{val ?? NA}</dd></div>
+          ))}
+          <div><dt>Kaynak</dt><dd>{e.sources.map((s, i) => <>{i > 0 && ", "}<a href={s.url} rel="noopener" target="_blank">{SOURCE_NAMES[s.kind]}</a></>)}</dd></div>
+        </dl>
+        {lowConfidence && <p class="notice"><Icon name="compass" />Bu bilgiler otomatik toplandı, başvurmadan önce resmi sayfadan kontrol et.</p>}
       </aside>
-    </article>
-  </div>
+    </div>
+
+    <section class="plate-more">
+      {e.summary && <p class="plate-summary">{e.summary}</p>}
+      {e.themes.length > 0 && (
+        <div class="plate-themes"><h2>Konular</h2><ul>{e.themes.map((t) => <li>{themeName(t)}</li>)}</ul></div>
+      )}
+      <div class="plate-sources">
+        <h2>Kaynaklar</h2>
+        <ul>{e.sources.map((s) => <li><a href={s.url} rel="noopener" target="_blank">{SOURCE_NAMES[s.kind]}</a> <span class="na">{formatDay(s.seen_at.slice(0, 10), today)} tarihinde görüldü</span></li>)}</ul>
+      </div>
+      <p class="plate-fix">Bilgi yanlış ya da eksik mi? <a href={fixIssueUrl(e.name, pageUrl)} target="_blank" rel="noopener">Düzeltme öner</a></p>
+    </section>
+  </article>
 </Base>

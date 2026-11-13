@@ -1,0 +1,171 @@
+---
+/* The sea chart: the signature of the site. Every not-yet-ended hackathon is an island; east is later. */
+import type { ViewEvent } from "../lib/events";
+import { layoutChart, rhumbs, mainland, CHART_H, HARBOR_W } from "../lib/chart";
+import { formatDay, parts, MONTHS } from "../lib/dates";
+import { href } from "../lib/url";
+import Icon from "./Icon.astro";
+
+interface Props { views: ViewEvent[]; today: string; updated: string | null; firstIds: Set<string> }
+const { views, today, updated, firstIds } = Astro.props;
+const visible = firstIds.size;
+const L = layoutChart(views.map((v) => v.meta), today);
+const W = L.width;
+const H = CHART_H;
+const BAND = 36;
+const ml = mainland();
+const rose = { x: 236, y: 540, r: 46 };
+const roseNodes = [rose, ...Array.from({ length: Math.floor((W - 900) / 2200) }, (_, i) => ({ x: L.todayX + 1100 + i * 2200, y: i % 2 ? 150 : 470, r: 0 }))];
+const firstDay = L.days[0]!;
+const lastDay = L.days.at(-1)!;
+const seaEnd = lastDay.x + lastDay.w;
+const byId = new Map(views.map((v) => [v.e.id, v]));
+const tips = Object.fromEntries(
+  L.islands.map((i) => {
+    const v = byId.get(i.id)!;
+    return [i.id, [v.e.name, v.status.text, v.deadlineDate ?? "", v.place ?? "", v.prize ?? "", v.status.tone, v.e.organizer ?? ""]];
+  }),
+);
+const geo = { w: W, h: H, today: L.todayX, harbor: HARBOR_W, islands: Object.fromEntries(L.islands.map((i) => [i.id, [Math.round(i.x), Math.round(i.y), i.r, i.state === "urgent" ? 1 : i.state === "closed" ? 2 : 0]])), months: L.months.map((m) => [Math.round(m.x), m.label]), weeks: L.weeks.map((w) => Math.round(w.x)), days: L.days.map((d) => [Math.round(d.x), d.date]) };
+const roseTicks = Array.from({ length: 64 }, (_, k) => {
+  const a = (k / 64) * Math.PI * 2;
+  const l = k % 8 === 0 ? 9 : k % 2 === 0 ? 5 : 3;
+  const o = rose.r + 8;
+  return [Math.cos(a) * o, Math.sin(a) * o, Math.cos(a) * (o - l), Math.sin(a) * (o - l)].map((n) => n.toFixed(1));
+});
+const scrubMonths: { left: string; label: string }[] = [];
+for (const m of L.months) {
+  if (L.farX !== null && m.x >= L.farX) break;
+  const left = (m.x / W) * 100;
+  const prev = scrubMonths.at(-1);
+  if (prev && left - Number(prev.left) < 6) continue;
+  scrubMonths.push({ left: left.toFixed(2), label: m.label.split(" ")[0]! });
+}
+const farPct = L.farX !== null ? (L.farX * 100) * (1 / W) : null;
+const farLeft = farPct !== null && farPct - Number(scrubMonths.at(-1)?.left ?? -99) >= 9 ? farPct.toFixed(2) : null;
+const tp = parts(today);
+const todayLabel = `Bugün, ${tp.d} ${MONTHS[tp.m - 1]}`;
+// Compass rose: 32 points, the cardinal ones long and filled half dark, half light (the classic printed rose).
+const star = (n: number, len: number, wid: number, rot = 0) =>
+  Array.from({ length: n }, (_, k) => {
+    const a = (k / n) * Math.PI * 2 + rot - Math.PI / 2;
+    const tip = [Math.cos(a) * len, Math.sin(a) * len];
+    const l = [Math.cos(a - Math.PI / 2) * wid, Math.sin(a - Math.PI / 2) * wid];
+    const r = [Math.cos(a + Math.PI / 2) * wid, Math.sin(a + Math.PI / 2) * wid];
+    const f = (p: number[]) => `${p[0]!.toFixed(1)} ${p[1]!.toFixed(1)}`;
+    return { dark: `M0 0L${f(l)}L${f(tip)}Z`, light: `M0 0L${f(r)}L${f(tip)}Z` };
+  });
+const roseStar = [...star(8, rose.r * 0.62, 5, Math.PI / 8), ...star(4, rose.r, 9)].flatMap((p) => [["rose-d", p.dark], ["rose-l", p.light]]);
+---
+<section class="chart-wrap" aria-labelledby="chart-title" data-chart>
+  <div class="cartouche" data-cartouche>
+    <p class="c-kicker">Hackathon denizi</p>
+    <h1 id="chart-title" class="c-title">Başvurusu açık <span class="c-count" data-visible-count>{visible}</span> hackathon, son başvuru tarihine göre haritada</h1>
+    <p class="c-text">Doğuya gittikçe tarih ilerler. Adanın büyüklüğü ödülü gösterir, fener yanan adalarda başvuru bu hafta kapanıyor.</p>
+    <dl class="c-legend">
+      <div><dt><svg viewBox="-14 -12 28 24" aria-hidden="true"><path class="lg-land" d="M-10 1C-10 -7 -2 -9 4 -7S11 2 7 6S-10 9 -10 1Z" /></svg></dt><dd>Katılabileceğin</dd></div>
+      <div><dt><svg viewBox="-14 -12 28 24" aria-hidden="true"><path class="lg-off" d="M-10 1C-10 -7 -2 -9 4 -7S11 2 7 6S-10 9 -10 1Z" /></svg></dt><dd>Filtre dışı</dd></div>
+      <div><dt><svg viewBox="-14 -12 28 24" aria-hidden="true"><path class="lg-flare" d="M0 0c4 -7 10 -10 15 -11c-1 6 -5 12 -11 14z" /><circle class="lg-light" r="2.4" /></svg></dt><dd>7 gün içinde kapanıyor</dd></div>
+      <div><dt><svg viewBox="-14 -12 28 24" aria-hidden="true"><path class="lg-route" d="M-12 4L12 -4" /></svg></dt><dd>Rotan</dd></div>
+    </dl>
+    {updated && <p class="c-meta">Son güncelleme {formatDay(updated, today)}</p>}
+  </div>
+
+  <div class="sea" data-sea tabindex="0" role="region" aria-label="Hackathon haritası. Yatay kaydırılır; aynı hackathonlar aşağıdaki listede de var.">
+    <div class="sea-track" style={`--cw: ${W}; --ch: ${H};`}>
+      <svg class="chart" viewBox={`0 0 ${W} ${H}`} aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" class="hatch-line" /></pattern>
+          <pattern id="fog" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.1" class="fog-dot" /><circle cx="10" cy="10" r="1.1" class="fog-dot" /></pattern>
+          <clipPath id="sea-clip"><rect x="0" y={BAND} width={W} height={H - 2 * BAND} /></clipPath>
+        </defs>
+
+        <rect class="sea-bg" x="0" y="0" width={W} height={H} />
+        <g clip-path="url(#sea-clip)">
+          <path class="rhumb" d={roseNodes.map((n) => rhumbs(n.x, n.y, 1700)).join("")} />
+          <rect class="past" x={firstDay.x} y={BAND} width={L.todayX - firstDay.x} height={H - 2 * BAND} />
+          {L.farX !== null && <rect class="far" x={L.farX} y={BAND} width={seaEnd - L.farX} height={H - 2 * BAND} />}
+          {L.fogX !== null && <rect class="fogzone" x={L.fogX} y={BAND} width={W - L.fogX - 100} height={H - 2 * BAND} />}
+          <g class="meridians">
+            {L.weeks.map((w) => <line x1={w.x} x2={w.x} y1={BAND} y2={H - BAND} />)}
+            {L.months.map((m) => <line class="m" x1={m.x} x2={m.x} y1={BAND} y2={H - BAND} />)}
+          </g>
+          <path class="ml-shoal" d={ml.shoal} />
+          <path class="ml-land" d={ml.land} />
+          <g class="rose" transform={`translate(${rose.x} ${rose.y})`}>
+            <circle r={rose.r + 8} class="rose-ring" />
+            <circle r={rose.r + 2} class="rose-ring thin" />
+            {roseTicks.map((t) => <line class="rose-tick" x1={t[0]} y1={t[1]} x2={t[2]} y2={t[3]} />)}
+            {roseStar.map((p) => <path class={p[0]} d={p[1]} />)}
+            <circle r="3" class="rose-hub" />
+            <text class="rose-n" y={-rose.r - 16} text-anchor="middle">K</text>
+          </g>
+          <text class="zone-label" transform={`translate(${firstDay.x + 18} ${H - BAND - 14}) rotate(-90)`}>Kapanan sular</text>
+          {L.farX !== null && <text class="zone-label" x={L.farX + 12} y={BAND + 22}>Uzak sular</text>}
+          {L.fogX !== null && <text class="zone-label" x={L.fogX + 14} y={BAND + 22}>Tarihi açıklanmamış</text>}
+        </g>
+
+        <g class="neat">
+          <rect class="neat-frame" x="0.5" y="0.5" width={W - 1} height={H - 1} />
+          <line class="neat-in" x1="0" x2={W} y1={BAND} y2={BAND} />
+          <line class="neat-in" x1="0" x2={W} y1={H - BAND} y2={H - BAND} />
+          {L.days.map((d, k) => k % 2 === 0 && <g><rect class="neat-cell" x={d.x} y={BAND - 5} width={d.w} height="5" /><rect class="neat-cell" x={d.x} y={H - BAND} width={d.w} height="5" /></g>)}
+          {L.weeks.map((w) => <text class="neat-week" x={w.x + 4} y={BAND - 12}>{w.label}</text>)}
+          {L.dayLabels.map((w) => <text class="neat-day" x={w.x + 4} y={BAND - 12}>{w.label}</text>)}
+          {L.months.map((m) => <text class="neat-month" x={m.x + 6} y={H - 12}>{m.label}</text>)}
+        </g>
+
+        <g class="islands">
+          {L.islands.map((i) => (
+            <a href={href(`e/${i.id}/`)} class="isle" data-id={i.id} data-state={i.state} data-off={firstIds.has(i.id) ? undefined : ""} tabindex="-1" style={`--o:${(i.x / 1000).toFixed(2)}`}>
+              <path class="i-contour" d={i.contour} />
+              <path class="i-shoal" d={i.shoal} />
+              <path class="i-land" d={i.land} pathLength="1" />
+              {i.flare && (
+                <g class="i-flare" transform={`translate(${(i.x + i.r * 0.25).toFixed(1)} ${(i.y - i.r * 0.2).toFixed(1)})`}>
+                  <path d="M0 0c6 -10 16 -16 26 -18c-2 10 -8 20 -18 24z" />
+                  <circle r="2.8" />
+                </g>
+              )}
+              <text class="i-label" x={i.x.toFixed(1)} y={i.ly.toFixed(1)} text-anchor="middle">
+                {i.label.map((l, n) => <tspan x={i.x.toFixed(1)} dy={n === 0 ? "0.9em" : "1.15em"}>{l}</tspan>)}
+              </text>
+            </a>
+          ))}
+        </g>
+        <path class="route" data-route d="" />
+        <g class="today" transform={`translate(${L.todayX} 0)`}>
+          <line y1={BAND} y2={H - BAND} />
+          <path class="today-flag" d={`M0 ${BAND}h8l-4 7z`} />
+          <text x="8" y={BAND + 22}>{todayLabel}</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="scrub" data-scrub>
+    <button type="button" class="scrub-btn" data-step="-1" aria-label="Bir hafta geri"><Icon name="chevron-left" size={18} /></button>
+    <div class="scrub-track" data-scrub-track>
+      <div class="scrub-marks" aria-hidden="true">
+        {L.islands.map((i) => <i class={`mk mk-${i.state}`} data-mk={i.id} data-off={firstIds.has(i.id) ? undefined : ""} style={`left:${((i.x / W) * 100).toFixed(2)}%`} />)}
+        {scrubMonths.map((m) => <span class="mk-month" style={`left:${m.left}%`}>{m.label}</span>)}
+        {farLeft !== null && <span class="mk-month mk-far" style={`left:${farLeft}%`}>Uzak sular</span>}
+        <b class="mk-today" style={`left:${((L.todayX / W) * 100).toFixed(2)}%`} />
+      </div>
+      <div class="scrub-win" data-scrub-win role="slider" tabindex="0" aria-label="Haritada görünen tarih aralığı" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext=""></div>
+      <span class="scrub-range" data-scrub-range aria-hidden="true"></span>
+    </div>
+    <button type="button" class="scrub-btn" data-step="1" aria-label="Bir hafta ileri"><Icon name="chevron-right" size={18} /></button>
+    <button type="button" class="scrub-today" data-today-btn><Icon name="anchor" size={16} /><span>Bugün</span></button>
+  </div>
+  <p class="sr-only" aria-live="polite" data-scrub-live></p>
+
+  <div class="tip" data-tip hidden>
+    <p class="tip-cd" data-tip-cd></p>
+    <p class="tip-name" data-tip-name></p>
+    <p class="tip-org" data-tip-org></p>
+    <dl class="tip-facts"><div><dt>Son başvuru</dt><dd data-tip-date></dd></div><div><dt>Yer</dt><dd data-tip-place></dd></div><div><dt>Ödül</dt><dd data-tip-prize></dd></div></dl>
+  </div>
+  <script type="application/json" id="chart-geo" set:html={JSON.stringify(geo).replace(/</g, "\\u003c")} />
+  <script type="application/json" id="chart-tips" set:html={JSON.stringify(tips).replace(/</g, "\\u003c")} />
+</section>

@@ -1,0 +1,47 @@
+---
+/* One line of the gazetteer. Fields always in the same order; a missing value says so instead of leaving a gap. */
+import type { ViewEvent } from "../lib/events";
+import { NA, themeName } from "../lib/format";
+import { islandRadius } from "../lib/chart";
+import { href } from "../lib/url";
+import Isle from "./Isle.astro";
+import Countdown from "./Countdown.astro";
+import SaveButton from "./SaveButton.astro";
+import Icon from "./Icon.astro";
+interface Props { v: ViewEvent; ended?: boolean; hidden?: boolean; locate?: boolean; pre?: boolean }
+/* pre: hidden by the default filter until the script runs (no flash); without JS everything shows. */
+const { v, ended = false, hidden = false, locate = true, pre = false } = Astro.props;
+const { e } = v;
+const urgent = v.status.kind === "today" || v.status.kind === "soon" || v.status.kind === "week";
+const facts: [string, string | null][] = [
+  ["Tarih", v.dates],
+  ["Yer", v.place],
+  ["Ödül", v.prize],
+  ["Takım", v.team],
+];
+const formatIcon = e.format === "online" ? "globe" : e.format === "hybrid" ? "shuffle" : "map-pin";
+---
+<li class="entry" data-id={e.id} data-tone={v.status.tone} data-pre={pre ? "out" : undefined} hidden={hidden}>
+  <Isle id={e.id} r={islandRadius(v.meta.prizeUsd)} flare={urgent && !ended} state={ended ? "closed" : v.status.kind === "closed" ? "closed" : "open"} class="entry-isle" />
+  <div class="entry-when">
+    {ended ? <p class="cd cd-row" data-tone="muted"><span class="cd-in"><span class="cd-t">Bitti</span></span></p> : <Countdown v={v} />}
+    <p class="entry-date">{v.deadlineDate ?? NA}</p>
+  </div>
+  <div class="entry-main">
+    <h3 class="entry-name"><a href={href(`e/${e.id}/`)} data-iris>{e.name}</a></h3>
+    <p class="entry-org">{e.organizer ?? <span class="na">Organizatör belirtilmemiş</span>}</p>
+    {e.themes.length > 0 && <p class="entry-themes">{e.themes.slice(0, 3).map((t) => <span>{themeName(t)}</span>)}</p>}
+  </div>
+  <dl class="entry-facts">
+    {facts.map(([k, val]) => (
+      <div class={`f-${k === "Ödül" ? "odul" : k === "Takım" ? "takim" : k === "Yer" ? "yer" : "tarih"}`}>
+        <dt>{k}</dt>
+        <dd class:list={[!val && "na"]}>{k === "Yer" && val && <Icon name={formatIcon} size={14} />}{val ?? NA}</dd>
+      </div>
+    ))}
+  </dl>
+  <div class="entry-act">
+    <SaveButton id={e.id} />
+    {locate && !ended && <button type="button" class="locate" data-locate={e.id} title="Haritada göster" aria-label={`${e.name} haritada göster`}><Icon name="locate-fixed" size={18} /></button>}
+  </div>
+</li>

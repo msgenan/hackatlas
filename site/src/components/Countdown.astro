@@ -1,0 +1,10 @@
+---
+/* Server-rendered countdown; scripts/common.ts recomputes it from the real date so a stale build stays right. */
+import type { ViewEvent } from "../lib/events";
+import { countdownInner } from "../lib/countdown";
+interface Props { v: ViewEvent; size?: "row" | "big" }
+const { v, size = "row" } = Astro.props;
+---
+<p class:list={["cd", `cd-${size}`]} data-cd data-tone={v.status.tone} data-deadline={v.e.deadline ?? ""} data-starts={v.e.starts_on ?? ""} data-ends={v.e.ends_on ?? ""}>
+  <span class="cd-in" set:html={countdownInner(v.status)} />
+</p>

@@ -43,7 +43,10 @@ function paint(): void {
   document.querySelectorAll<HTMLButtonElement>("[data-save]").forEach((b) => {
     const on = ids.has(b.dataset.save!);
     b.setAttribute("aria-pressed", String(on));
-    if (!b.classList.contains("save-full")) b.title = on ? "Kaydedildi" : "Kaydet";
+    if (!b.classList.contains("save-full")) {
+      b.title = on ? "Rotada" : "Rotaya ekle";
+      b.setAttribute("aria-label", on ? "Rotada, çıkarmak için bas" : "Rotaya ekle");
+    }
   });
 }
 

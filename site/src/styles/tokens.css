@@ -1,164 +1,142 @@
-/* hackatlas design tokens, v2 "kalkış panosu". The only place raw colors, sizes and durations live.
-   Idea: hackathons are departures, the deadline is the gate closing. The page is a terminal hall
-   (cool concrete by day, night hall by night); the departures board is a physical object and stays dark
-   in both themes; every event is a boarding pass. One accent: board amber. See DESIGN.md. */
+/* hackatlas v3 "deniz haritası" tokens. The only place for raw colors, sizes and durations. */
+
+@font-face { font-family: "Atkinson"; font-weight: 400; font-display: swap; src: url("../fonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson"; font-weight: 700; font-display: swap; src: url("../fonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2"); }
+@font-face {
+  font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("../fonts/source-serif-4-latin-ext-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap;
+  src: url("../fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("../fonts/source-serif-4-latin-ext-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: italic; font-weight: 200 900; font-display: swap;
+  src: url("../fonts/source-serif-4-latin-opsz-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
+  /* Day chart: chart-white sea, buff land, shoal blue, chart magenta for what is closing. */
+  --paper: #f3f7f8;
+  --paper-2: #fbfdfd;
+  --shoal: #cfe3eb;
+  --shoal-2: #e2eef2;
+  --land: #ead7a2;
+  --land-2: #f3e7c4;
+  --coast: #24343b;
+  --ink: #15262e;
+  --ink-2: #3f525a;
+  --ink-3: #5c6f77;
+  --rule: #a7bfc8;
+  --rule-2: #d3e2e8;
+  --rhumb: #b9ccd3;
+  --accent: #a3206c;
+  --accent-ink: #8e1a5d;
+  --accent-soft: #f4dbe8;
+  --on-accent: #ffffff;
+  --fog: #e6ecee;
+  --focus: #1f6fd1;
+  --shadow: 0 1px 0 #ffffff inset, 0 10px 30px -18px #15262e66;
+
+  --sans: "Atkinson", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  /* type scale, ratio 1.25 */
+  --t-xs: 0.75rem;
+  --t-sm: 0.875rem;
+  --t-md: 1rem;
+  --t-lg: 1.25rem;
+  --t-xl: 1.5625rem;
+  --t-2xl: 1.953rem;
+  --t-3xl: 2.441rem;
+  --t-4xl: 3.052rem;
+  --t-5xl: clamp(2.6rem, 6.4vw, 4.768rem);
+
+  /* 4px grid */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+  --s10: 40px;
+  --s12: 48px;
+  --s16: 64px;
+  --s24: 96px;
+
+  --gutter: clamp(16px, 4vw, 56px);
+  --measure: 66ch;
+  --wide: 1240px;
+  --r-sm: 3px;
+  --r-md: 6px;
+  --hair: 1px;
+  --header-h: 60px;
+  --chart-h: clamp(440px, 66svh, 660px);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --d-fast: 160ms;
+  --d-med: 280ms;
+  --d-slow: 700ms;
+
   color-scheme: light;
-  /* Day terminal */
-  --bg: #e7eaef;
-  --bg-2: #dde1e8;
-  --surface: #fbfaf7;          /* pass paper */
-  --raised: #f0f1f4;
-  --sunken: #d6dbe3;
-  --line: rgb(14 18 32 / 0.10);
-  --line-strong: rgb(14 18 32 / 0.18);
-  --text: #0e1220;
-  --text-2: #444b5c;
-  --text-3: #5f6678;           /* meta only, 5.3:1 on --surface */
-
-  /* One accent: board amber. Text uses --accent (dark amber on light), fills use --accent-fill. */
-  --accent: #8f4b00;           /* 6.4:1 on --surface */
-  --accent-fill: #ffb21a;
-  --accent-soft: rgb(255 178 26 / 0.18);
-  --on-accent: #1a1203;
-
-  --danger: #b4231a;
-  --danger-fill: #e5483b;
-  --danger-soft: rgb(229 72 59 / 0.12);
-  --ok: #17703c;
-  --ok-soft: rgb(23 112 60 / 0.1);
-
-  /* The departures board (dark in both themes) */
-  --board: #0b0d12;
-  --board-edge: #1d2129;
-  --flap: #171a21;
-  --flap-hi: #1e222b;
-  --flap-split: rgb(0 0 0 / 0.55);
-  --flap-text: #f1eee6;
-  --flap-amber: #ffb21a;
-  --flap-red: #ff6a5c;
-  --flap-dim: #8b919e;
-
-  --shadow-sm: 0 1px 2px rgb(14 18 32 / 0.06);
-  --shadow-pass: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 1px 2px rgb(14 18 32 / 0.06), 0 10px 28px -12px rgb(14 18 32 / 0.18);
-  --shadow-pass-hover: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 2px 4px rgb(14 18 32 / 0.06), 0 22px 44px -18px rgb(14 18 32 / 0.28);
-  --shadow-float: 0 12px 32px rgb(14 18 32 / 0.16), 0 1px 2px rgb(14 18 32 / 0.08);
-  --shadow-board: 0 30px 60px -30px rgb(5 8 15 / 0.55), 0 0 0 1px rgb(255 255 255 / 0.04) inset;
-  --focus: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent-fill);
-
-  /* Type */
-  --font-ui: "Geist Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Big Shoulders Display Variable", "Geist Variable", system-ui, sans-serif;
-  --font-mono: "Geist Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
-  /* Scale ~1.25 */
-  --fs-12: 0.75rem;   --lh-12: 1rem;
-  --fs-13: 0.8125rem; --lh-13: 1.25rem;
-  --fs-15: 0.9375rem; --lh-15: 1.5rem;   /* body */
-  --fs-17: 1.0625rem; --lh-17: 1.625rem;
-  --fs-20: 1.25rem;   --lh-20: 1.75rem;
-  --fs-24: 1.5rem;    --lh-24: 1.875rem;
-  --fs-30: 1.875rem;  --lh-30: 2.125rem;
-  --fs-44: 2.75rem;   --lh-44: 2.75rem;
-  --fs-hero: clamp(3.25rem, 2rem + 6.2vw, 7.5rem);
-
-  /* Spacing, 4px grid */
-  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px;
-  --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px;
-
-  /* Radius: tag < control < pass < board */
-  --r-tag: 6px;
-  --r-control: 10px;
-  --r-panel: 16px;
-  --r-pass: 18px;
-  --r-board: 22px;
-  --r-flap: 3px;
-  --r-pill: 999px;
-
-  /* Layout */
-  --page-max: 1240px;
-  --page-pad: var(--s-6);
-  --header-h: 64px;
-  --row-min: 72px;
-  --measure: 68ch;
-  --stub-w: 9.5rem;
-  --notch: 11px;
-  --touch: 2.75rem;
-  --rail-h: 6rem;
-
-  /* Motion: one curve */
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --t-fast: 140ms;
-  --t-menu: 200ms;
-  --t-enter: 420ms;
-  --stagger: 40ms;
 }
 
-@media (max-width: 640px) {
-  :root { --page-pad: var(--s-4); --stub-w: 7.25rem; }
-}
-
-/* Night terminal: follows the system unless the viewer chose light; explicit dark always wins. */
+/* Night chart (ECDIS night palette): dark sea, dim land, magenta kept but lifted for contrast. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --paper: #09141b;
+    --paper-2: #0e1c25;
+    --shoal: #123041;
+    --shoal-2: #0e2330;
+    --land: #3a3321;
+    --land-2: #2b2618;
+    --coast: #cdbd8c;
+    --ink: #dbe5e9;
+    --ink-2: #a8b9c1;
+    --ink-3: #8597a0;
+    --rule: #2b4555;
+    --rule-2: #182c38;
+    --rhumb: #1d3443;
+    --accent: #f07cc0;
+    --accent-ink: #f59acd;
+    --accent-soft: #3a1630;
+    --on-accent: #22061a;
+    --fog: #13222c;
+    --focus: #7fb6ff;
+    --shadow: 0 12px 34px -18px #000000cc;
     color-scheme: dark;
-    --bg: #07090e;
-    --bg-2: #0b0e15;
-    --surface: #11151e;
-    --raised: #1a1f2a;
-    --sunken: #05070b;
-    --line: rgb(236 238 243 / 0.08);
-    --line-strong: rgb(236 238 243 / 0.15);
-    --text: #eceef3;
-    --text-2: #a8afbe;
-    --text-3: #8d94a6;
-    --accent: #ffb21a;
-    --accent-fill: #ffb21a;
-    --accent-soft: rgb(255 178 26 / 0.13);
-    --on-accent: #1a1203;
-    --danger: #ff7a6d;
-    --danger-fill: #e5483b;
-    --danger-soft: rgb(229 72 59 / 0.16);
-    --ok: #4cc38a;
-    --ok-soft: rgb(76 195 138 / 0.14);
-    --board: #05070b;
-    --board-edge: #191d25;
-    --shadow-sm: none;
-    --shadow-pass: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 0 0 1px rgb(255 255 255 / 0.05);
-    --shadow-pass-hover: 0 1px 0 rgb(255 255 255 / 0.06) inset, 0 0 0 1px rgb(255 178 26 / 0.35), 0 18px 40px -20px rgb(0 0 0 / 0.8);
-    --shadow-float: 0 12px 32px rgb(0 0 0 / 0.55);
-    --shadow-board: 0 0 0 1px rgb(255 255 255 / 0.05) inset, 0 30px 80px -40px rgb(255 178 26 / 0.12);
   }
 }
 :root[data-theme="dark"] {
+  --paper: #09141b;
+  --paper-2: #0e1c25;
+  --shoal: #123041;
+  --shoal-2: #0e2330;
+  --land: #3a3321;
+  --land-2: #2b2618;
+  --coast: #cdbd8c;
+  --ink: #dbe5e9;
+  --ink-2: #a8b9c1;
+  --ink-3: #8597a0;
+  --rule: #2b4555;
+  --rule-2: #182c38;
+  --rhumb: #1d3443;
+  --accent: #f07cc0;
+  --accent-ink: #f59acd;
+  --accent-soft: #3a1630;
+  --on-accent: #22061a;
+  --fog: #13222c;
+  --focus: #7fb6ff;
+  --shadow: 0 12px 34px -18px #000000cc;
   color-scheme: dark;
-  --bg: #07090e;
-  --bg-2: #0b0e15;
-  --surface: #11151e;
-  --raised: #1a1f2a;
-  --sunken: #05070b;
-  --line: rgb(236 238 243 / 0.08);
-  --line-strong: rgb(236 238 243 / 0.15);
-  --text: #eceef3;
-  --text-2: #a8afbe;
-  --text-3: #8d94a6;
-  --accent: #ffb21a;
-  --accent-fill: #ffb21a;
-  --accent-soft: rgb(255 178 26 / 0.13);
-  --on-accent: #1a1203;
-  --danger: #ff7a6d;
-  --danger-fill: #e5483b;
-  --danger-soft: rgb(229 72 59 / 0.16);
-  --ok: #4cc38a;
-  --ok-soft: rgb(76 195 138 / 0.14);
-  --board: #05070b;
-  --board-edge: #191d25;
-  --shadow-sm: none;
-  --shadow-pass: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 0 0 1px rgb(255 255 255 / 0.05);
-  --shadow-pass-hover: 0 1px 0 rgb(255 255 255 / 0.06) inset, 0 0 0 1px rgb(255 178 26 / 0.35), 0 18px 40px -20px rgb(0 0 0 / 0.8);
-  --shadow-float: 0 12px 32px rgb(0 0 0 / 0.55);
-  --shadow-board: 0 0 0 1px rgb(255 255 255 / 0.05) inset, 0 30px 80px -40px rgb(255 178 26 / 0.12);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root { --t-fast: 0ms; --t-menu: 0ms; --t-enter: 0ms; --stagger: 0ms; }
 }

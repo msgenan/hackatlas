@@ -1,6 +1,11 @@
 ---
-import { iconSvg } from "../lib/icons";
-interface Props { name: string; size?: 16 | 18 }
+import { SPRITE_ICONS, iconSvg } from "../lib/icons";
+interface Props { name: string; size?: number }
 const { name, size = 16 } = Astro.props;
+const inSprite = (SPRITE_ICONS as readonly string[]).includes(name);
 ---
-<Fragment set:html={iconSvg(name, size)} />
+{inSprite ? (
+  <svg class="icon" width={size} height={size} aria-hidden="true" focusable="false"><use href={`#i-${name}`} /></svg>
+) : (
+  <Fragment set:html={iconSvg(name, size)} />
+)}

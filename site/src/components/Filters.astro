@@ -1,51 +1,40 @@
 ---
-import Icon from "./Icon.astro";
 import { THEMES } from "../lib/types";
-import { FORMAT_NAMES, themeName } from "../lib/format";
-interface Props { sort?: boolean }
-const { sort = true } = Astro.props;
-const regions = [["katilabilir", "Katılabileceklerim"], ["tr", "Sadece Türkiye"], ["tumu", "Tümü"]] as const;
-const sorts = [["son-basvuru", "Son başvuru"], ["odul", "Ödül"], ["tarih", "Etkinlik tarihi"], ["yeni", "Yeni eklenen"]] as const;
+import { themeName } from "../lib/format";
+import Icon from "./Icon.astro";
+const regions = [["katilabilir", "Katılabileceklerim"], ["tr", "Türkiye"], ["tumu", "Tümü"]] as const;
+const formats = [["online", "Online"], ["in_person", "Yüz yüze"], ["hybrid", "Hibrit"]] as const;
+const sorts = [["son-basvuru", "Son başvuru"], ["odul", "Ödül"], ["tarih", "Başlangıç"], ["yeni", "Yeni eklenen"]] as const;
 ---
-<form class="filters" role="search" aria-label="Filtreler" id="filters" onsubmit="return false">
-  <div class="filter-row">
-    <label class="search">
+<form class="filters" data-filters role="search" aria-label="Hackathonları süz" onsubmit="return false">
+  <div class="f-row">
+    <label class="f-search">
+      <Icon name="search" size={18} />
       <span class="sr-only">Ara</span>
-      <Icon name="search" />
-      <input class="field" type="search" name="q" placeholder="Ara: ad, organizatör, şehir" autocomplete="off" />
+      <input type="search" name="q" placeholder="Ad, organizatör, şehir ya da konu" autocomplete="off" />
     </label>
-    <fieldset class="seg">
-      <legend class="sr-only">Katılım</legend>
-      {regions.map(([v, label]) => (
-        <label><input type="radio" name="bolge" value={v} checked={v === "katilabilir"} /><span>{label}</span></label>
-      ))}
+    <fieldset class="f-seg">
+      <legend class="sr-only">Bölge</legend>
+      {regions.map(([v, l]) => <label><input type="radio" name="bolge" value={v} checked={v === "katilabilir"} /><span>{l}</span></label>)}
     </fieldset>
-    <div class="pop-wrap">
-      <button type="button" class="btn pop-btn" aria-expanded="false" aria-controls="pop-format" aria-haspopup="true">Format <span class="count" hidden></span><Icon name="chevron-down" /></button>
-      <div class="pop" id="pop-format" role="group" aria-label="Format">
-        {(Object.keys(FORMAT_NAMES) as (keyof typeof FORMAT_NAMES)[]).map((f) => (
-          <label class="opt"><input type="checkbox" name="format" value={f} />{FORMAT_NAMES[f]}</label>
-        ))}
-      </div>
-    </div>
-    <div class="pop-wrap">
-      <button type="button" class="btn pop-btn" aria-expanded="false" aria-controls="pop-konu" aria-haspopup="true">Konu <span class="count" hidden></span><Icon name="chevron-down" /></button>
-      <div class="pop" id="pop-konu" role="group" aria-label="Konu">
-        {THEMES.map((t) => <label class="opt"><input type="checkbox" name="konu" value={t} />{themeName(t)}</label>)}
-      </div>
-    </div>
-    <label class="check-pill"><input type="checkbox" name="odul" value="1" /><span>Ödüllü</span></label>
-    {sort && (
-      <label>
-        <span class="sr-only">Sırala</span>
-        <select class="field" name="sirala" aria-label="Sırala">
-          {sorts.map(([v, l]) => <option value={v}>Sırala: {l}</option>)}
-        </select>
-      </label>
-    )}
+    <label class="f-sort">
+      <span>Sırala</span>
+      <select name="sirala">{sorts.map(([v, l]) => <option value={v}>{l}</option>)}</select>
+    </label>
   </div>
-  <div class="filter-meta">
-    <span id="result-count" aria-live="polite"></span>
-    <button type="button" class="link-btn" data-clear hidden>Filtreleri temizle</button>
+  <div class="f-row f-chips">
+    <fieldset class="f-group">
+      <legend class="sr-only">Biçim</legend>
+      {formats.map(([v, l]) => <label class="chip"><input type="checkbox" name="format" value={v} /><span>{l}</span></label>)}
+      <label class="chip"><input type="checkbox" name="odul" value="1" /><span>Ödüllü</span></label>
+    </fieldset>
+    <fieldset class="f-group f-themes">
+      <legend class="sr-only">Konu</legend>
+      {THEMES.map((t) => <label class="chip"><input type="checkbox" name="konu" value={t} /><span>{themeName(t)}</span></label>)}
+    </fieldset>
+  </div>
+  <div class="f-status">
+    <p class="f-count" data-count aria-live="polite"></p>
+    <button type="button" class="link-btn" data-clear hidden><Icon name="x" size={14} />Filtreleri temizle</button>
   </div>
 </form>

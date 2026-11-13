@@ -86,7 +86,7 @@ export interface EventMeta {
   prizeUsd: number | null;
   added: string;
   search: string;
-  /** For the departures board. */
+  /** City and raw prize, for the chart tips. */
   city: string | null;
   prizeAmount: number | null;
   prizeCurrency: string | null;

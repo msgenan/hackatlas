@@ -1,0 +1,8 @@
+---
+/* A generated copperplate engraving used as a mask, so it is printed in the chart's own ink in both themes. */
+import { href } from "../lib/url";
+interface Props { name: "serpent" | "ship"; class?: string; flip?: boolean }
+const { name, class: cls = "", flip = false } = Astro.props;
+const ratio = name === "serpent" ? "960 / 532" : "960 / 559";
+---
+<div class:list={["engraving", `engraving-${name}`, flip && "flip", cls]} style={`--src: url(${href(`img/${name}.webp`)}); aspect-ratio: ${ratio};`} aria-hidden="true"></div>

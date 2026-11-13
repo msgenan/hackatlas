@@ -1,80 +1,80 @@
 ---
 import Base from "../layouts/Base.astro";
-import EventRow from "../components/EventRow.astro";
-import EmptyState from "../components/EmptyState.astro";
-import Board from "../components/Board.astro";
+import Chart from "../components/Chart.astro";
+import Entry from "../components/Entry.astro";
 import Filters from "../components/Filters.astro";
+import Engraving from "../components/Engraving.astro";
 import Icon from "../components/Icon.astro";
 import { site, defaultVisible } from "../lib/site";
 import { GROUP_LABELS, GROUP_ORDER, type Group } from "../lib/countdown";
-import { formatDay } from "../lib/dates";
-import { href } from "../lib/url";
+import { ISSUE_NEW } from "../lib/format";
 
 const { today, upcoming, updated } = site();
-const first = defaultVisible(upcoming);
+const first = new Set(defaultVisible(upcoming).map((v) => v.e.id));
 const byGroup = (g: Group) => upcoming.filter((v) => v.group === g);
-const cols = ["Son başvuru", "Hackathon", "Tarih", "Yer", "Ödül", "Takım", ""];
 const metas = upcoming.map((v) => v.meta);
-// Build-time instant for the server-rendered board: noon in Turkey on the build's "today".
-const nowMs = Date.parse(`${today}T12:00:00+03:00`);
+const GROUP_NOTES: Partial<Record<Group, string>> = {
+  week: "Fener yanan adalar. Başvuru 7 gün içinde kapanıyor.",
+  unknown: "Tarihi henüz açıklanmamış hackathonlar.",
+  closed: "Başvurusu kapanmış ama henüz bitmemiş hackathonlar.",
+};
 ---
-<Base current="liste">
-  <div class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title" class="hero-title" data-hero-title>
-        <span class="line"><span>Hangi hackathona</span></span>
-        <span class="line"><span>yetişirsin?</span></span>
-      </h1>
-      {upcoming.length > 0 ? (
-        <p class="hero-sub">
-          Katılabileceğin <b id="intro-count">{first.length}</b> hackathon, son başvuruya göre sıralı.
-          Türkiye'den ve dünyadan toplanır, her gün güncellenir{updated && <>; son güncelleme {formatDay(updated, today)}</>}.
-        </p>
-      ) : (
-        <p class="hero-sub">Türkiye'den ve dünyadan hackathonlar, son başvuruya göre sıralı. İlk kayıtlar gözden geçirildikten sonra burada görünür.</p>
-      )}
+<Base current="harita">
+  {upcoming.length === 0 ? (
+    <section class="page empty-sea">
+      <Engraving name="serpent" class="empty-art" />
+      <h1 class="page-title">Haritada henüz ada yok.</h1>
+      <p class="lead">Yeni hackathonlar gözden geçirildikten sonra burada görünür. Bildiğin bir hackathon varsa ekleyebilirsin.</p>
+      <p><a class="btn-primary" href={ISSUE_NEW} target="_blank" rel="noopener"><Icon name="plus" />Hackathon ekle</a></p>
     </section>
-    {upcoming.length === 0 ? (
-      <EmptyState title="Henüz yayınlanmış hackathon yok." text="Yeni kayıtlar insanlar tarafından gözden geçirildikten sonra burada görünür. Bildiğin bir hackathon varsa ekleyebilirsin." />
-    ) : (
-      <>
-        <Board metas={first.map((v) => v.meta)} nowMs={nowMs} />
-        <div class="list" id="liste">
+  ) : (
+    <>
+      <Chart views={upcoming} today={today} updated={updated} firstIds={first} />
+      <section class="gazetteer" id="liste" aria-labelledby="dizin-title">
+        <div class="gz-head">
+          <h2 id="dizin-title" class="gz-title">Dizin</h2>
+          <p class="gz-sub">Haritadaki her ada, hep aynı sırayla: son başvuru, tarih, yer, ödül, takım.</p>
+        </div>
         <Filters />
+        <div class="groups" data-groups>
           {GROUP_ORDER.map((g) => {
             const items = byGroup(g);
-            const header = (
-              <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
+            const rows = (
+              <ol class="entries" data-rows={g}>
+                {items.map((v) => <Entry v={v} pre={!first.has(v.e.id)} />)}
+              </ol>
             );
-            const rows = <ul class="rows" data-rows={g}>{items.map((v) => <EventRow v={v} />)}</ul>;
             return g === "closed" ? (
               <details class="group" data-group={g} hidden={items.length === 0}>
-                <summary><Icon name="chevron-right" /><span>{GROUP_LABELS[g]}</span> <span class="gcount">({items.length})</span></summary>
-                {header}{rows}
+                <summary class="group-head"><Icon name="chevron-right" /><span class="group-name">{GROUP_LABELS[g]}</span><span class="group-n" data-gcount>{items.length}</span></summary>
+                {GROUP_NOTES[g] && <p class="group-note">{GROUP_NOTES[g]}</p>}
+                {rows}
               </details>
             ) : (
               <section class="group" data-group={g} hidden={items.length === 0}>
-                <h2><span>{GROUP_LABELS[g]}</span> <span class="gcount">({items.length})</span></h2>
-                {header}{rows}
+                <h3 class="group-head"><span class="group-name">{GROUP_LABELS[g]}</span><span class="group-n" data-gcount>{items.length}</span></h3>
+                {GROUP_NOTES[g] && <p class="group-note">{GROUP_NOTES[g]}</p>}
+                {rows}
               </section>
             );
           })}
           <section class="group" data-group="flat" hidden>
-            <h2><span>Tüm hackathonlar</span> <span class="gcount">(0)</span></h2>
-            <div class="cols" aria-hidden="true">{cols.map((c) => <span>{c}</span>)}</div>
-            <ul class="rows" data-rows="flat"></ul>
+            <h3 class="group-head"><span class="group-name" data-flat-name>Sıralı liste</span><span class="group-n" data-gcount>0</span></h3>
+            <ol class="entries" data-rows="flat"></ol>
           </section>
-          <div class="none-found" id="none-found" hidden>
-            <p>Bu filtrelerle eşleşen hackathon yok.</p>
-            <button type="button" class="btn" data-clear>Filtreleri temizle</button>
-          </div>
         </div>
-        <script type="application/json" id="hackatlas-data" set:html={JSON.stringify(metas).replace(/</g, "\\u003c")} />
-        <script is:inline defer src={href("vendor/gsap-3.14.2.min.js")}></script>
-        <script>
-          import "../scripts/list";
-        </script>
-      </>
-    )}
-  </div>
+        <div class="none-found" data-none hidden>
+          <Engraving name="serpent" class="none-art" />
+          <p class="none-title">Bu sularda eşleşen hackathon yok.</p>
+          <p class="none-text">Aramayı kısalt ya da bir filtreyi kaldır.</p>
+          <button type="button" class="btn-primary" data-clear>Filtreleri temizle</button>
+        </div>
+      </section>
+      <script type="application/json" id="hackatlas-data" set:html={JSON.stringify(metas).replace(/</g, "\\u003c")} />
+      <script type="application/json" id="hackatlas-first" set:html={JSON.stringify([...first])} />
+      <script>
+        import "../scripts/home";
+      </script>
+    </>
+  )}
 </Base>

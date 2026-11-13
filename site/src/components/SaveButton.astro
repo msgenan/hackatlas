@@ -1,14 +1,10 @@
 ---
 import Icon from "./Icon.astro";
-interface Props { id: string; name: string; full?: boolean }
-const { id, name, full = false } = Astro.props;
+interface Props { id: string; full?: boolean }
+const { id, full = false } = Astro.props;
 ---
-{full ? (
-  <button type="button" class="btn save-btn save-full" data-save={id} aria-pressed="false">
-    <Icon name="bookmark" /><span class="off">Kaydet</span><span class="on">Kaydedildi</span>
-  </button>
-) : (
-  <button type="button" class="save save-btn" data-save={id} aria-pressed="false" aria-label={`Kaydet: ${name}`} title="Kaydet">
-    <Icon name="bookmark" size={18} />
-  </button>
-)}
+<button type="button" class:list={["save", full && "save-full"]} data-save={id} aria-pressed="false" title={full ? undefined : "Rotaya ekle"} aria-label={full ? undefined : "Rotaya ekle"}>
+  <span class="save-off"><Icon name="bookmark" size={full ? 16 : 18} /></span>
+  <span class="save-on"><Icon name="bookmark-check" size={full ? 16 : 18} /></span>
+  {full && <span class="save-text"><span class="save-off">Rotaya ekle</span><span class="save-on">Rotada</span></span>}
+</button>

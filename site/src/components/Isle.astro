@@ -1,0 +1,15 @@
+---
+/* One event's island at a fixed scale, so a bigger prize reads as a bigger island everywhere. */
+import { islandShape } from "../lib/chart";
+interface Props { id: string; r: number; flare?: boolean; state?: string; class?: string; size?: number }
+const { id, r, flare = false, state = "open", class: cls = "", size = 56 } = Astro.props;
+const s = islandShape(id, 0, 0, r, true);
+const E = 56;
+---
+<svg class:list={["isle-glyph", cls]} data-state={state} viewBox={`${-E} ${-E} ${2 * E} ${2 * E}`} width={size} height={size} aria-hidden="true" focusable="false">
+  <path class="g-contour" d={s.contour} />
+  <path class="g-shoal" d={s.shoal} />
+  <path class="g-land" d={s.land} />
+  {flare && <path class="g-flare" d={`M${(r * 0.25).toFixed(1)} ${(-r * 0.2).toFixed(1)}c6 -10 16 -16 26 -18c-2 10 -8 20 -18 24z`} />}
+  {flare && <circle class="g-light" cx={(r * 0.25).toFixed(1)} cy={(-r * 0.2).toFixed(1)} r="2.6" />}
+</svg>
