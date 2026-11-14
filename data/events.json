@@ -137,6 +137,74 @@
       "updated_at": "2026-11-11T22:44:22Z"
     },
     {
+      "id": "byu-idaho-i-hack-2026-reinventing-the-past-2026",
+      "name": "BYU-Idaho: i-Hack 2026: Reinventing the Past",
+      "organizer": "Brigham Young University - Idaho CSE Dep",
+      "url": "https://ihack-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Science &amp; Technology Building (STC)"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ihack-2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "hacked-beta-2026",
+      "name": "HackED Beta 2026",
+      "organizer": "Computer Engineering Club, Ualberta",
+      "url": "https://hacked-beta-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "University of Alberta - UComms"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": {
+        "amount": 1100.0,
+        "currency": "CAD",
+        "text": "$CAD 1,100"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hacked-beta-2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
       "id": "ibm-qiskit-hackathon-bangladesh-2026",
       "name": "IBM Qiskit Hackathon - Bangladesh",
       "organizer": "DevChangeMakers Community",
@@ -165,6 +233,39 @@
       "confidence": null,
       "added_at": "2026-11-11T22:44:22Z",
       "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "haven-philly-2026",
+      "name": "Haven Philly",
+      "organizer": "Hack Club",
+      "url": "https://haven-philly.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Drexel University CCI Building"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-14",
+      "deadline": "2026-11-14",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://haven-philly.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
     },
     {
       "id": "system-public-challenge-2026",
@@ -381,6 +482,212 @@
       "updated_at": "2026-11-11T22:44:22Z"
     },
     {
+      "id": "2026-design-at-ut-design-a-thon-panopticon-2026",
+      "name": "2026 DESIGN at UT Design-A-Thon: Panopticon",
+      "organizer": "Design at UT",
+      "url": "https://design-at-ut-designathon-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": "Austin",
+        "country": "US",
+        "venue": null
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "education"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://design-at-ut-designathon-2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "engage-test-2026",
+      "name": "Engage Test",
+      "organizer": "Engage Group",
+      "url": "https://engage-test.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Dubai"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 20.0,
+        "currency": "USD",
+        "text": "$20"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://engage-test.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "gtransformer-ai-buildathon-2026-ai-for-global-good-2026",
+      "name": "GTransformer AI Buildathon 2026 — AI for Global Good",
+      "organizer": "GTransformer Foundation",
+      "url": "https://gtransformer-buildathon-2026.devpost.com/",
+      "summary": null,
+      "format": "hybrid",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Milpitas, Bay Area"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 1000.0,
+        "currency": "USD",
+        "text": "$1,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://gtransformer-buildathon-2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "hackprinceton-fall-26-2026",
+      "name": "HackPrinceton Fall '26",
+      "organizer": "Princeton University",
+      "url": "https://hackprinceton-fall-26.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "JRR, LAS, Robertson, Friend"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "education",
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackprinceton-fall-26.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "hackumass-xiv-2026",
+      "name": "HackUMass XIV",
+      "organizer": "HackUMass",
+      "url": "https://hackumass-xiv.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Integrative Learning Center"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hackumass-xiv.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "uscxibm-qiskit-fall-fest-2026",
+      "name": "USCxIBM Qiskit Fall Fest 2026",
+      "organizer": "IBM",
+      "url": "https://uscibm-qff26.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Darla Moore School of Business, USC"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://uscibm-qff26.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
       "id": "hack-a-ton-with-friends-2026",
       "name": "Hack-a-ton with Friends",
       "organizer": "naitsa",
@@ -412,6 +719,174 @@
       "confidence": null,
       "added_at": "2026-11-11T22:44:22Z",
       "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "hack-club-haven-hong-kong-2026",
+      "name": "Hack Club Haven (Hong Kong)",
+      "organizer": "Hack Club",
+      "url": "https://hack-club-haven-hong-kong.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Canadian International School Hong Kong"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://hack-club-haven-hong-kong.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "immerse-the-bay-2026",
+      "name": "Immerse the Bay 2026",
+      "organizer": "Stanford XR",
+      "url": "https://immerse-the-bay-2026.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "Stanford University"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 1000.0,
+        "currency": "USD",
+        "text": "$1,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "hardware",
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://immerse-the-bay-2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "imperial-ai-hackathon-2026",
+      "name": "Imperial AI Hackathon",
+      "organizer": "Imperial AI Society",
+      "url": "https://imperial-ai-hackathon.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://imperial-ai-hackathon.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "the-next-frontier-2026-a-space-innovation-hackathon-2026",
+      "name": "The Next Frontier 2026: A Space Innovation Hackathon",
+      "organizer": "AI Collective",
+      "url": "https://aichr-space.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "ECPI Virginia Beach Campus"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://aichr-space.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
+      "id": "ubc-eprojects-x-n8n-loop-hackathon-2026",
+      "name": "UBC eProjects x n8n LOOP Hackathon",
+      "organizer": "n8n",
+      "url": "https://loop.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "University of British Columbia"
+      },
+      "starts_on": "2026-11-14",
+      "ends_on": "2026-11-15",
+      "deadline": "2026-11-15",
+      "prize": {
+        "amount": 1000.0,
+        "currency": "CAD",
+        "text": "$CAD 1,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://loop.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
     },
     {
       "id": "stupid-ideas-hackathon-ottawa-f26-2026",
@@ -670,6 +1145,38 @@
       "updated_at": "2026-11-11T22:44:22Z"
     },
     {
+      "id": "ese1110-fall-2026",
+      "name": "ESE1110 Fall 2026",
+      "organizer": "UPenn ESE",
+      "url": "https://ese1110f26.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "virtual"
+      },
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-11-19",
+      "deadline": "2026-11-19",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://ese1110f26.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
       "id": "accessed-hacks-2026",
       "name": "AccessED Hacks",
       "organizer": "AccessEDnpo",
@@ -736,6 +1243,38 @@
       "confidence": null,
       "added_at": "2026-11-11T22:44:22Z",
       "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "build-with-gemma-innovate-in-windsor-2026",
+      "name": "Build with Gemma - Innovate in Windsor",
+      "organizer": "Google Developer Groups Windsor",
+      "url": "https://innovate-in-windsor-hackathon.devpost.com/",
+      "summary": null,
+      "format": "in_person",
+      "location": {
+        "city": null,
+        "country": null,
+        "venue": "University of Windsor"
+      },
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-20",
+      "deadline": "2026-11-20",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://innovate-in-windsor-hackathon.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
     },
     {
       "id": "stem2connect-ai-hackathon-2026",
@@ -1782,6 +2321,39 @@
       "updated_at": "2026-11-11T22:44:22Z"
     },
     {
+      "id": "reddit-s-game-of-the-day-hackathon-2026",
+      "name": "Reddit’s Game of the Day Hackathon",
+      "organizer": "reddit",
+      "url": "https://redditgameofday2026.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-11",
+      "ends_on": "2026-12-08",
+      "deadline": "2026-12-08",
+      "prize": {
+        "amount": 35000.0,
+        "currency": "USD",
+        "text": "$35,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "open",
+        "games"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://redditgameofday2026.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
+    },
+    {
       "id": "ethchiangmai-longevity-hackathon-2026",
       "name": "ETHChiangmai & Longevity Hackathon 2026",
       "organizer": null,
@@ -2007,6 +2579,34 @@
       "confidence": null,
       "added_at": "2026-11-11T22:44:22Z",
       "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "relate-by-neo4j-hackathon-2026",
+      "name": "Relate by Neo4j Hackathon",
+      "organizer": "Neo4j",
+      "url": "https://relate.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-11",
+      "ends_on": "2026-12-11",
+      "deadline": "2026-12-11",
+      "prize": null,
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://relate.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
     },
     {
       "id": "innovateher-hackathon-girls-who-code-2026",
@@ -2626,6 +3226,39 @@
       "confidence": null,
       "added_at": "2026-11-11T22:44:22Z",
       "updated_at": "2026-11-11T22:44:22Z"
+    },
+    {
+      "id": "open-agentic-web-challenge-2026",
+      "name": "Open Agentic Web Challenge",
+      "organizer": "Cognizant",
+      "url": "https://cognizant-agenticweb.devpost.com/",
+      "summary": null,
+      "format": "online",
+      "location": null,
+      "starts_on": "2026-11-11",
+      "ends_on": "2027-01-11",
+      "deadline": "2027-01-11",
+      "prize": {
+        "amount": 10000.0,
+        "currency": "USD",
+        "text": "$10,000"
+      },
+      "team": null,
+      "eligibility": null,
+      "themes": [
+        "ai",
+        "social-impact"
+      ],
+      "sources": [
+        {
+          "kind": "devpost",
+          "url": "https://cognizant-agenticweb.devpost.com/",
+          "seen_at": "2026-11-14T11:57:28Z"
+        }
+      ],
+      "confidence": null,
+      "added_at": "2026-11-14T11:57:28Z",
+      "updated_at": "2026-11-14T11:57:28Z"
     },
     {
       "id": "syntax-summit-2026",
